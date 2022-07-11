@@ -2,6 +2,7 @@ baseURL: 'http://example.org/'
 languageCode: en-us 
 title: CodePaper
 theme: "PaperMod"
+publishdir: "./docs/"
 
 buildDrafts: false
 buildFuture: false
