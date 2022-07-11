@@ -40,7 +40,7 @@ params:
   homeInfoParams:
     enabled: true
     Title: Zanxinz👋
-    Content:  分享学习与生活
+    Content:  ""
   # 社交联系方式
   socialIcons: 
     - name: "twitter"
