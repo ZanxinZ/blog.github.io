@@ -1,0 +1,59 @@
+baseURL: 'http://example.org/'
+languageCode: en-us 
+title: CodePaper
+theme: "PaperMod"
+
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+menu:
+  main:
+    - identifier: categories
+      name: 类别
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: 标签
+      url: /tags/
+      weight: 20
+    - identifier: archive
+      name: 档案
+      url: /archive/
+      weight: 5
+    - identifier: search
+      name: 搜索
+      url: /search/
+      weight: 30
+
+params:
+  # 页面底部分享栏
+  ShowShareButtons: true
+  ShareButtons: ["telegram", "reddit", "twitter"]
+  defaultTheme: auto
+  # 主页的模式
+  homeInfoParams:
+    enabled: true
+    Title: Zanxinz👋
+    Content:  分享学习与生活
+  # 社交联系方式
+  socialIcons: 
+    - name: "twitter"
+      url: "https://twitter.com/zanxinz"
+    - name: "github"
+      url: "https://github.com/ZanxinZ"
+    - name: "email"
+      url: "post/info/contact/mail"
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  env: production
+ 
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON

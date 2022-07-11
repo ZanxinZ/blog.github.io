@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>语言 on CodePaper</title>
+    <link>http://example.org/language/</link>
+    <description>Recent content in 语言 on CodePaper</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 09 Jul 2022 17:12:24 +0800</lastBuildDate><atom:link href="http://example.org/language/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>test</title>
+      <link>http://example.org/post/language/swift/test/</link>
+      <pubDate>Sun, 10 Jul 2022 15:33:40 +0800</pubDate>
+      
+      <guid>http://example.org/post/language/swift/test/</guid>
+      <description>ka</description>
+    </item>
+    
+    <item>
+      <title>Base</title>
+      <link>http://example.org/post/language/swift/base/</link>
+      <pubDate>Sun, 10 Jul 2022 15:03:40 +0800</pubDate>
+      
+      <guid>http://example.org/post/language/swift/base/</guid>
+      <description>Hi</description>
+    </item>
+    
+    <item>
+      <title>Advanced Operators</title>
+      <link>http://example.org/post/language/swift/28advanced-operators/</link>
+      <pubDate>Sun, 19 Jun 2022 16:00:40 +0800</pubDate>
+      
+      <guid>http://example.org/post/language/swift/28advanced-operators/</guid>
+      <description>Unlike arithmetic operators in C, arithmetic operators in Swift don’t overflow by default. If want to overflow by default, use the overflow operation begin with ampersand (&amp;amp;). For example, the overflow addition operator (&amp;amp;+).
+It’s so free to define custom infix, prefix, postfix and assignment operators, precedence and associativity values.
+Bitwise Operators Here we use a function to pad 0 for the number’s print result.
+func pad(num: UInt8, count: Int) -&amp;gt; String {  var str = String(num, radix: 2)  var res: String = str  for _ in 0.</description>
+    </item>
+    
+    <item>
+      <title>Access Control</title>
+      <link>http://example.org/post/language/swift/27access-control/</link>
+      <pubDate>Sat, 18 Jun 2022 16:00:40 +0800</pubDate>
+      
+      <guid>http://example.org/post/language/swift/27access-control/</guid>
+      <description>Access control restrict access to part of the code form code in other source files and modules. It enable us to hide the implement detail of the code, and to specify a preferred interface which that code can be accessed and used.
+Set access levels to individual types (classes, structures, enumerations), as well as to properties, methods, initializers, and subscripts belonging to those types.
+Protocols can be restricted to a certain context, as can global constants, variable, and functions.</description>
+    </item>
+    
+    <item>
+      <title>Memory Safty</title>
+      <link>http://example.org/post/language/swift/26memory-safety/</link>
+      <pubDate>Sun, 12 Jun 2022 16:05:40 +0800</pubDate>
+      
+      <guid>http://example.org/post/language/swift/26memory-safety/</guid>
+      <description>Most of the time we don’t have to think about accessing memory, but it’s important to understand where potential conflicts can occur, so we can avoid writing code that has conflicting access to memory.
+Here we are talking about the situation that happen on a single thread.
+Memory Access var one = 1 // write access to the memory one is stored. print(&amp;#34;\(one)&amp;#34;) // read access from the memory one is stored.</description>
+    </item>
+    
+    <item>
+      <title>Automatic Reference Counting</title>
+      <link>http://example.org/post/language/swift/25automatic-reference-counting/</link>
+      <pubDate>Sun, 12 Jun 2022 16:00:40 +0800</pubDate>
+      
+      <guid>http://example.org/post/language/swift/25automatic-reference-counting/</guid>
+      <description>Swift use ARC to track and manage the app’s memory usage. ARC frees up the memory used by class instances when those instances are no longer needed.
+Reference counting applies only to instance of classes.
+Reference:
+ strong: retain the obj. (default) weak: don’t retain the object referred to, track the object referred to. unowned: don’t retain the object referred to, don’t tract the object referred to.  How ARC Work Allocate a chunk of memory to store information about that instance</description>
+    </item>
+    
+    <item>
+      <title>Opaque Type</title>
+      <link>http://example.org/post/language/swift/24opaque-type/</link>
+      <pubDate>Sun, 05 Jun 2022 16:05:40 +0800</pubDate>
+      
+      <guid>http://example.org/post/language/swift/24opaque-type/</guid>
+      <description>A function with an opaque type hides its return value’s type information. Hiding type information at some boundaries between a module and code that calls into the module. Unlike returning a value whose type is a protocol type, opaque type preserve type identity —the compile has access to the type information, but clients of the module don’t.
+The Situation Here we have a Shape protocol.
+protocol Shape {  func draw() -&amp;gt; String } The struct Triangle conform to the Shape.</description>
+    </item>
+    
+    <item>
+      <title>Generics</title>
+      <link>http://example.org/post/language/swift/23generics/</link>
+      <pubDate>Sun, 05 Jun 2022 16:00:40 +0800</pubDate>
+      
+      <guid>http://example.org/post/language/swift/23generics/</guid>
+      <description>Define a class with template type &lt;!-- raw HTML omitted --&gt;, then should illustract the type when use the class.</description>
+    </item>
+    
+    <item>
+      <title>Optional Chaining</title>
+      <link>http://example.org/post/language/swift/16optional-chaining/</link>
+      <pubDate>Tue, 24 May 2022 16:05:40 +0800</pubDate>
+      
+      <guid>http://example.org/post/language/swift/16optional-chaining/</guid>
+      <description>A process for querying and calling properties, methods, and subscripts on an optional that might currently be nil .Multiple queries can be chained together, and the chain fails gracefully if any link in the chain is nil .
+Optional Chaining as an Alternative to Forced Unwrapping  ! force unwrapping triggers a runtime error when the optional is nil . Use the optional chaining to check if the optional value querying is succeed.</description>
+    </item>
+    
+    <item>
+      <title>Protocol</title>
+      <link>http://example.org/post/language/swift/22protocols/</link>
+      <pubDate>Sun, 22 May 2022 16:00:40 +0800</pubDate>
+      
+      <guid>http://example.org/post/language/swift/22protocols/</guid>
+      <description>A protocol defines a blueprint with methods, properties.</description>
+    </item>
+    
+    <item>
+      <title>Extension</title>
+      <link>http://example.org/post/language/swift/21extensions/</link>
+      <pubDate>Sat, 21 May 2022 16:00:40 +0800</pubDate>
+      
+      <guid>http://example.org/post/language/swift/21extensions/</guid>
+      <description>Extension add new functionality to an existing class, structure, enumeration, or protocol type.</description>
+    </item>
+    
+    <item>
+      <title>Nested Types</title>
+      <link>http://example.org/post/language/swift/20nested-types/</link>
+      <pubDate>Mon, 16 May 2022 16:05:40 +0800</pubDate>
+      
+      <guid>http://example.org/post/language/swift/20nested-types/</guid>
+      <description>Enumerations, classes or structures can be nested in another type.
+struct Closh {  enum Size: String{  case H = &amp;#34;high&amp;#34;, M = &amp;#34;Medium&amp;#34;, L = &amp;#34;Low&amp;#34;  }   enum Detail: Int {  case H = 180, M = 170, L = 160  struct Price {  let normal: Int, discount: Int?  }  var price: Price {  switch self {  case .</description>
+    </item>
+    
+    <item>
+      <title>Type Casting</title>
+      <link>http://example.org/post/language/swift/19type-casting/</link>
+      <pubDate>Mon, 16 May 2022 16:00:40 +0800</pubDate>
+      
+      <guid>http://example.org/post/language/swift/19type-casting/</guid>
+      <description>Type casting in Swift is implemented with is and as operators.
+Type casting:
+ A subclass instance can be use as a superclass instance.  Defining a Class Hierarchy class Media {  var name: String  init(name: String) {  self.name = name  } }  class Song: Media {  var artist: String  init(name: String, artist: String) {  self.artist = artist  super.init(name: name)  } }  class Movie: Media {  var director: String  init(name: String, director: String) {  self.</description>
+    </item>
+    
+    <item>
+      <title>Concurrency</title>
+      <link>http://example.org/post/language/swift/18concurrency/</link>
+      <pubDate>Sun, 08 May 2022 16:00:40 +0800</pubDate>
+      
+      <guid>http://example.org/post/language/swift/18concurrency/</guid>
+      <description>Swift has built-in support for writing asynchronous and parallel code in a structured way.
+Parallel code means multiple pieces of code run simultaneously.
+ Concurrency will make the code harder to debug. Swift can help to catch problem at compile time.  Although it’s possible to write concurrent code without using Swift language support, that code tends to be hard to read.
+listPhotos(inGallery: &amp;#34;Summer Vacation&amp;#34;) { photoNames in  let sortedNames = photoNames.</description>
+    </item>
+    
+    <item>
+      <title>Error Handling</title>
+      <link>http://example.org/post/language/swift/17error-handling/</link>
+      <pubDate>Sat, 07 May 2022 16:00:40 +0800</pubDate>
+      
+      <guid>http://example.org/post/language/swift/17error-handling/</guid>
+      <description>A class support for throwing, catching, propagating, and manipulating recoverable errors at runtime.
+When an optional fails, it’s useful to understand what cause the failure, so that the code can respond accordingly.
+Example: Reading a file from the disk may be fail in some way.
+ File not exist Have no permission to read. File not being encoded in a compatible format.  Distinguishing among these different situations allows a program to resolve some errors and to communicate to the user any errors it can’t resolve.</description>
+    </item>
+    
+    <item>
+      <title>Deinitialization</title>
+      <link>http://example.org/post/language/swift/15deinitialization/</link>
+      <pubDate>Mon, 02 May 2022 16:00:40 +0800</pubDate>
+      
+      <guid>http://example.org/post/language/swift/15deinitialization/</guid>
+      <description>Before the object is recycle, the deinitializer solve the post events.</description>
+    </item>
+    
+    <item>
+      <title>Initialization</title>
+      <link>http://example.org/post/language/swift/14initialization/</link>
+      <pubDate>Sat, 30 Apr 2022 16:00:40 +0800</pubDate>
+      
+      <guid>http://example.org/post/language/swift/14initialization/</guid>
+      <description>The class&amp;rsquo;s initializer set the original state for the object.</description>
+    </item>
+    
+    <item>
+      <title>Inheritance</title>
+      <link>http://example.org/post/language/swift/13inheritance/</link>
+      <pubDate>Sun, 24 Apr 2022 16:00:40 +0800</pubDate>
+      
+      <guid>http://example.org/post/language/swift/13inheritance/</guid>
+      <description>A class inherit another class call super class, and get some ability from super class.</description>
+    </item>
+    
+    <item>
+      <title>Method</title>
+      <link>http://example.org/post/language/swift/11method/</link>
+      <pubDate>Sun, 17 Apr 2022 16:15:40 +0800</pubDate>
+      
+      <guid>http://example.org/post/language/swift/11method/</guid>
+      <description>The object have some method to provide functionality.</description>
+    </item>
+    
+    <item>
+      <title>Properties</title>
+      <link>http://example.org/post/language/swift/10properties/</link>
+      <pubDate>Sun, 17 Apr 2022 16:12:40 +0800</pubDate>
+      
+      <guid>http://example.org/post/language/swift/10properties/</guid>
+      <description>Stored properties
+Only provided by classed and structures.
+  Computed properties
+Provide by classes, structures, enumerations.
+  Usually associated with instance of a particular type, can be associated with the type itself(type properties).
+Can define property observers to monitor changes in a property’s value, which can respond to with custom action.
+Can use a property wrapper to reuse code in the getter and setter.
+Stored Properties **struct Setting {  var width: Int  let height: Int } var appSetting = Setting(width: 100, height: 200) appSetting.</description>
+    </item>
+    
+    <item>
+      <title>Structures and Classes</title>
+      <link>http://example.org/post/language/swift/09structures-and-classes/</link>
+      <pubDate>Sun, 10 Apr 2022 16:12:40 +0800</pubDate>
+      
+      <guid>http://example.org/post/language/swift/09structures-and-classes/</guid>
+      <description>The object oriented programming.</description>
+    </item>
+    
+    <item>
+      <title>Enumerations</title>
+      <link>http://example.org/post/language/swift/08enumerations/</link>
+      <pubDate>Sun, 10 Apr 2022 16:08:40 +0800</pubDate>
+      
+      <guid>http://example.org/post/language/swift/08enumerations/</guid>
+      <description>Syntax enum Direction { 	case up 	case down 	case left 	case right } Multiple case can appear on a single line, separated by commas:
+enum { 	case up, down, left, right } Use the Enumeration
+var dir = Direction.up When we want to modify the var after the initialized, we can use a shorter form of the enumeration.
+var dir = Direction.up dir = .down // The value&amp;#39;s type has been inferred when the value is in initializing.</description>
+    </item>
+    
+    <item>
+      <title>Subscripts</title>
+      <link>http://example.org/post/language/swift/12subscripts/</link>
+      <pubDate>Sun, 10 Apr 2022 16:00:40 +0800</pubDate>
+      
+      <guid>http://example.org/post/language/swift/12subscripts/</guid>
+      <description>Set subscript(index: Int) in the class to index the data of the instance of the this class.</description>
+    </item>
+    
+    <item>
+      <title>Closures</title>
+      <link>http://example.org/post/language/swift/07closures/</link>
+      <pubDate>Sat, 02 Apr 2022 16:10:40 +0800</pubDate>
+      
+      <guid>http://example.org/post/language/swift/07closures/</guid>
+      <description>The closures can cantains something by the curly bracket.</description>
+    </item>
+    
+    <item>
+      <title>Function</title>
+      <link>http://example.org/post/language/swift/06function/</link>
+      <pubDate>Sat, 02 Apr 2022 16:08:40 +0800</pubDate>
+      
+      <guid>http://example.org/post/language/swift/06function/</guid>
+      <description>Call the function(method) to do something detail.</description>
+    </item>
+    
+    <item>
+      <title>Control Flow</title>
+      <link>http://example.org/post/language/swift/05control-flow/</link>
+      <pubDate>Mon, 28 Mar 2022 16:08:40 +0800</pubDate>
+      
+      <guid>http://example.org/post/language/swift/05control-flow/</guid>
+      <description>loop, condition branch, control transfer.</description>
+    </item>
+    
+    <item>
+      <title>Collection Type</title>
+      <link>http://example.org/post/language/swift/04collection-type/</link>
+      <pubDate>Mon, 28 Mar 2022 16:04:40 +0800</pubDate>
+      
+      <guid>http://example.org/post/language/swift/04collection-type/</guid>
+      <description>The array, set, and dictionary.</description>
+    </item>
+    
+    <item>
+      <title>Strings and Characters</title>
+      <link>http://example.org/post/language/swift/03strings-and-characters/</link>
+      <pubDate>Sun, 20 Mar 2022 16:04:40 +0800</pubDate>
+      
+      <guid>http://example.org/post/language/swift/03strings-and-characters/</guid>
+      <description>String type is bridged with Foundation’s NSString. Foundation extends String to expose methods defines by NSString. If import Foundation, you can access those NSString methods on String without casting.
+String Literals // &amp;#34;Hello World!&amp;#34; is a String literal.  let sentence = &amp;#34;Hello World!&amp;#34;  // Multiline let story = &amp;#34;&amp;#34;&amp;#34; There are some people in the room. They are having a party. Because today is the Christmas. &amp;#34;&amp;#34;&amp;#34; // every line has the line breaks.</description>
+    </item>
+    
+    <item>
+      <title>Basic Operators</title>
+      <link>http://example.org/post/language/swift/02basic-operators/</link>
+      <pubDate>Sat, 19 Mar 2022 16:00:40 +0800</pubDate>
+      
+      <guid>http://example.org/post/language/swift/02basic-operators/</guid>
+      <description>Basic usage of the operators.</description>
+    </item>
+    
+    <item>
+      <title>Basic</title>
+      <link>http://example.org/post/language/swift/01basic/</link>
+      <pubDate>Sat, 12 Mar 2022 15:55:40 +0800</pubDate>
+      
+      <guid>http://example.org/post/language/swift/01basic/</guid>
+      <description>Basic usage of the swift syntax.</description>
+    </item>
+    
+  </channel>
+</rss>

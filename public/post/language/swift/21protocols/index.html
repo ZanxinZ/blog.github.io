@@ -1,0 +1,503 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>CodePaper</title><meta name=keywords content><meta name=description content="Protocols A protocol defines a blueprint of methods, properties.
+Can be Adopted and implemented by:
+ class structure enumeration  Syntax Definition
+protocol SomeProtocol { 	func doSomething() } Being Conformed
+  By Struct
+struct SomeStruct: FirstProtocol, AnotherProtocol {  }   By Class
+class SomeClass: SomeSuperClass, FirstProtocol, AnotherProtocol {  }   Conforming Protocol The Dog and People both conform the DoSport protocol, so they have responsibility to implement all things from the protocol."><meta name=author content><link rel=canonical href=http://example.org/post/language/swift/21protocols/><link crossorigin=anonymous href=/assets/css/stylesheet.6e97a6b79be998515e8c86c68e32a9f7a90e6917f550d2af32568b717f5ca785.css integrity="sha256-bpemt5vpmFFejIbGjjKp96kOaRf1UNKvMlaLcX9cp4U=" rel="preload stylesheet" as=style><script defer crossorigin=anonymous src=/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG+9vmJ0cTS+ovo0FeA=" onload=hljs.initHighlightingOnLoad()></script>
+<link rel=icon href=http://example.org/favicon.ico><link rel=icon type=image/png sizes=16x16 href=http://example.org/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=http://example.org/favicon-32x32.png><link rel=apple-touch-icon href=http://example.org/apple-touch-icon.png><link rel=mask-icon href=http://example.org/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><meta property="og:title" content><meta property="og:description" content="Protocols A protocol defines a blueprint of methods, properties.
+Can be Adopted and implemented by:
+ class structure enumeration  Syntax Definition
+protocol SomeProtocol { 	func doSomething() } Being Conformed
+  By Struct
+struct SomeStruct: FirstProtocol, AnotherProtocol {  }   By Class
+class SomeClass: SomeSuperClass, FirstProtocol, AnotherProtocol {  }   Conforming Protocol The Dog and People both conform the DoSport protocol, so they have responsibility to implement all things from the protocol."><meta property="og:type" content="article"><meta property="og:url" content="http://example.org/post/language/swift/21protocols/"><meta property="article:section" content="post"><meta name=twitter:card content="summary"><meta name=twitter:title content><meta name=twitter:description content="Protocols A protocol defines a blueprint of methods, properties.
+Can be Adopted and implemented by:
+ class structure enumeration  Syntax Definition
+protocol SomeProtocol { 	func doSomething() } Being Conformed
+  By Struct
+struct SomeStruct: FirstProtocol, AnotherProtocol {  }   By Class
+class SomeClass: SomeSuperClass, FirstProtocol, AnotherProtocol {  }   Conforming Protocol The Dog and People both conform the DoSport protocol, so they have responsibility to implement all things from the protocol."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":2,"name":"","item":"http://example.org/post/language/swift/21protocols/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"","name":"","description":"Protocols A protocol defines a blueprint of methods, properties.\nCan be Adopted and implemented by:\n class structure enumeration  Syntax Definition\nprotocol SomeProtocol { \tfunc doSomething() } Being Conformed\n  By Struct\nstruct SomeStruct: FirstProtocol, AnotherProtocol {  }   By Class\nclass SomeClass: SomeSuperClass, FirstProtocol, AnotherProtocol {  }   Conforming Protocol The Dog and People both conform the DoSport protocol, so they have responsibility to implement all things from the protocol.","keywords":[],"articleBody":"Protocols A protocol defines a blueprint of methods, properties.\nCan be Adopted and implemented by:\n class structure enumeration  Syntax Definition\nprotocol SomeProtocol { \tfunc doSomething() } Being Conformed\n  By Struct\nstruct SomeStruct: FirstProtocol, AnotherProtocol {  }   By Class\nclass SomeClass: SomeSuperClass, FirstProtocol, AnotherProtocol {  }   Conforming Protocol The Dog and People both conform the DoSport protocol, so they have responsibility to implement all things from the protocol.\nprotocol DoSport {  var strength: Int { get set}  static var instanceCount: Int { get}  func walk(distance: Int) }  class Dog: DoSport {  static var instanceCount: Int = 0   func walk(distance: Int) {  print(\"Walk \\(distance)with four leg\")  }  var strength: Int  init(strength: Int) {  self.strength = strength  Dog.instanceCount += 1  }  }  class People: DoSport {  static var instanceCount = 0  func walk(distance: Int) {  print(\"Walk \\(distance)with two leg\")  }  var strength: Int  init(strength: Int) {  self.strength = strength  People.instanceCount += 1  } }  var d = Dog(strength: 200) d.walk(distance: 4000) var p = People(strength: 1000) p.walk(distance: 1000) Mutating Method Requirements protocol Togglable {  mutating func toggle() } The mutating keyword only used by structures and enumerations.\nInitializer Requirements protocol SomeProtocol {  init(someParameter: Int) } Class Implementation\nThe required modifier ensures that all the subclass of the someClass must conform to the protocol and implement the method.\nclass SomeClass: SomeProtocol {  required init(someParameter: Int) {   } } Subclass Override Initializer and Conform to the Protocol\nprotocol Cuttable {  init(someParameter: Int) }  class Shape {  init(someParameter: Int) {   } } class Square: Shape, Cuttable {  required override init(someParameter: Int) {  super.init(someParameter: someParameter)  } } Failable Initializer Requirements A failable initializer requirement can be satisfied by a failable or nonfailable initializer on a conforming type. A nonfailable initializer requirement can be satisfied by a nonfailable initializer or an implicitly unwrapped failable initializer.\nProtocol as Types Using a protocol as type is sometimes called an existential type. So call “A type T conform to the protocol”.\nUse a protocol as a type:\n As a parameter type or return type in a function, method, or initializer As the type of a constant, variable, or property As the type of items in an array, dictionary, or other container  Example:\nUse the RandomNumberGenerator protocol as a type, the parameter that the initializer get should conform to the RandomNumberGenerator .\nprotocol RandomNumberGenerator {  func random() - Double }  class Dice {  let sides: Int  let generator: RandomNumberGenerator  init(sides: Int, generator: RandomNumberGenerator) {  self.sides = sides  self.generator = generator  }  func roll() - Int {  return Int(generator.random() * Double(sides)) + 1  } }  class CustomGenerator: RandomNumberGenerator {  func random() - Double {  return 3.0  } }  // When the CustomGenerator() instance pass to the initialzer, it's been upcasting. var dice = Dice(sides: 2, generator: CustomGenerator()) // Give it a generator. It's a way to make generics. print(dice.roll()) // 7 Delegation A class has a delegation in itself and the delegation take the place of class to do other things. The delegation’s input is the class whom want to be delegated.\nExample: A snake and ladder game. The DiceGame is a protocol that require a Dice and a play() method. It’s the fundamental function of a DiceGame .\nThe DiceGameDelegate is a protocol that required some method to do the detail of the game, it defines how the game be played. It rely on the DiceGame . So here is the Delegation.\nThe SnakeAndLadders implements the DiceGame , and implements what to do in the play() method. It has a DiceGameDelegate to do delegate itself to do the detail things.\nclass Generator {  func getNum() - Int { Int.random(in: 1...6)} }  class Dice {  let sides: Int  var generator: Generator  init(sides: Int, generator: Generator) {  self.sides = sides  self.generator = generator  }  func roll() - Int {  return generator.getNum()  } } protocol DiceGame {  var dice: Dice{get}  func play() }  protocol DiceGameDelegate: AnyObject {  func gameDidStart(_ game: DiceGame)  func game(_ game: DiceGame, didStartNewTurnWithDiceRoll diceRoll: Int)  func gameDidEnd(_ game: DiceGame) }  class SnakeAndLadders: DiceGame {  let finalSquare = 25  let dice = Dice(sides: 6, generator: Generator())  var square = 0  var board: [Int]  init() {  board = Array(repeating: 0, count: finalSquare + 1) \t// Some point in the board have extra square buffer.  board[03] = +08; board[06] = +11; board[09] = +09; board[10] = +02  board[14] = -10; board[19] = -11; board[22] = -02; board[24] = -08  }   weak var delegate: DiceGameDelegate?  func play() {  square = 0  delegate?.gameDidStart(self) \t gameLoop: while square != finalSquare {  let diceRoll = dice.roll()  delegate?.game(self, didStartNewTurnWithDiceRoll: diceRoll)  switch square + diceRoll {  case finalSquare:  break gameLoop // If the score(square + diceRoll) equal to max, the game end  case let newSquare where newSquare  finalSquare:  continue gameLoop // If the score(square + diceRoll) is greater than max, try again to get a diceRoll.  default:  square += diceRoll // If the score(square + diceRoll) is smaller than max, the game loop go on.  square += board[square]  }  }  delegate?.gameDidEnd(self)  }  }  class DiceGameTracker: DiceGameDelegate {  var numberOfTurn = 0  func gameDidStart(_ game: DiceGame) {  numberOfTurn = 0  if game is SnakeAndLadders {  print(\"Start a new game of Snakes and Ladders\")  }  print(\"Game use a \\(game.dice.sides)\")  }   func game(_ game: DiceGame, didStartNewTurnWithDiceRoll diceRoll: Int) {  numberOfTurn += 1  print(\"Rolled a \\(diceRoll)\")  }   func gameDidEnd(_ game: DiceGame) {  print(\"The game lasted for \\(numberOfTurn)turns\")  } }  // The use of game and the delegation. let tracker = DiceGameTracker() // It's a implementation of the DiceGameDelegate. let game = SnakeAndLadders() // It's a implementation of the DiceGame. game.delegate = tracker game.play() Adding Protocol Conformance with an Extension We can extend an existing type to adopt and conform to a new protocol, even if we don’t have access to the source code for the existing type.\nprotocol TextOut {  var textDesc: String { get } }  extension Dice: TextOut {  var textDesc: String {  return \"It's a dice with \\(self.sides)sides\"  } }  print(game.dice.textDesc) // Print: It's a dice with 6 sides Conditionally Conforming to a Protocol Condition: Where the element conform the TextOut\nextension Array: TextOut where Element: TextOut {  var textDesc: String {  let itemAsText = self.map{$0.textDesc} // It's a map \t// Join the map to be a string  return \"[\" + itemAsText.joined(separator: \",\") + \"]\"  } }  let d6 = Dice(sides: 12, generator: Generator()) let d12 = Dice(sides: 12, generator: Generator()) let myDice = [d6, d12] print(myDice.textDesc) // [It's a dice with 12 sides,It's a dice with 12 sides] Declaring Protocol Adoption with an Extension Use the instance as a protocol. So it’s the protocol oriented programming.\nstruct Hamster {  var name: String  var textDesc: String {  return \"A Hamster \\(name)\"  } }  extension Hamster: TextOut {}  let h = Hamster(name: \"HH\") let p: TextOut = h print(p.textDesc) Adopting a Protocol Using a Synthesized Implementation Swift can automatically provide the protocol conformance for Equatable , Hashable, and Comparable in many simple cases.\nSynthesized implementation of Equatable\n Structures that have only stored properties that conform to the Equatableprotocol Enumerations that have only associated types that conform to the Equatableprotocol Enumerations that have no associated types  Synthesized implementation of Hashable .\n Structures that have only stored properties that conform to the Hashableprotocol Enumerations that have only associated types that conform to the Hashableprotocol Enumerations that have no associated types  Example:\n  Once the structure or enumeration conform the Equatable , it can be compared by ==, and the structure of enumeration needn’t to implement that the protocol required.\nstruct Vector3D: Equatable {  var x = 0.0, y = 0.0, z = 0.0 } let point = Vector3D(x: 2.0, y: 3.0, z: 4.0) let pointAnother = Vector3D(x: 2.0, y: 3.0, z: 4.0)  if point == pointAnother {  print(\"Two vectors are equivalent\") }  // Print: Two vectors are equivalent   Comparable\nenum SkillLevel: Comparable {  case beginner  case intermediate  case expert(stars: Int) }  var levels = [SkillLevel.intermediate, SkillLevel.beginner, SkillLevel.expert(stars: 5), SkillLevel.expert(stars: 3)]  for level in levels.sorted() {  print(level) }  // Print: // beginner // intermediate // expert(stars: 3) // expert(stars: 5)   Collection of Protocol Types A protocol can be used as the type to be stored in a collection such as an array or a dictionary.\nlet things: [TextOut] = [d6, d12, h] for thing in things {  print(thing.textDesc) }  // Print: // It's a dice with 6 sides // It's a dice with 12 sides // A Hamster HH Protocol Inheritance A protocol can inherit one or more other protocols.\nprotocol Storeable {  func store() - String } protocol Readable {  }  protocol Cleanable {  }  protocol BookShelf: Storeable, Readable, Cleanable {  // Here the BookShelf will have the requirement from the protocols. } Class-Only Protocols We can limit protocol adoption to class types by adding the AnyObject protocol to a protocol’s inheritance list. It defines that the conforming type has a reference semantics rather than value semantics.\nprotocol SomeClassOnlyProtocol: AnyObject, SomeInheritedProtocol { } Protocol Composition A type can conform to multiple protocols at the same time. It has the form SomeProtocol \u0026 AnotherProtocol .\nProtocol composition don’t define any new protocol types.\nprotocol Named {  var name: String { get } }  protocol Aged {  var age: Int { get} }  struct Person: Named, Aged {  var name: String  var age: Int }  // The type passed to the function must conform to both Named and Aged. func goToSchool(menber: Named \u0026 Aged) {  print(\"Go to school: \\(menber.name)is \\(menber.age)\") }  let person = Person(name: \"Mike\", age: 8) goToSchool(menber: person)  // Print: Go to school: Mike is 8 Combines the Protocol and Class Combines the Named protocol and Location class.\nprotocol Named {  var name: String { get } }  func printInfo(location: Location \u0026 Named) {  print(\"The place \\(location.name)[\\(location.latitude), \\(location.longitude)] \") }  let place = City(name: \"Teochew\", latitude: 23.67, longitude: 116.62) printInfo(location: place)  // Print: The place Teochew [23.67, 116.62] Checking for Protocol Conformance It can do the checking and casting as operation that in type checking and casting.\n  is : check a protocol\n  as : cast a protocol to a specific protocol.\nThe as? is downcast operator, it return an optional value. The as! is force downcast, it can trigger runtime error.\n  // Protocol is used to describe some status. protocol HasArea {  var area: Double { get } } class Circle: HasArea {  let pi = 3.1415927  var radius: Double  var area: Double { return pi * radius * radius}  init(radius: Double) {  self.radius = radius  } }  class Square: HasArea {  var area: Double  init(area: Double) {  self.area = area  } }  class Animal {  var legs: Int  init(legs: Int) {  self.legs = legs  } }  let objs: [Any] = [Circle(radius: 5), Square(area: 20), Animal(legs: 4)]  for obj in objs {  if obj is HasArea {  print(obj, \" is HasArea\")  } else {  print(obj, \" is not HasArea\")  } }  for obj in objs {  if let object = obj as? HasArea { \t// Here the object is know to be of type HasArea, so it has the only property 'area' to access.  print(object, \" can be cast to a HasArea. Area is \\(object.area)\")  } else {  print(obj.self, \" can't be cast to a HasArea\")  } }  // Print: // Page_Contents.Circle is HasArea // Page_Contents.Square is HasArea // Page_Contents.Animal is not HasArea // Page_Contents.Circle can be cast to a HasArea Area is 78.5398175 // Page_Contents.Square can be cast to a HasArea Area is 20.0 // Page_Contents.Animal can't be cast to a HasArea Optional Protocol Requirements Use the @objc to mark the protocol and the requirements. So these requirements don’t have to be implemented by types that conform to the protocol.\n@objc :\n Can be adopted only by classes that inherit from Objective-C class or other @objc classes (Maybe in the new swift version, the class don’t have to inherit the OC class). Can’t be adopted by structures or enumerations. The type used in the optional requirement will automatically be an optional. Such as (Int) - String becomes ((Int) - String)? . Here the entire function type is wrapped in the optional, not the method’s return value.  @objc protocol Source {  @objc optional func increment(count: Int) - Int  @objc optional var anotherIncrement: Int { get } }  class Counter {  var count = 0  var source: Source?  func increment() {  if let amount = source?.increment?(count: count) {  count += amount  } else if let amount = source?.anotherIncrement {  count += amount  }  } }  class ThreeSource: Source {  let anotherIncrement = 3 }  class TowardZeroSource: Source {  func increment(count: Int) - Int {  if count == 0 {  return 0  } else if count  0 {  return 1  } else {  return -1  }  } }  let counter = Counter() counter.source = ThreeSource() for i in 1...3 {  counter.increment()  print(counter.count) }  print()  counter.source = TowardZeroSource() for _ in 1...10 {  counter.increment()  print(counter.count) }  print()  counter.count = -5 for _ in 1...8 {  counter.increment()  print(counter.count) }  // Print:  // 3 // 6 // 9 // // 8 // 7 // 6 // 5 // 4 // 3 // 2 // 1 // 0 // 0 // // -4 // -3 // -2 // -1 // 0 // 0 // 0 // 0 The instance of the Counter use different source of the count, so that it has the different effects.\nProtocol Extensions Protocol can be extended to provide method, initializer, subscript, and computed property implementations to conforming types. But can’t make a protocol inherit from another, the inheritance always specified in the protocol declaration itself.\nextension RandomNumberGenerator {  func randomBool() - Bool {  return Double.random(in: 0...1)  0.5  } }  let generator = SystemRandomNumberGenerator() print(generator.randomBool()) The code above show that the class SystemRandomNumberGeneraror conform the RandomNumberGenerator protocol and we extend the RandomNumberGenerator protocol with a randomBool() method, so the SystemRandomNumberGeneraror can use the new method easily.\nProviding Default Implementations We can provide method or computed property requirement in the protocol’s extension.\nprotocol HasLeg {  var leg: Int { get}  var desc: String { get } }  extension HasLeg {  var desc: String {  return \"I have \\(leg)legs\"  } }  class Dog: HasLeg {  var leg: Int  //var desc: String  init() {  leg = 4  } } let dog = Dog() print(dog.desc) // I have 4 legs Adding Constraints to Protocol Extensions Here we constrain the extension of the protocol only add extension when the condition Element: Equatable satisfied.\nextension Collection where Element: Equatable {  func allEqual() - Bool {  for element in self {  if element != self.first {  return false  }  }  return true  } }  let a = [100, 100, 100, 100] let b = [100, 100, 200, 100]  print(a.allEqual()) print(b.allEqual()) ","wordCount":"2417","inLanguage":"en","datePublished":"0001-01-01T00:00:00Z","dateModified":"0001-01-01T00:00:00Z","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.org/post/language/swift/21protocols/"},"publisher":{"@type":"Organization","name":"CodePaper","logo":{"@type":"ImageObject","url":"http://example.org/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=http://example.org/ accesskey=h title="CodePaper (Alt + H)">CodePaper</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=http://example.org/archive/ title=档案><span>档案</span></a></li><li><a href=http://example.org/categories/ title=类别><span>类别</span></a></li><li><a href=http://example.org/tags/ title=标签><span>标签</span></a></li><li><a href=http://example.org/search/ title="搜索 (Alt + /)" accesskey=/><span>搜索</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=http://example.org/>Home</a></div><h1 class=post-title></h1><div class=post-meta></div></header><div class=post-content><h1 id=protocols>Protocols<a hidden class=anchor aria-hidden=true href=#protocols>#</a></h1><p>A <em>protocol</em> defines a blueprint of methods, properties.</p><p>Can be Adopted and implemented by:</p><ul><li>class</li><li>structure</li><li>enumeration</li></ul><h2 id=syntax>Syntax<a hidden class=anchor aria-hidden=true href=#syntax>#</a></h2><p>Definition</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>protocol</span> <span style=color:#a6e22e>SomeProtocol</span> {
+</span></span><span style=display:flex><span>		<span style=color:#66d9ef>func</span> <span style=color:#a6e22e>doSomething</span>()
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>Being Conformed</p><ul><li><p>By Struct</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>struct</span> <span style=color:#a6e22e>SomeStruct</span>: FirstProtocol, AnotherProtocol {
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div></li><li><p>By Class</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>SomeClass</span>: SomeSuperClass, FirstProtocol, AnotherProtocol {
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div></li></ul><h2 id=conforming-protocol>Conforming Protocol<a hidden class=anchor aria-hidden=true href=#conforming-protocol>#</a></h2><p>The <code>Dog</code> and <code>People</code> both conform the <code>DoSport</code> protocol, so they have responsibility to implement all things from the protocol.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>protocol</span> <span style=color:#a6e22e>DoSport</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> strength: Int { <span style=color:#66d9ef>get</span> <span style=color:#66d9ef>set</span>}
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>var</span> instanceCount: Int { <span style=color:#66d9ef>get</span>}
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>walk</span>(distance: Int)
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Dog</span>: DoSport {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>var</span> instanceCount: Int = <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>walk</span>(distance: Int) {
+</span></span><span style=display:flex><span>        print(<span style=color:#e6db74>&#34;Walk </span><span style=color:#e6db74>\(</span>distance<span style=color:#e6db74>)</span><span style=color:#e6db74> with four leg&#34;</span>)
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> strength: Int
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>init</span>(strength: Int) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>self</span>.strength = strength
+</span></span><span style=display:flex><span>        Dog.instanceCount <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>People</span>: DoSport {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>var</span> instanceCount = <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>walk</span>(distance: Int) {
+</span></span><span style=display:flex><span>        print(<span style=color:#e6db74>&#34;Walk </span><span style=color:#e6db74>\(</span>distance<span style=color:#e6db74>)</span><span style=color:#e6db74> with two leg&#34;</span>)
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> strength: Int
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>init</span>(strength: Int) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>self</span>.strength = strength
+</span></span><span style=display:flex><span>        People.instanceCount <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>var</span> d = Dog(strength: <span style=color:#ae81ff>200</span>)
+</span></span><span style=display:flex><span>d.walk(distance: <span style=color:#ae81ff>4000</span>)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>var</span> p = People(strength: <span style=color:#ae81ff>1000</span>)
+</span></span><span style=display:flex><span>p.walk(distance: <span style=color:#ae81ff>1000</span>)
+</span></span></code></pre></div><h3 id=mutating-method-requirements>Mutating Method Requirements<a hidden class=anchor aria-hidden=true href=#mutating-method-requirements>#</a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>protocol</span> <span style=color:#a6e22e>Togglable</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>mutating</span> <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>toggle</span>()
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>The <code>mutating</code> keyword only used by structures and enumerations.</p><h3 id=initializer-requirements>Initializer Requirements<a hidden class=anchor aria-hidden=true href=#initializer-requirements>#</a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>protocol</span> <span style=color:#a6e22e>SomeProtocol</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>init</span>(someParameter: Int)
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>Class Implementation</p><p>The <code>required</code> modifier ensures that all the subclass of the <code>someClass</code> must conform to the protocol and implement the method.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>SomeClass</span>: SomeProtocol {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>required</span> <span style=color:#66d9ef>init</span>(someParameter: Int) {
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>Subclass Override Initializer and Conform to the Protocol</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>protocol</span> <span style=color:#a6e22e>Cuttable</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>init</span>(someParameter: Int)
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Shape</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>init</span>(someParameter: Int) {
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Square</span>: Shape, Cuttable {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>required</span> <span style=color:#66d9ef>override</span> <span style=color:#66d9ef>init</span>(someParameter: Int) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>super</span>.<span style=color:#66d9ef>init</span>(someParameter: someParameter)
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h3 id=failable-initializer-requirements>Failable Initializer Requirements<a hidden class=anchor aria-hidden=true href=#failable-initializer-requirements>#</a></h3><p>A failable initializer requirement can be satisfied by a failable or nonfailable initializer on a conforming type. A nonfailable initializer requirement can be satisfied by a nonfailable initializer or an implicitly unwrapped failable initializer.</p><h2 id=protocol-as-types>Protocol as Types<a hidden class=anchor aria-hidden=true href=#protocol-as-types>#</a></h2><p>Using a protocol as type is sometimes called an existential type. So call “A type <em>T</em> conform to the protocol”.</p><p>Use a protocol as a type:</p><ul><li>As a parameter type or return type in a function, method, or initializer</li><li>As the type of a constant, variable, or property</li><li>As the type of items in an array, dictionary, or other container</li></ul><p>Example:</p><p>Use the <code>RandomNumberGenerator</code> protocol as a type, the parameter that the initializer get should conform to the <code>RandomNumberGenerator</code> .</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>protocol</span>  <span style=color:#a6e22e>RandomNumberGenerator</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>random</span>() -&gt; Double
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Dice</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> sides: Int
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> generator: RandomNumberGenerator
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>init</span>(sides: Int, generator: RandomNumberGenerator) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>self</span>.sides = sides
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>self</span>.generator = generator
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>roll</span>() -&gt; Int {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> Int(generator.random() <span style=color:#f92672>*</span> Double(sides)) <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>CustomGenerator</span>: RandomNumberGenerator {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>random</span>() -&gt; Double {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#ae81ff>3.0</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// When the CustomGenerator() instance pass to the initialzer, it&#39;s been upcasting.</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>var</span> dice = Dice(sides: <span style=color:#ae81ff>2</span>, generator: CustomGenerator()) <span style=color:#75715e>// Give it a generator. It&#39;s a way to make generics.</span>
+</span></span><span style=display:flex><span>print(dice.roll()) <span style=color:#75715e>// 7</span>
+</span></span></code></pre></div><h2 id=delegation>Delegation<a hidden class=anchor aria-hidden=true href=#delegation>#</a></h2><p>A class has a delegation in itself and the delegation take the place of class to do other things. <strong>The delegation’s input is the class whom want to be delegated.</strong></p><h3 id=example-a-snake-and-ladder-game>Example: A snake and ladder game.<a hidden class=anchor aria-hidden=true href=#example-a-snake-and-ladder-game>#</a></h3><p>The <code>DiceGame</code> is a protocol that require a <code>Dice</code> and a <code>play()</code> method. It’s the fundamental function of a <code>DiceGame</code> .</p><p>The <code>DiceGameDelegate</code> is a protocol that required some method to do the detail of the game, it defines how the game be played. <strong>It rely on the</strong> <code>DiceGame</code> . So here is the <em>Delegation.</em></p><p>The <code>SnakeAndLadders</code> implements the <code>DiceGame</code> , and implements what to do in the <code>play()</code> method. It has a <code>DiceGameDelegate</code> to do delegate itself to do the detail things.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Generator</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>getNum</span>() -&gt; Int { Int.random(<span style=color:#66d9ef>in</span>: <span style=color:#ae81ff>1.</span>..<span style=color:#ae81ff>6</span>)}
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Dice</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> sides: Int
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> generator: Generator
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>init</span>(sides: Int, generator: Generator) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>self</span>.sides = sides
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>self</span>.generator = generator
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>roll</span>() -&gt; Int {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> generator.getNum()
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#66d9ef>protocol</span> <span style=color:#a6e22e>DiceGame</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> dice: Dice{<span style=color:#66d9ef>get</span>}
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>play</span>()
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>protocol</span> <span style=color:#a6e22e>DiceGameDelegate</span>: AnyObject {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>gameDidStart</span>(<span style=color:#66d9ef>_</span> game: DiceGame)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>game</span>(<span style=color:#66d9ef>_</span> game: DiceGame, didStartNewTurnWithDiceRoll diceRoll: Int)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>gameDidEnd</span>(<span style=color:#66d9ef>_</span> game: DiceGame)
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>SnakeAndLadders</span>: DiceGame {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> finalSquare = <span style=color:#ae81ff>25</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> dice = Dice(sides: <span style=color:#ae81ff>6</span>, generator: Generator())
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> square = <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> board: [Int]
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>init</span>() {
+</span></span><span style=display:flex><span>        board = Array(repeating: <span style=color:#ae81ff>0</span>, count: finalSquare <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>)
+</span></span><span style=display:flex><span>				<span style=color:#75715e>// Some point in the board have extra square buffer.</span>
+</span></span><span style=display:flex><span>        board[<span style=color:#ae81ff>03</span>] = <span style=color:#f92672>+</span><span style=color:#ae81ff>08</span>; board[<span style=color:#ae81ff>06</span>] = <span style=color:#f92672>+</span><span style=color:#ae81ff>11</span>; board[<span style=color:#ae81ff>09</span>] = <span style=color:#f92672>+</span><span style=color:#ae81ff>09</span>; board[<span style=color:#ae81ff>10</span>] = <span style=color:#f92672>+</span><span style=color:#ae81ff>02</span>
+</span></span><span style=display:flex><span>        board[<span style=color:#ae81ff>14</span>] = <span style=color:#f92672>-</span><span style=color:#ae81ff>10</span>; board[<span style=color:#ae81ff>19</span>] = <span style=color:#f92672>-</span><span style=color:#ae81ff>11</span>; board[<span style=color:#ae81ff>22</span>] = <span style=color:#f92672>-</span><span style=color:#ae81ff>02</span>; board[<span style=color:#ae81ff>24</span>] = <span style=color:#f92672>-</span><span style=color:#ae81ff>08</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>weak</span> <span style=color:#66d9ef>var</span> delegate: DiceGameDelegate?
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>play</span>() {
+</span></span><span style=display:flex><span>        square = <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>        delegate?.gameDidStart(<span style=color:#66d9ef>self</span>)
+</span></span><span style=display:flex><span>				
+</span></span><span style=display:flex><span>        gameLoop: <span style=color:#66d9ef>while</span> square <span style=color:#f92672>!=</span> finalSquare {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>let</span> diceRoll = dice.roll()
+</span></span><span style=display:flex><span>            delegate?.game(<span style=color:#66d9ef>self</span>, didStartNewTurnWithDiceRoll: diceRoll)
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>switch</span> square <span style=color:#f92672>+</span> diceRoll {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>case</span> finalSquare:
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>break</span> gameLoop    <span style=color:#75715e>// If the score(square + diceRoll) equal to max, the game end</span>
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>case</span> <span style=color:#66d9ef>let</span> newSquare <span style=color:#66d9ef>where</span> newSquare <span style=color:#f92672>&gt;</span> finalSquare:
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>continue</span> gameLoop <span style=color:#75715e>// If the score(square + diceRoll) is greater than max, try again to get a diceRoll.</span>
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>default</span>: 
+</span></span><span style=display:flex><span>                square <span style=color:#f92672>+=</span> diceRoll <span style=color:#75715e>// If the score(square + diceRoll) is smaller than max, the game loop go on.</span>
+</span></span><span style=display:flex><span>                square <span style=color:#f92672>+=</span> board[square]
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>        delegate?.gameDidEnd(<span style=color:#66d9ef>self</span>)
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>DiceGameTracker</span>: DiceGameDelegate {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> numberOfTurn = <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>gameDidStart</span>(<span style=color:#66d9ef>_</span> game: DiceGame) {
+</span></span><span style=display:flex><span>        numberOfTurn = <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> game <span style=color:#66d9ef>is</span> SnakeAndLadders {
+</span></span><span style=display:flex><span>            print(<span style=color:#e6db74>&#34;Start a new game of Snakes and Ladders&#34;</span>)
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>        print(<span style=color:#e6db74>&#34;Game use a </span><span style=color:#e6db74>\(</span>game.dice.sides<span style=color:#e6db74>)</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>game</span>(<span style=color:#66d9ef>_</span> game: DiceGame, didStartNewTurnWithDiceRoll diceRoll: Int) {
+</span></span><span style=display:flex><span>        numberOfTurn <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>        print(<span style=color:#e6db74>&#34;Rolled a </span><span style=color:#e6db74>\(</span>diceRoll<span style=color:#e6db74>)</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>gameDidEnd</span>(<span style=color:#66d9ef>_</span> game: DiceGame) {
+</span></span><span style=display:flex><span>        print(<span style=color:#e6db74>&#34;The game lasted for </span><span style=color:#e6db74>\(</span>numberOfTurn<span style=color:#e6db74>)</span><span style=color:#e6db74> turns&#34;</span>)
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// The use of game and the delegation.</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> tracker = DiceGameTracker()  <span style=color:#75715e>// It&#39;s a implementation of the DiceGameDelegate.</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> game = SnakeAndLadders()     <span style=color:#75715e>// It&#39;s a implementation of the DiceGame.</span>
+</span></span><span style=display:flex><span>game.delegate = tracker
+</span></span><span style=display:flex><span>game.play()
+</span></span></code></pre></div><h2 id=adding-protocol-conformance-with-an-extension>Adding Protocol Conformance with an Extension<a hidden class=anchor aria-hidden=true href=#adding-protocol-conformance-with-an-extension>#</a></h2><p>We can extend an existing type to adopt and conform to a new protocol, even if we don’t have access to the source code for the existing type.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>protocol</span> <span style=color:#a6e22e>TextOut</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> textDesc: String { <span style=color:#66d9ef>get</span> }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>extension</span> <span style=color:#a6e22e>Dice</span>: TextOut {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> textDesc: String {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#34;It&#39;s a dice with </span><span style=color:#e6db74>\(</span><span style=color:#66d9ef>self</span>.sides<span style=color:#e6db74>)</span><span style=color:#e6db74> sides&#34;</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>print(game.dice.textDesc)  <span style=color:#75715e>// Print: It&#39;s a dice with 6 sides</span>
+</span></span></code></pre></div><h3 id=conditionally-conforming-to-a-protocol>Conditionally Conforming to a Protocol<a hidden class=anchor aria-hidden=true href=#conditionally-conforming-to-a-protocol>#</a></h3><p>Condition: Where the element conform the TextOut</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>extension</span> <span style=color:#a6e22e>Array</span>: TextOut <span style=color:#66d9ef>where</span> Element: TextOut {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> textDesc: String {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>let</span> itemAsText = <span style=color:#66d9ef>self</span>.map{$0.textDesc}  <span style=color:#75715e>// It&#39;s a map</span>
+</span></span><span style=display:flex><span>				<span style=color:#75715e>// Join the map to be a string</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#34;[&#34;</span> <span style=color:#f92672>+</span> itemAsText.joined(separator: <span style=color:#e6db74>&#34;,&#34;</span>) <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;]&#34;</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> d6 = Dice(sides: <span style=color:#ae81ff>12</span>, generator: Generator())
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> d12 = Dice(sides: <span style=color:#ae81ff>12</span>, generator: Generator())
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> myDice = [d6, d12]
+</span></span><span style=display:flex><span>print(myDice.textDesc) <span style=color:#75715e>// [It&#39;s a dice with 12 sides,It&#39;s a dice with 12 sides]</span>
+</span></span></code></pre></div><h3 id=declaring-protocol-adoption-with-an-extension>Declaring Protocol Adoption with an Extension<a hidden class=anchor aria-hidden=true href=#declaring-protocol-adoption-with-an-extension>#</a></h3><p>Use the instance as a protocol. So it’s the <strong>protocol oriented programming.</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>struct</span> <span style=color:#a6e22e>Hamster</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> name: String
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> textDesc: String {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#34;A Hamster </span><span style=color:#e6db74>\(</span>name<span style=color:#e6db74>)</span><span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>extension</span> <span style=color:#a6e22e>Hamster</span>: TextOut {}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> h = Hamster(name: <span style=color:#e6db74>&#34;HH&#34;</span>)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> p: TextOut = h
+</span></span><span style=display:flex><span>print(p.textDesc)
+</span></span></code></pre></div><h2 id=adopting-a-protocol-using-a-synthesized-implementation>Adopting a Protocol Using a Synthesized Implementation<a hidden class=anchor aria-hidden=true href=#adopting-a-protocol-using-a-synthesized-implementation>#</a></h2><p>Swift can <em><strong>automatically</strong></em> <strong>provide the protocol conformance</strong> for <code>Equatable</code> , <code>Hashable</code>, and <code>Comparable</code> in many simple cases.</p><p>Synthesized implementation of <code>Equatable</code></p><ul><li>Structures that have only stored properties that conform to the <code>Equatable</code>protocol</li><li>Enumerations that have only associated types that conform to the <code>Equatable</code>protocol</li><li>Enumerations that have no associated types</li></ul><p>Synthesized implementation of <code>Hashable</code> .</p><ul><li>Structures that have only stored properties that conform to the <code>Hashable</code>protocol</li><li>Enumerations that have only associated types that conform to the <code>Hashable</code>protocol</li><li>Enumerations that have no associated types</li></ul><p>Example:</p><ul><li><p>Once the structure or enumeration conform the <code>Equatable</code> , it can be compared by <code>==</code>, and the structure of enumeration needn’t to implement that the protocol required.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>struct</span> <span style=color:#a6e22e>Vector3D</span>: Equatable {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> x = <span style=color:#ae81ff>0.0</span>, y = <span style=color:#ae81ff>0.0</span>, z = <span style=color:#ae81ff>0.0</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> point = Vector3D(x: <span style=color:#ae81ff>2.0</span>, y: <span style=color:#ae81ff>3.0</span>, z: <span style=color:#ae81ff>4.0</span>)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> pointAnother = Vector3D(x: <span style=color:#ae81ff>2.0</span>, y: <span style=color:#ae81ff>3.0</span>, z: <span style=color:#ae81ff>4.0</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> point == pointAnother {
+</span></span><span style=display:flex><span>    print(<span style=color:#e6db74>&#34;Two vectors are equivalent&#34;</span>)
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Print: Two vectors are equivalent</span>
+</span></span></code></pre></div></li><li><p><code>Comparable</code></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>enum</span> <span style=color:#a6e22e>SkillLevel</span>: Comparable {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>case</span> beginner
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>case</span> intermediate
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>case</span> expert(stars: Int)
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>var</span> levels = [SkillLevel.intermediate, SkillLevel.beginner, SkillLevel.expert(stars: <span style=color:#ae81ff>5</span>), SkillLevel.expert(stars: <span style=color:#ae81ff>3</span>)]
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> level <span style=color:#66d9ef>in</span> levels.sorted() {
+</span></span><span style=display:flex><span>    print(level)
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Print:</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// beginner</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// intermediate</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// expert(stars: 3)</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// expert(stars: 5)</span>
+</span></span></code></pre></div></li></ul><h2 id=collection-of-protocol-types>Collection of Protocol Types<a hidden class=anchor aria-hidden=true href=#collection-of-protocol-types>#</a></h2><p>A protocol can be used as the type to be stored in a collection such as an array or a dictionary.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>let</span> things: [TextOut] = [d6, d12, h]
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> thing <span style=color:#66d9ef>in</span> things {
+</span></span><span style=display:flex><span>    print(thing.textDesc)
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Print:</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// It&#39;s a dice with 6 sides</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// It&#39;s a dice with 12 sides</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// A Hamster HH</span>
+</span></span></code></pre></div><h2 id=protocol-inheritance>Protocol Inheritance<a hidden class=anchor aria-hidden=true href=#protocol-inheritance>#</a></h2><p>A protocol can inherit one or more other protocols.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>protocol</span> <span style=color:#a6e22e>Storeable</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>store</span>() -&gt; String
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#66d9ef>protocol</span> <span style=color:#a6e22e>Readable</span> {
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>protocol</span> <span style=color:#a6e22e>Cleanable</span> {
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>protocol</span> <span style=color:#a6e22e>BookShelf</span>: Storeable, Readable, Cleanable {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Here the BookShelf will have the requirement from the protocols.</span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h2 id=class-only-protocols>Class-Only Protocols<a hidden class=anchor aria-hidden=true href=#class-only-protocols>#</a></h2><p>We can limit protocol adoption to <em>class types</em> by adding the <code>AnyObject</code> protocol to a protocol’s inheritance list. It defines that the conforming type has a reference semantics rather than value semantics.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>protocol</span> <span style=color:#a6e22e>SomeClassOnlyProtocol</span>: AnyObject, SomeInheritedProtocol {
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h2 id=protocol-composition>Protocol Composition<a hidden class=anchor aria-hidden=true href=#protocol-composition>#</a></h2><p>A type can conform to multiple protocols at the same time. It has the form <code>SomeProtocol & AnotherProtocol</code> .</p><p>Protocol composition don’t define any new protocol types.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>protocol</span> <span style=color:#a6e22e>Named</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> name: String { <span style=color:#66d9ef>get</span> }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>protocol</span> <span style=color:#a6e22e>Aged</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> age: Int { <span style=color:#66d9ef>get</span>}
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>struct</span> <span style=color:#a6e22e>Person</span>: Named, Aged {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> name: String
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> age: Int
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// The type passed to the function must conform to both Named and Aged.</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>goToSchool</span>(menber: Named <span style=color:#f92672>&amp;</span> Aged) {
+</span></span><span style=display:flex><span>    print(<span style=color:#e6db74>&#34;Go to school: </span><span style=color:#e6db74>\(</span>menber.name<span style=color:#e6db74>)</span><span style=color:#e6db74> is </span><span style=color:#e6db74>\(</span>menber.age<span style=color:#e6db74>)</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> person = Person(name: <span style=color:#e6db74>&#34;Mike&#34;</span>, age: <span style=color:#ae81ff>8</span>)
+</span></span><span style=display:flex><span>goToSchool(menber: person)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Print: Go to school: Mike is 8</span>
+</span></span></code></pre></div><h3 id=combines-the-protocol-and-class>Combines the Protocol and Class<a hidden class=anchor aria-hidden=true href=#combines-the-protocol-and-class>#</a></h3><p>Combines the <code>Named</code> protocol and <code>Location</code> class.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>protocol</span> <span style=color:#a6e22e>Named</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> name: String { <span style=color:#66d9ef>get</span> }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>printInfo</span>(location: Location <span style=color:#f92672>&amp;</span> Named) {
+</span></span><span style=display:flex><span>    print(<span style=color:#e6db74>&#34;The place </span><span style=color:#e6db74>\(</span>location.name<span style=color:#e6db74>)</span><span style=color:#e6db74>  [</span><span style=color:#e6db74>\(</span>location.latitude<span style=color:#e6db74>)</span><span style=color:#e6db74>, </span><span style=color:#e6db74>\(</span>location.longitude<span style=color:#e6db74>)</span><span style=color:#e6db74>] &#34;</span>)
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> place = City(name: <span style=color:#e6db74>&#34;Teochew&#34;</span>, latitude: <span style=color:#ae81ff>23.67</span>, longitude: <span style=color:#ae81ff>116.62</span>)
+</span></span><span style=display:flex><span>printInfo(location: place)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Print: The place Teochew  [23.67, 116.62]</span>
+</span></span></code></pre></div><h2 id=checking-for-protocol-conformance>Checking for Protocol Conformance<a hidden class=anchor aria-hidden=true href=#checking-for-protocol-conformance>#</a></h2><p>It can do the checking and casting as operation that in type checking and casting.</p><ul><li><p><code>is</code> : check a protocol</p></li><li><p><code>as</code> : cast a protocol to a specific protocol.</p><p>The <code>as?</code> is downcast operator, it return an optional value. The <code>as!</code> is force downcast, it can trigger runtime error.</p></li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#75715e>// Protocol is used to describe some status.</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>protocol</span> <span style=color:#a6e22e>HasArea</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> area: Double { <span style=color:#66d9ef>get</span> }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Circle</span>: HasArea {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> pi = <span style=color:#ae81ff>3.1415927</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> radius: Double
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> area: Double { <span style=color:#66d9ef>return</span> pi <span style=color:#f92672>*</span> radius <span style=color:#f92672>*</span> radius}
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>init</span>(radius: Double) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>self</span>.radius = radius
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Square</span>: HasArea {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> area: Double
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>init</span>(area: Double) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>self</span>.area = area
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Animal</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> legs: Int
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>init</span>(legs: Int) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>self</span>.legs = legs
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> objs: [Any] = [Circle(radius: <span style=color:#ae81ff>5</span>), Square(area: <span style=color:#ae81ff>20</span>), Animal(legs: <span style=color:#ae81ff>4</span>)]
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> obj <span style=color:#66d9ef>in</span> objs {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> obj <span style=color:#66d9ef>is</span> HasArea {
+</span></span><span style=display:flex><span>        print(obj, <span style=color:#e6db74>&#34; is HasArea&#34;</span>)
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>        print(obj, <span style=color:#e6db74>&#34; is not HasArea&#34;</span>)
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> obj <span style=color:#66d9ef>in</span> objs {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> <span style=color:#66d9ef>let</span> object = obj <span style=color:#66d9ef>as</span>? HasArea {
+</span></span><span style=display:flex><span>				<span style=color:#75715e>// Here the object is know to be of type HasArea, so it has the only property &#39;area&#39; to access.</span>
+</span></span><span style=display:flex><span>        print(object, <span style=color:#e6db74>&#34; can be cast to a HasArea. Area is </span><span style=color:#e6db74>\(</span>object.area<span style=color:#e6db74>)</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>        print(obj.<span style=color:#66d9ef>self</span>, <span style=color:#e6db74>&#34; can&#39;t be cast to a HasArea&#34;</span>)
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Print:</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Page_Contents.Circle  is HasArea</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Page_Contents.Square  is HasArea</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Page_Contents.Animal  is not HasArea</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Page_Contents.Circle  can be cast to a HasArea Area is 78.5398175</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Page_Contents.Square  can be cast to a HasArea Area is 20.0</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Page_Contents.Animal  can&#39;t be cast to a HasArea</span>
+</span></span></code></pre></div><h2 id=optional-protocol-requirements>Optional Protocol Requirements<a hidden class=anchor aria-hidden=true href=#optional-protocol-requirements>#</a></h2><p>Use the <code>@objc</code> to mark the protocol and the requirements. So these requirements don’t have to be implemented by types that conform to the protocol.</p><p><code>@objc</code> :</p><ul><li>Can be adopted only by classes that inherit from Objective-C class or other <code>@objc</code> classes (Maybe in the new swift version, the class don’t have to inherit the OC class).</li><li>Can’t be adopted by structures or enumerations.</li><li>The type used in the optional requirement will automatically be an optional. Such as <code>(Int) -> String</code> becomes <code>((Int) -> String)?</code> . Here the entire function type is wrapped in the optional, not the method’s return value.</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>@objc</span> <span style=color:#66d9ef>protocol</span> <span style=color:#a6e22e>Source</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>@objc</span> <span style=color:#66d9ef>optional</span> <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>increment</span>(count: Int) -&gt; Int
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>@objc</span> <span style=color:#66d9ef>optional</span> <span style=color:#66d9ef>var</span> anotherIncrement: Int { <span style=color:#66d9ef>get</span> }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Counter</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> count = <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> source: Source?
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>increment</span>() {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> <span style=color:#66d9ef>let</span> amount = source?.increment?(count: count) {
+</span></span><span style=display:flex><span>            count <span style=color:#f92672>+=</span> amount
+</span></span><span style=display:flex><span>        } <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> <span style=color:#66d9ef>let</span> amount = source?.anotherIncrement {
+</span></span><span style=display:flex><span>            count <span style=color:#f92672>+=</span> amount
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>ThreeSource</span>: Source {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> anotherIncrement = <span style=color:#ae81ff>3</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>TowardZeroSource</span>: Source {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>increment</span>(count: Int) -&gt; Int {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> count == <span style=color:#ae81ff>0</span> {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>        } <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> count <span style=color:#f92672>&lt;</span> <span style=color:#ae81ff>0</span> {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>        } <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> <span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> counter = Counter()
+</span></span><span style=display:flex><span>counter.source = ThreeSource()
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> i <span style=color:#66d9ef>in</span> <span style=color:#ae81ff>1.</span>..<span style=color:#ae81ff>3</span> {
+</span></span><span style=display:flex><span>    counter.increment()
+</span></span><span style=display:flex><span>    print(counter.count)
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>print()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>counter.source = TowardZeroSource()
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> <span style=color:#66d9ef>_</span> <span style=color:#66d9ef>in</span> <span style=color:#ae81ff>1.</span>..<span style=color:#ae81ff>10</span> {
+</span></span><span style=display:flex><span>    counter.increment()
+</span></span><span style=display:flex><span>    print(counter.count)
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>print()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>counter.count = <span style=color:#f92672>-</span><span style=color:#ae81ff>5</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> <span style=color:#66d9ef>_</span> <span style=color:#66d9ef>in</span> <span style=color:#ae81ff>1.</span>..<span style=color:#ae81ff>8</span> {
+</span></span><span style=display:flex><span>    counter.increment()
+</span></span><span style=display:flex><span>    print(counter.count)
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Print: </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 3</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 6</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 9</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>//</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 8</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 7</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 6</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 5</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 4</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 3</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 2</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 1</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 0</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 0</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>//</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// -4</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// -3</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// -2</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// -1</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 0</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 0</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 0</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 0</span>
+</span></span></code></pre></div><p>The instance of the <code>Counter</code> use different source of the count, so that it has the different effects.</p><h2 id=protocol-extensions>Protocol Extensions<a hidden class=anchor aria-hidden=true href=#protocol-extensions>#</a></h2><p>Protocol can be extended to provide method, initializer, subscript, and computed property implementations to conforming types. But can’t make a protocol inherit from another, the inheritance always specified in the protocol declaration itself.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>extension</span> <span style=color:#a6e22e>RandomNumberGenerator</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>randomBool</span>() -&gt; Bool {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span>  Double.random(<span style=color:#66d9ef>in</span>: <span style=color:#ae81ff>0.</span>..<span style=color:#ae81ff>1</span>) <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>0.5</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> generator = SystemRandomNumberGenerator()
+</span></span><span style=display:flex><span>print(generator.randomBool())
+</span></span></code></pre></div><p>The code above show that the class <code>SystemRandomNumberGeneraror</code> conform the <code>RandomNumberGenerator</code> protocol and we extend the <code>RandomNumberGenerator</code> protocol with a <code>randomBool()</code> method, so the <code>SystemRandomNumberGeneraror</code> can use the new method easily.</p><h3 id=providing-default-implementations>Providing Default Implementations<a hidden class=anchor aria-hidden=true href=#providing-default-implementations>#</a></h3><p>We can provide <strong>method</strong> or <strong>computed property</strong> requirement in the protocol’s extension.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>protocol</span> <span style=color:#a6e22e>HasLeg</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> leg: Int { <span style=color:#66d9ef>get</span>}
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> desc: String { <span style=color:#66d9ef>get</span> }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>extension</span> <span style=color:#a6e22e>HasLeg</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> desc: String {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#34;I have </span><span style=color:#e6db74>\(</span>leg<span style=color:#e6db74>)</span><span style=color:#e6db74> legs&#34;</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Dog</span>: HasLeg {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> leg: Int
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//var desc: String</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>init</span>() {
+</span></span><span style=display:flex><span>        leg = <span style=color:#ae81ff>4</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> dog = Dog()
+</span></span><span style=display:flex><span>print(dog.desc) <span style=color:#75715e>// I have 4 legs</span>
+</span></span></code></pre></div><h3 id=adding-constraints-to-protocol-extensions>Adding Constraints to Protocol Extensions<a hidden class=anchor aria-hidden=true href=#adding-constraints-to-protocol-extensions>#</a></h3><p>Here we constrain the extension of the protocol only add extension when the condition <code>Element: Equatable</code> satisfied.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>extension</span> <span style=color:#a6e22e>Collection</span> <span style=color:#66d9ef>where</span> Element: Equatable {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>allEqual</span>() -&gt; Bool {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>for</span> element <span style=color:#66d9ef>in</span> <span style=color:#66d9ef>self</span> {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>if</span> element <span style=color:#f92672>!=</span> <span style=color:#66d9ef>self</span>.first {
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>false</span>
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>true</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> a = [<span style=color:#ae81ff>100</span>, <span style=color:#ae81ff>100</span>, <span style=color:#ae81ff>100</span>, <span style=color:#ae81ff>100</span>]
+</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> b = [<span style=color:#ae81ff>100</span>, <span style=color:#ae81ff>100</span>, <span style=color:#ae81ff>200</span>, <span style=color:#ae81ff>100</span>]
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>print(a.allEqual())
+</span></span><span style=display:flex><span>print(b.allEqual())
+</span></span></code></pre></div></div><footer class=post-footer><ul class=post-tags></ul><div class=share-buttons><a target=_blank rel="noopener noreferrer" aria-label="share  on twitter" href="https://twitter.com/intent/tweet/?text=&url=http%3a%2f%2fexample.org%2fpost%2flanguage%2fswift%2f21protocols%2f&hashtags="><svg viewBox="0 0 512 512" height="30" width="30" fill="currentcolor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM195.519 424.544c135.939.0 210.268-112.643 210.268-210.268.0-3.218.0-6.437-.153-9.502 14.406-10.421 26.973-23.448 36.935-38.314-13.18 5.824-27.433 9.809-42.452 11.648 15.326-9.196 26.973-23.602 32.49-40.92-14.252 8.429-30.038 14.56-46.896 17.931-13.487-14.406-32.644-23.295-53.946-23.295-40.767.0-73.87 33.104-73.87 73.87.0 5.824.613 11.494 1.992 16.858-61.456-3.065-115.862-32.49-152.337-77.241-6.284 10.881-9.962 23.601-9.962 37.088.0 25.594 13.027 48.276 32.95 61.456-12.107-.307-23.448-3.678-33.41-9.196v.92c0 35.862 25.441 65.594 59.311 72.49-6.13 1.686-12.72 2.606-19.464 2.606-4.751.0-9.348-.46-13.946-1.38 9.349 29.426 36.628 50.728 68.965 51.341-25.287 19.771-57.164 31.571-91.8 31.571-5.977.0-11.801-.306-17.625-1.073 32.337 21.15 71.264 33.41 112.95 33.41z"/></svg></a><a target=_blank rel="noopener noreferrer" aria-label="share  on reddit" href="https://reddit.com/submit?url=http%3a%2f%2fexample.org%2fpost%2flanguage%2fswift%2f21protocols%2f&title="><svg viewBox="0 0 512 512" height="30" width="30" fill="currentcolor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM446 265.638c0-22.964-18.616-41.58-41.58-41.58-11.211.0-21.361 4.457-28.841 11.666-28.424-20.508-67.586-33.757-111.204-35.278l18.941-89.121 61.884 13.157c.756 15.734 13.642 28.29 29.56 28.29 16.407.0 29.706-13.299 29.706-29.701.0-16.403-13.299-29.702-29.706-29.702-11.666.0-21.657 6.792-26.515 16.578l-69.105-14.69c-1.922-.418-3.939-.042-5.585 1.036-1.658 1.073-2.811 2.761-3.224 4.686l-21.152 99.438c-44.258 1.228-84.046 14.494-112.837 35.232-7.468-7.164-17.589-11.591-28.757-11.591-22.965.0-41.585 18.616-41.585 41.58.0 16.896 10.095 31.41 24.568 37.918-.639 4.135-.99 8.328-.99 12.576.0 63.977 74.469 115.836 166.33 115.836s166.334-51.859 166.334-115.836c0-4.218-.347-8.387-.977-12.493 14.564-6.47 24.735-21.034 24.735-38.001zM326.526 373.831c-20.27 20.241-59.115 21.816-70.534 21.816-11.428.0-50.277-1.575-70.522-21.82-3.007-3.008-3.007-7.882.0-10.889 3.003-2.999 7.882-3.003 10.885.0 12.777 12.781 40.11 17.317 59.637 17.317 19.522.0 46.86-4.536 59.657-17.321 3.016-2.999 7.886-2.995 10.885.008 3.008 3.011 3.003 7.882-.008 10.889zm-5.23-48.781c-16.373.0-29.701-13.324-29.701-29.698.0-16.381 13.328-29.714 29.701-29.714 16.378.0 29.706 13.333 29.706 29.714.0 16.374-13.328 29.698-29.706 29.698zM160.91 295.348c0-16.381 13.328-29.71 29.714-29.71 16.369.0 29.689 13.329 29.689 29.71.0 16.373-13.32 29.693-29.689 29.693-16.386.0-29.714-13.32-29.714-29.693z"/></svg></a><a target=_blank rel="noopener noreferrer" aria-label="share  on telegram" href="https://telegram.me/share/url?text=&url=http%3a%2f%2fexample.org%2fpost%2flanguage%2fswift%2f21protocols%2f"><svg viewBox="2 2 28 28" height="30" width="30" fill="currentcolor"><path d="M26.49 29.86H5.5a3.37 3.37.0 01-2.47-1 3.35 3.35.0 01-1-2.47V5.48A3.36 3.36.0 013 3 3.37 3.37.0 015.5 2h21A3.38 3.38.0 0129 3a3.36 3.36.0 011 2.46V26.37a3.35 3.35.0 01-1 2.47 3.38 3.38.0 01-2.51 1.02zm-5.38-6.71a.79.79.0 00.85-.66L24.73 9.24a.55.55.0 00-.18-.46.62.62.0 00-.41-.17q-.08.0-16.53 6.11a.59.59.0 00-.41.59.57.57.0 00.43.52l4 1.24 1.61 4.83a.62.62.0 00.63.43.56.56.0 00.4-.17L16.54 20l4.09 3A.9.9.0 0021.11 23.15zM13.8 20.71l-1.21-4q8.72-5.55 8.78-5.55c.15.0.23.0.23.16a.18.18.0 010 .06s-2.51 2.3-7.52 6.8z"/></svg></a></div></footer></article></main><footer class=footer><span>&copy; 2022 <a href=http://example.org/>CodePaper</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(t){t.preventDefault();var e=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(e)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(e)}']`).scrollIntoView({behavior:"smooth"}),e==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${e}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(t=>{const n=t.parentNode.parentNode,e=document.createElement("button");e.classList.add("copy-code"),e.innerHTML="copy";function s(){e.innerHTML="copied!",setTimeout(()=>{e.innerHTML="copy"},2e3)}e.addEventListener("click",o=>{if("clipboard"in navigator){navigator.clipboard.writeText(t.textContent),s();return}const e=document.createRange();e.selectNodeContents(t);const n=window.getSelection();n.removeAllRanges(),n.addRange(e);try{document.execCommand("copy"),s()}catch(e){}n.removeRange(e)}),n.classList.contains("highlight")?n.appendChild(e):n.parentNode.firstChild==n||(t.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?t.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(e):t.parentNode.appendChild(e))})</script></body></html>
