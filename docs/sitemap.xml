@@ -2,10 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://1-1.link/tags/java/</loc>
+    <loc>https://1-1.link/categories/</loc>
     <lastmod>2022-07-12T21:45:46+08:00</lastmod>
   </url><url>
-    <loc>https://1-1.link/post/language/java/</loc>
+    <loc>https://1-1.link/categories/java/</loc>
+    <lastmod>2022-07-12T21:45:46+08:00</lastmod>
+  </url><url>
+    <loc>https://1-1.link/post/language/java/java/</loc>
     <lastmod>2022-07-12T21:45:46+08:00</lastmod>
   </url><url>
     <loc>https://1-1.link/post/</loc>
@@ -20,11 +23,8 @@
     <loc>https://1-1.link/about/</loc>
     <lastmod>2022-07-12T14:46:26+08:00</lastmod>
   </url><url>
-    <loc>https://1-1.link/post/info/resume/resume/</loc>
-    <lastmod>2022-07-12T14:46:06+08:00</lastmod>
-  </url><url>
-    <loc>https://1-1.link/categories/</loc>
-    <lastmod>2022-07-11T18:27:35+08:00</lastmod>
+    <loc>https://1-1.link/tags/%E7%AE%80%E5%8E%86/</loc>
+    <lastmod>2022-07-12T14:46:26+08:00</lastmod>
   </url><url>
     <loc>https://1-1.link/post/design-pattern/all-design-pattern/</loc>
     <lastmod>2022-07-11T18:27:35+08:00</lastmod>
