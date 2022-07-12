@@ -8,6 +8,35 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 09 Jul 2022 17:19:01 +0800</lastBuildDate><atom:link href="https://1-1.link/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>关于我</title>
+      <link>https://1-1.link/about/</link>
+      <pubDate>Tue, 12 Jul 2022 14:46:26 +0800</pubDate>
+      
+      <guid>https://1-1.link/about/</guid>
+      <description>简历 教育经历 2017&amp;ndash;2021 中国计量大学（本科）自动化专业 2021&amp;ndash;今 中国计量大学（研究生）电子信息专业 技术栈 掌握常见的数据结构与算法 熟悉各个设计模式的思想 熟练掌握 Java 熟练掌握 Swift &amp;amp; UIKit 开发 项目经历 2021.05 跨平台文件传输 5 号电池 AAcell
+负责后端部分，使用 Java 语言，基于 SpringBoot 框架搭建了 web 服务，实现仅依赖于浏览器的文件传输便捷服务。
+多台不同系统的设备使用房间号和密码可以进入同一个房间。
+使用拦截器配合 JWT (Json Web Token) 对请求建立连接的用户进行验证。
+密码使用 sha-256 非对称加密，在具有密文的情况下也无法获取用户设置的源密码。
+使用 MySQL 存放房间信息和用户发送的消息。
+每一个房间的文件是直接以分类别的方式存放在固定文件夹。
+使用 WebSocket 让多个客户端向服务器订阅消息，使用房间号作为标识。
+2021.02 本科毕设项目，基于 Mask-RCNN 和双目视觉对快递包裹内物体的三维定位。 Mask-RCNN 图像分割将包裹内的物体的种类和物体边缘识别出来，再使用双目视觉测得物体的与相机的距离，从而得到每一个物体的三维坐标值，为后续机械臂抓取物体提供坐标信息。
+2021.07 安卓点餐 App CakeTouch 前台工作人员为客户记录每一个订单需要的商品，在确认订单之后，通过蓝牙打印机打印出商品的需求信息。
+获奖经历 2019.05 参加浙江省第四届大学生机器人比赛获得寻宝机器人组二等奖 2019.10 参加大学生挑战杯 兴趣爱好 了解新的的技术和数码产品 联系方式 G-Mail
+QQ 邮箱</description>
+    </item>
+    
+    <item>
+      <title>Resume</title>
+      <link>https://1-1.link/post/info/resume/resume/</link>
+      <pubDate>Tue, 12 Jul 2022 14:46:06 +0800</pubDate>
+      
+      <guid>https://1-1.link/post/info/resume/resume/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>各种设计模式</title>
       <link>https://1-1.link/post/design-pattern/all-design-pattern/</link>
       <pubDate>Mon, 11 Jul 2022 18:27:35 +0800</pubDate>
