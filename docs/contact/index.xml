@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>contact on CodePaper</title>
-    <link>1-1.link/contact/</link>
+    <link>https://1-1.link/contact/</link>
     <description>Recent content in contact on CodePaper</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 Jul 2022 18:46:53 +0800</lastBuildDate><atom:link href="1-1.link/contact/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Jul 2022 18:46:53 +0800</lastBuildDate><atom:link href="https://1-1.link/contact/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mail</title>
-      <link>1-1.link/post/info/contact/mail/</link>
+      <link>https://1-1.link/post/info/contact/mail/</link>
       <pubDate>Sun, 10 Jul 2022 18:46:21 +0800</pubDate>
       
-      <guid>1-1.link/post/info/contact/mail/</guid>
+      <guid>https://1-1.link/post/info/contact/mail/</guid>
       <description>now</description>
     </item>
     

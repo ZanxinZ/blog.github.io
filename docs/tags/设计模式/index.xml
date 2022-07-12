@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>设计模式 on CodePaper</title>
-    <link>1-1.link/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
+    <link>https://1-1.link/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
     <description>Recent content in 设计模式 on CodePaper</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Jul 2022 18:27:35 +0800</lastBuildDate><atom:link href="1-1.link/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Jul 2022 18:27:35 +0800</lastBuildDate><atom:link href="https://1-1.link/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>各种设计模式</title>
-      <link>1-1.link/post/design-pattern/all-design-pattern/</link>
+      <link>https://1-1.link/post/design-pattern/all-design-pattern/</link>
       <pubDate>Mon, 11 Jul 2022 18:27:35 +0800</pubDate>
       
-      <guid>1-1.link/post/design-pattern/all-design-pattern/</guid>
+      <guid>https://1-1.link/post/design-pattern/all-design-pattern/</guid>
       <description>Creational Object Created Pattern
 Factory Method Provide the method for creating an instance in the superclass, and allow the subclass to choose the type of the instance.
 在父类中提供创建对象的方法，允许子类决定实例化对象的类型。
