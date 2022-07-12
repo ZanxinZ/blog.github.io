@@ -8,24 +8,6 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 09 Jul 2022 17:12:24 +0800</lastBuildDate><atom:link href="https://1-1.link/language/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>test</title>
-      <link>https://1-1.link/post/language/swift/test/</link>
-      <pubDate>Sun, 10 Jul 2022 15:33:40 +0800</pubDate>
-      
-      <guid>https://1-1.link/post/language/swift/test/</guid>
-      <description>ka</description>
-    </item>
-    
-    <item>
-      <title>Base</title>
-      <link>https://1-1.link/post/language/swift/base/</link>
-      <pubDate>Sun, 10 Jul 2022 15:03:40 +0800</pubDate>
-      
-      <guid>https://1-1.link/post/language/swift/base/</guid>
-      <description>Hi</description>
-    </item>
-    
-    <item>
       <title>Advanced Operators</title>
       <link>https://1-1.link/post/language/swift/28advanced-operators/</link>
       <pubDate>Sun, 19 Jun 2022 16:00:40 +0800</pubDate>
