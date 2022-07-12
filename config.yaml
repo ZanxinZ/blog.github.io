@@ -30,6 +30,11 @@ menu:
       name: 搜索
       url: /search/
       weight: 30
+    - identifier: about
+      name: 关于我
+      url: /about/
+      weight: 40
+      
 
 params:
   # 页面底部分享栏
