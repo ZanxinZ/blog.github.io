@@ -1,0 +1,32 @@
+name: Actions
+on: 
+  push: 
+    branches: 
+      - master      # 监测 master 分支的 push
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref}}
+    steps:
+      - uses: actions/checkout@v3
+        with: 
+          submodules: true
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with: 
+          hugo-version: 'latest'
+          extended: true
+      - name: Build
+        run: hugo --minify
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          personal_token: ${{ secrets.ACTION_ACCESS_TOKEN }}
+          publish_dir: ./docs  ## 选择 deploy 源头，把这个 docs 部署到 main 分支  
+          publish_branch: main 
+     
+      - run: echo "🍏 This job's status is ${{ job.status }}."
