@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on CodePaper</title>
+    <link>https://1-1.link/post/</link>
+    <description>Recent content in Posts on CodePaper</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 Mar 2023 16:59:18 +0800</lastBuildDate><atom:link href="https://1-1.link/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo 的一些问题</title>
+      <link>https://1-1.link/post/tool/usehugo/someproblem/</link>
+      <pubDate>Sat, 11 Mar 2023 16:59:18 +0800</pubDate>
+      
+      <guid>https://1-1.link/post/tool/usehugo/someproblem/</guid>
+      <description>若域名有变动 需要修改三个地方
+workflow 文件夹里 Github Acction 配置文件 Action.yml 中的 cname: config.yaml 中的 baseURL Github repository setting Pages </description>
+    </item>
+    
+    <item>
+      <title>Hugo 发布一篇文章的过程</title>
+      <link>https://1-1.link/post/tool/usehugo/publisharticle/</link>
+      <pubDate>Sat, 11 Mar 2023 16:00:07 +0800</pubDate>
+      
+      <guid>https://1-1.link/post/tool/usehugo/publisharticle/</guid>
+      <description>安装 windows：确保有 hugo.exe 在工程目录下, 并且 .gitignore 里面写上 hugo.exe，即可 Mac：确保 hugo 已安装就可以 新建 一般，都在 post 文件夹下放 markdown 文件，使用不同文件夹来归类
+hugo new post/tool/useHugo/publishArticle.md
+书写 设定文章的 title, categories, tags 写入内容。标题大小从 ## 开始 本地预览 hugo server
+编译成 html，输出到 /docs （路径与 GitHub Action 对应） hugo
+到这里，就完成了写作
+Git Push 先 fetch，再 commit，再 push。
+Github Page 需要重新填写域名 因为 Github Action 在执行的时候会把 master 分支中的 /docs 内所有内容拷贝到 main 分支，这里面不包括 CNAME 文件。所以在 repository 的 setting 的 pages 重新填写域名。（问题已经解决，在 workflow action.yml 中添加 cname: 1-1.</description>
+    </item>
+    
+    <item>
+      <title>Notion文件导出</title>
+      <link>https://1-1.link/post/tool/notion/notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/</link>
+      <pubDate>Sat, 11 Mar 2023 15:11:32 +0800</pubDate>
+      
+      <guid>https://1-1.link/post/tool/notion/notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/</guid>
+      <description>Notion 批量文件导出，以 PFD格式 Notion 是一款 markdown 笔记软件，可以快速书写，多端同步，支持文件导出，十分方便。 我在 notion 中写了很多页面，有时要转移到别的地方保存，那么应该怎么做呢？
+notion 支持导出的文件格式：PDF，HTML，MD 可是，这几种方法都有缺点。
+PDF：只能当前页面，导出所有子页面，需要升级 Pro HTML：多出了一些附带的文件，文件散乱，转移和浏览都不方便 MD：导出之后，图片和文本都分开，转移不方便，文件散乱 那么，有没有更简单的办法获取我自己写的许多页面，且保存为 PDF ？ 有的，步骤如下：
+在notion中包含子页面导出 markdown 使用 vs code 打开，使用插件 Markdown PDF 逐页导出。 具体操作步骤 下图可以看到我的一个页面包含了多个子页面。
+右上角三个点的按钮，选择 export
+导出 markdown
+会得到页面和子页面的目录结构
+使用 vscode 打开。
+安装插件 ”Markdown PDF“
+搜索 Markdown PDF， 点击安装 install。
+设置 ”auto convert when save “
+在插件库里可以看到已安装 Markdown PDF
+这样一来，打开一个 md 文件，ctrl + s，它就自动转换为 pdf 并输出到源路径了。
+当然，也可以自己设定输出的路径，方便批量管理。
+总结 到这里，就实现了 Notion 写作内容的固化和转移啦！</description>
+    </item>
+    
+    <item>
+      <title>各种设计模式</title>
+      <link>https://1-1.link/post/design-pattern/all-design-pattern/</link>
+      <pubDate>Mon, 11 Jul 2022 18:27:35 +0800</pubDate>
+      
+      <guid>https://1-1.link/post/design-pattern/all-design-pattern/</guid>
+      <description>Creational Object Created Pattern
+Factory Method Provide the method for creating an instance in the superclass, and allow the subclass to choose the type of the instance.
+在父类中提供创建对象的方法，允许子类决定实例化对象的类型。
+具备的部分：生产者协议、产品协议，往后就可以根据需要来扩展每一种产品。
+具体的生产者比如 MongoCakeCreator 的存在是为了实现与产品相关的核心业务逻辑，而不仅仅是创建 MongoCake 实例。工厂方法将核心业务逻辑从具体产品类中分离出来。
+// Creator protocol CakeCreator { func createCake() -&amp;gt; Cake func doSomethingForCake(cake: Cake) -&amp;gt; Cake } // Product protocol Cake { func doWork() } // ConcreteCreator class MongoCakeCreator: CakeCreator { var cake: MongoCake? func createCake() -&amp;gt; Cake { var cake = MongoCake() doSomethingForCake(cake: cake) return cake } func doSomethingForCake(cake: Cake) -&amp;gt; Cake{ cake.</description>
+    </item>
+    
+  </channel>
+</rss>
