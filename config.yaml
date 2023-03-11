@@ -44,7 +44,7 @@ params:
   # 主页的模式
   homeInfoParams:
     enabled: true
-    Title: Zanxinz👋
+    Title: I'm Zanxinz👋
     Content:  ""
   # 社交联系方式
   socialIcons: 
@@ -57,6 +57,8 @@ params:
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
   env: production
+  cover:
+    responsiveImages: fasle
  
 outputs:
   home:
