@@ -15,7 +15,7 @@ Notion 是一款 markdown 笔记软件，可以快速书写，多端同步，支
 
 ### notion 支持导出的文件格式：PDF，HTML，MD
 
-![Untitled](./Notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/Untitled.png)
+![Untitled](../Notion文件导出/Untitled.png)
 
 可是，这几种方法都有缺点。
 
@@ -34,46 +34,46 @@ Notion 是一款 markdown 笔记软件，可以快速书写，多端同步，支
 
 下图可以看到我的一个页面包含了多个子页面。
 
-![Untitled](./Notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/Untitled%201.png)
+![Untitled](../Notion文件导出/Untitled1.png)
 
 右上角三个点的按钮，选择 export
 
-![Untitled](./Notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/Untitled%202.png)
+![Untitled](../Notion文件导出/Untitled2.png)
 
 1. 导出 markdown 
     
-    ![Untitled](./Notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/Untitled%203.png)
+    ![Untitled](../Notion文件导出/Untitled3.png)
     
 2. 会得到页面和子页面的目录结构
 
-![Untitled](./Notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/Untitled%204.png)
+![Untitled](../Notion文件导出/Untitled4.png)
 
-![Untitled](./Notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/Untitled%205.png)
+![Untitled](../Notion文件导出/Untitled5.png)
 
 1. 使用 vscode 打开。
 2. 安装插件 ”Markdown PDF“
     
-    ![Untitled](./Notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/Untitled%206.png)
+    ![Untitled](../Notion文件导出/Untitled6.png)
     
     搜索 Markdown PDF， 点击安装 install。
     
-    ![Untitled](./Notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/Untitled%207.png)
+    ![Untitled](../Notion文件导出/Untitled7.png)
     
 3. 设置 ”auto convert when save “
     
     在插件库里可以看到已安装 Markdown PDF
     
-    ![Untitled](./Notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/Untitled%208.png)
+    ![Untitled](../Notion文件导出/Untitled8.png)
     
-    ![Untitled](./Notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/Untitled%209.png)
+    ![Untitled](../Notion文件导出/Untitled9.png)
     
     这样一来，打开一个 md 文件，ctrl + s，它就自动转换为 pdf 并输出到源路径了。
     
     当然，也可以自己设定输出的路径，方便批量管理。
     
-    ![Untitled](./Notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/Untitled%2010.png)
+    ![Untitled](../Notion文件导出/Untitled10.png)
     
-    ![Untitled](./Notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/Untitled%2011.png)
+    ![Untitled](../Notion文件导出/Untitled11.png)
     
 
 ### 总结
