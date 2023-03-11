@@ -1,5 +1,5 @@
 ---
-title: "hugo 的一些问题"
+title: "Hugo 的一些问题"
 date: 2023-03-11T16:59:18+08:00
 ShowToc: true
 categories: 
