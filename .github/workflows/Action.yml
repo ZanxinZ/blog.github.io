@@ -27,6 +27,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           personal_token: ${{ secrets.ACTION_ACCESS_TOKEN }}
           publish_dir: ./docs  ## 选择 deploy 源头，把这个 docs 部署到 main 分支  
-          publish_branch: main 
+          publish_branch: main
+          cname: 1-1.link
      
       - run: echo "🍏 This job's status is ${{ job.status }}."
