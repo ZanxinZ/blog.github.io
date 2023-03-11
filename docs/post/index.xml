@@ -6,7 +6,26 @@
     <description>Recent content in Posts on CodePaper</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Jul 2022 21:45:46 +0800</lastBuildDate><atom:link href="https://1-1.link/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Mar 2023 15:11:32 +0800</lastBuildDate><atom:link href="https://1-1.link/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notion文件导出</title>
+      <link>https://1-1.link/post/tool/notion/notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/</link>
+      <pubDate>Sat, 11 Mar 2023 15:11:32 +0800</pubDate>
+      
+      <guid>https://1-1.link/post/tool/notion/notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/</guid>
+      <description>Notion 批量文件导出，以 PFD格式 Notion 是一款 markdown 笔记软件，可以快速书写，多端同步，支持文件导出，十分方便。 我在 notion 中写了很多页面，有时要转移到别的地方保存，那么应该怎么做呢？
+notion 支持导出的文件格式：PDF，HTML，MD 可是，这几种方法都有缺点。
+ PDF：只能当前页面，导出所有子页面，需要升级 Pro HTML：多出了一些附带的文件，文件散乱，转移和浏览都不方便 MD：导出之后，图片和文本都分开，转移不方便，文件散乱  那么，有没有更简单的办法获取我自己写的许多页面，且保存为 PDF ？ 有的，步骤如下：
+ 在notion中包含子页面导出 markdown 使用 vs code 打开，使用插件 Markdown PDF 逐页导出。  具体操作步骤 下图可以看到我的一个页面包含了多个子页面。
+右上角三个点的按钮，选择 export
+  导出 markdown
+  会得到页面和子页面的目录结构
+    使用 vscode 打开。
+  安装插件 ”Markdown PDF“
+搜索 Markdown PDF， 点击安装 install。
+  设置 ”auto convert when save “</description>
+    </item>
+    
     <item>
       <title>各种设计模式</title>
       <link>https://1-1.link/post/design-pattern/all-design-pattern/</link>
@@ -18,7 +37,7 @@ Factory Method Provide the method for creating an instance in the superclass, an
 在父类中提供创建对象的方法，允许子类决定实例化对象的类型。
 具备的部分：生产者协议、产品协议，往后就可以根据需要来扩展每一种产品。
 具体的生产者比如 MongoCakeCreator 的存在是为了实现与产品相关的核心业务逻辑，而不仅仅是创建 MongoCake 实例。工厂方法将核心业务逻辑从具体产品类中分离出来。
- // Creator  protocol CakeCreator {  func createCake() -&amp;gt; Cake  func doSomethingForCake(cake: Cake) -&amp;gt; Cake  }   // Product  protocol Cake {  func doWork()  }   // ConcreteCreator  class MongoCakeCreator: CakeCreator {  var cake: MongoCake?</description>
+// Creator protocol CakeCreator { func createCake() -&amp;gt; Cake func doSomethingForCake(cake: Cake) -&amp;gt; Cake } // Product protocol Cake { func doWork() } // ConcreteCreator class MongoCakeCreator: CakeCreator { var cake: MongoCake? func createCake() -&amp;gt; Cake { var cake = MongoCake() doSomethingForCake(cake: cake) return cake } func doSomethingForCake(cake: Cake) -&amp;gt; Cake{ cake.</description>
     </item>
     
   </channel>
