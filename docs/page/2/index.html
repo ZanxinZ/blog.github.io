@@ -73,6 +73,19 @@
 <main class=main>
 <article class=post-entry>
 <header class=entry-header>
+<h2>Opaque Type
+</h2>
+</header>
+<div class=entry-content>
+<p>A function with an opaque type hides its return value’s type information. Hiding type information at some boundaries between a module and code that calls into the module. Unlike returning a value whose type is a protocol type, opaque type preserve type identity —the compile has access to the type information, but clients of the module don’t.
+The Situation Here we have a Shape protocol.
+protocol Shape { func draw() -> String } The struct Triangle conform to the Shape....</p>
+</div>
+<footer class=entry-footer><span title="2022-06-05 16:05:40 +0800 CST">June 5, 2022</span></footer>
+<a class=entry-link aria-label="post link to Opaque Type" href=https://1-1.link/post/language/swift/24opaque-type/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>Generics
 </h2>
 </header>
@@ -179,17 +192,6 @@ File not exist Have no permission to read. File not being encoded in a compatibl
 </div>
 <footer class=entry-footer><span title="2022-05-02 16:00:40 +0800 CST">May 2, 2022</span></footer>
 <a class=entry-link aria-label="post link to Deinitialization" href=https://1-1.link/post/language/swift/15deinitialization/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>Initialization
-</h2>
-</header>
-<div class=entry-content>
-<p>The class’s initializer set the original state for the object.</p>
-</div>
-<footer class=entry-footer><span title="2022-04-30 16:00:40 +0800 CST">April 30, 2022</span></footer>
-<a class=entry-link aria-label="post link to Initialization" href=https://1-1.link/post/language/swift/14initialization/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>
