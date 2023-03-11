@@ -15,23 +15,23 @@ minify:
 menu:
   main:
     - identifier: categories
-      name: 类别
+      name: 📖类别
       url: /categories/
       weight: 10
     - identifier: tags
-      name: 标签
+      name: 🏷️标签
       url: /tags/
       weight: 20
     - identifier: archive
-      name: 档案
+      name: 📦档案
       url: /archive/
       weight: 5
     - identifier: search
-      name: 搜索
+      name: 🔎搜索
       url: /search/
       weight: 30
     - identifier: about
-      name: 关于我
+      name: 🧑‍💻关于我
       url: /about/
       weight: 40
       
@@ -54,12 +54,23 @@ params:
       url: "https://github.com/ZanxinZ"
     - name: "email"
       url: "post/info/contact/mail"
+  # 回到顶部
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
   env: production
   cover:
     responsiveImages: fasle
- 
+  ShowPostNavLinks: true
+  ShowCodeCopyButtons: true
+
+assets:
+  disableHLJS: true
+  favicon: "/img/favicon.ico"
+  favicon16x16: "/img/favicon.ico"
+  favicon32x32: "/img/favicon.ico"
+  apple_touch_icon: "/img/favicon.ico"
+  safari_pinned_tab: "/img/favicon.ico"
+
 outputs:
   home:
     - HTML
