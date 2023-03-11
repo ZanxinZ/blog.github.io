@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Hugo on CodePaper</title>
+    <link>https://1-1.link/tags/hugo/</link>
+    <description>Recent content in Hugo on CodePaper</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 Mar 2023 16:00:07 +0800</lastBuildDate><atom:link href="https://1-1.link/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo 发布一篇文章的过程</title>
+      <link>https://1-1.link/post/tool/usehugo/publisharticle/</link>
+      <pubDate>Sat, 11 Mar 2023 16:00:07 +0800</pubDate>
+      
+      <guid>https://1-1.link/post/tool/usehugo/publisharticle/</guid>
+      <description>安装  windows：确保有 hugo.exe 在工程目录下, 并且 .gitignore 里面写上 hugo.exe，即可 Mac：确保 hugo 已安装就可以  新建 一般，都在 post 文件夹下放 markdown 文件，使用不同文件夹来归类
+ hugo new post/tool/useHugo/publishArticle.md
+ 书写  设定文章的 title, categories, tags 写入内容。标题大小从 ## 开始  本地预览  hugo server
+ 编译成 html，输出到 /docs （路径与 GitHub Action 对应）  hugo
+ 到这里，就完成了写作
+Git Push 先 fetch，再 commit，再 push。
+Github Page 需要重新填写域名 因为 Github Action 在执行的时候会把 master 分支中的 /docs 内所有内容拷贝到 main 分支，这里面不包括 CNAME 文件。所以在 repository 的 setting 的 pages 重新填写域名。</description>
+    </item>
+    
+  </channel>
+</rss>
