@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>WRT 路由器 on CodePaper</title>
+    <link>https://1-1.link/tags/wrt-%E8%B7%AF%E7%94%B1%E5%99%A8/</link>
+    <description>Recent content in WRT 路由器 on CodePaper</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 13 May 2023 22:43:27 +0800</lastBuildDate><atom:link href="https://1-1.link/tags/wrt-%E8%B7%AF%E7%94%B1%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>N4000 四网口工控机组网</title>
+      <link>https://1-1.link/post/tool/wrt/setnetwork/</link>
+      <pubDate>Sat, 13 May 2023 22:43:27 +0800</pubDate>
+      
+      <guid>https://1-1.link/post/tool/wrt/setnetwork/</guid>
+      <description>需要用到的硬件 工控机本体这里称为 A， 一台可以连接 WiFi 或者可插入以太网网线的设备称为 B。 公网的接入端口线称为 C。 一个 Wifi 路由器D。 键盘与HDMI 显示器（用于命令行查看系统信息，可省略）、两条网线。 方法一：”不同网段“接法 软路由的 LAN 接 WiFi 的 WAN，连接 WiFi 的设备和直连软路由的设备不算是同一网段。
+WiFi 所在 192.168.1.x
+软路由所在 192.168.11.x
+关键步骤：
+以太网连接，从 C 上接一条网线到 A 的 eth1 端口。D 的 WAN 网口和 A 的 eth0 用网线连接。 使用设备 B，连接 WiFi，然后登入后台管理页面，网址一般在 WiFi 路由器背后有写明。 设备B 需要关键一步：设置为 自动 IP 分配，那么才可以在 B 上访问到 192.168.11.1
+关键配置：
+登入D 的 后台页面（依据不同品牌而定，我这里是 192.168.1.1）。WiFi 路由器 D 的设置，需要设置为 自动获得 IP 地址，拔掉 WiFi 的电源，重启，它会通过A、公网 C 自动获得 IP。这时，连接到该 WiFi 的设备就可以通过 192.</description>
+    </item>
+    
+  </channel>
+</rss>
