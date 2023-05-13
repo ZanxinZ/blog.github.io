@@ -57,7 +57,7 @@ WiFi 所在 192.168.1.x
 
 关闭 DHCP，使得路由器不作为子网网关
 
-![Untitled](N4000%20%E5%9B%9B%E7%BD%91%E5%8F%A3%E5%B7%A5%E6%8E%A7%E6%9C%BA%E7%BB%84%E7%BD%91/Untitled%205.png)
+![Untitled](../N4000%20%E5%9B%9B%E7%BD%91%E5%8F%A3%E5%B7%A5%E6%8E%A7%E6%9C%BA%E7%BB%84%E7%BD%91/Untitled%205.png)
 
 这样一来，连接到 WiFi 的设备既可以访问 192.168.11.1 的软路由管理页面，也可以访问原本 WiFi 的管理页面。后续的 open clash 配置和方法一的一样。
 
