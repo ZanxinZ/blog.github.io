@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Swift on CodePaper</title>
+    <link>https://1-1.link/tags/swift/</link>
+    <description>Recent content in Swift on CodePaper</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 17 May 2023 22:41:55 +0800</lastBuildDate><atom:link href="https://1-1.link/tags/swift/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何通过点击 UICollectionViewCell 跳转至对应的 UIViewController</title>
+      <link>https://1-1.link/post/ios/viewcontrollertransform/</link>
+      <pubDate>Wed, 17 May 2023 22:41:55 +0800</pubDate>
+      
+      <guid>https://1-1.link/post/ios/viewcontrollertransform/</guid>
+      <description>跳转部分的实现 我需要从我的 HomeViewController 通过点击不同的 CollectionViewCell 跳至不同的 ViewController
+思路：
+ 首先是需要把目标 ViewController 存放起来，在点击 cell 时可以作为目的地进行 present 跳转。  因为我的多个不同的 ViewController 都继承自 UIViewController， 那么我想用它作为父类型存放在cell中。
+ 先把 Main storyboard 存为当前类的属性，以方便初始化各个 collectionView   然后使用 storyboard 自带的动态反射方法 instantiateViewController，通过字符串找到对应的 ViewController   在 dataSource 的实现中，将 cell 的属性绑定为对应的 controllerView 目标。   最后是 didTapCell 方法，是点击后的具体要做的动作，即跳转。这里的 target 类型是 UIController。  发现这样实现不了，原因是第 1 步中 MainChoiceCell 中的 targetController 不能是 weak，若为 weak 那么它在被赋值然后在函数结束时（closure 结束）会释放引用也就是恢复为 nil，所以正确的做法应该是把 weak 去掉。
+手指触碰 UICollectionViewCell 但未释放，这属于 Highlight UICollectionViewCell 底层来自 UIView。重写 highlight 的 willSet， 手指点在 UICollectionViewCell 区域会触发 highlight 置为 true ；手指不松开，移动到不属于 UICollectionViewCell 的区域，则会触发 highlight 置为 false。</description>
+    </item>
+    
+  </channel>
+</rss>
