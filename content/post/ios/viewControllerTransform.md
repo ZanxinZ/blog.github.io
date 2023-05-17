@@ -2,8 +2,10 @@
 title: "如何通过点击 UICollectionViewCell 跳转至对应的 UIViewController"
 date: 2023-05-17T22:41:55+08:00
 ShowToc: true
-categories: 
+categories:
+- 软件开发
 tags: 
+- iOS
 ---
 
 
