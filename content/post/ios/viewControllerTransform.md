@@ -66,7 +66,7 @@ override var isHighlighted: Bool {
     }
 ```
 
-实现了进入时扩大，离开时缩小，与 UITapGestureRecognizer 互相独立。使用 UITapGestureRecognizer 实现点击监听SwiftCopyCaption
+实现了进入时扩大，离开时缩小，与 UITapGestureRecognizer 互相独立。使用 UITapGestureRecognizer 实现点击监听
 
 ```swift
 cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapCell(_:))))
