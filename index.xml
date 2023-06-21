@@ -93,12 +93,16 @@ PDF：只能当前页面，导出所有子页面，需要升级 Pro HTML：多�
     </item>
     
     <item>
-      <title>关于我</title>
+      <title>个人简历</title>
       <link>https://1-1.link/about/</link>
       <pubDate>Tue, 12 Jul 2022 14:46:26 +0800</pubDate>
       
       <guid>https://1-1.link/about/</guid>
-      <description>简历 教育经历 2017&amp;ndash;2021 中国计量大学（本科）自动化专业 2021&amp;ndash;今 中国计量大学（研究生）电子信息专业 技术栈 掌握常见的数据结构与算法 熟悉各个设计模式的思想 熟悉 Swift &amp;amp; UIKit 开发 Java 服务端开发 项目经历 2021.05 跨平台文件传输 5 号电池 AAcell 🔗
+      <description>出生年月：1998.01 籍贯：广东揭阳 学历：硕士研究生
+联系方式：13757116490
+Github：https://github.com/ZanxinZ
+教育经历 2017&amp;ndash;2021 中国计量大学（本科）自动化专业 2021&amp;ndash;2024 中国计量大学（研究生）电子信息专业 技术栈 熟悉基本数据结构与算法 熟悉 iOS Swift &amp;amp; UIKit 开发 Java 服务端开发 熟悉各个设计模式的思想 熟悉基本 Git 操作 掌握基本 C 语言编程 熟悉基本 Python 语法 项目经历 2022-2023 iOS App《小速记》实现 ToDo、每日打卡、数字记录、统计功能。
+2021.05 跨平台文件传输 5 号电池 AAcell 🔗
 负责后端部分，使用 Java 语言，基于 SpringBoot 框架搭建了 web 服务，实现仅依赖于浏览器的文件传输便捷服务。
 多台不同系统的设备使用房间号和密码可以进入同一个房间。
 使用拦截器配合 JWT (Json Web Token) 对请求建立连接的用户进行验证。
@@ -106,11 +110,7 @@ PDF：只能当前页面，导出所有子页面，需要升级 Pro HTML：多�
 使用 MySQL 数据库存放房间信息和用户发送的消息。
 每一个房间的文件是直接以分类别的方式存放在固定文件夹。
 使用 WebSocket 让多个客户端向服务器订阅消息，使用房间号作为标识。
-2021.02 本科毕设项目，基于 Mask-RCNN 和双目视觉对快递包裹内物体的三维定位。 Mask-RCNN 图像分割将包裹内的物体的种类和物体边缘识别出来，再使用双目视觉测得物体的与相机的距离，从而得到每一个物体的三维坐标值，为后续机械臂抓取物体提供坐标信息。
-2021.07 安卓平板点餐 App CakeTouch 🔗 前台工作人员为客户记录每一个订单需要的商品，在确认订单之后，通过蓝牙打印机打印出商品的需求信息。
-获奖经历 2019.05 参加浙江省第四届大学生机器人比赛获得寻宝机器人组二等奖 2019.10 参加大学生挑战杯，鸡枞根部切削机器人项目，国赛二等奖 兴趣爱好 了解新的的技术和数码产品 联系方式 G-Mail
-zanxinz@gmail.com
-QQ 邮箱</description>
+2021.02 本科毕设项目，基于 Mask-RCNN 和双目视觉对快递包裹内物体的三维定位。 Mask-RCNN 识别包裹内的物体种类和物体边缘，使用双目视觉测得物体的与相机的距离，从而得到每一个物体的三维坐标值，为后续机械臂抓取物体提供坐标信息。</description>
     </item>
     
     <item>
@@ -125,15 +125,6 @@ Factory Method Provide the method for creating an instance in the superclass, an
 具备的部分：生产者协议、产品协议，往后就可以根据需要来扩展每一种产品。
 具体的生产者比如 MongoCakeCreator 的存在是为了实现与产品相关的核心业务逻辑，而不仅仅是创建 MongoCake 实例。工厂方法将核心业务逻辑从具体产品类中分离出来。
 // Creator protocol CakeCreator { func createCake() -&amp;gt; Cake func doSomethingForCake(cake: Cake) -&amp;gt; Cake } // Product protocol Cake { func doWork() } // ConcreteCreator class MongoCakeCreator: CakeCreator { var cake: MongoCake? func createCake() -&amp;gt; Cake { var cake = MongoCake() doSomethingForCake(cake: cake) return cake } func doSomethingForCake(cake: Cake) -&amp;gt; Cake{ cake.</description>
-    </item>
-    
-    <item>
-      <title>Mail</title>
-      <link>https://1-1.link/post/info/contact/mail/</link>
-      <pubDate>Sun, 10 Jul 2022 18:46:21 +0800</pubDate>
-      
-      <guid>https://1-1.link/post/info/contact/mail/</guid>
-      <description>now</description>
     </item>
     
     
@@ -430,6 +421,29 @@ String Literals // &amp;#34;Hello World!&amp;#34; is a String literal. let sente
       
       <guid>https://1-1.link/post/language/swift/01basic/</guid>
       <description>Basic usage of the swift syntax.</description>
+    </item>
+    
+    <item>
+      <title>Mail</title>
+      <link>https://1-1.link/post/info/contact/mail/</link>
+      <pubDate>Sat, 10 Jul 2021 18:46:21 +0800</pubDate>
+      
+      <guid>https://1-1.link/post/info/contact/mail/</guid>
+      <description>false</description>
+    </item>
+    
+    <item>
+      <title>竞赛经历与奖项</title>
+      <link>https://1-1.link/post/info/certificate/</link>
+      <pubDate>Mon, 21 Jun 2021 10:17:24 +0800</pubDate>
+      
+      <guid>https://1-1.link/post/info/certificate/</guid>
+      <description>机器人比赛 2019.05 寻宝机器人
+2019.05 超市购物机器人
+2020.06 创意机器人比赛魔方组
+魔方机器人 🔗
+西门子智能制造挑战赛 2019.08
+大学生挑战杯 2022.07</description>
     </item>
     
   </channel>
