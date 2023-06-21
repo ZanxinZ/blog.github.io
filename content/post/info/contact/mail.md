@@ -1,12 +1,12 @@
 ---
 title: "Mail"
-date: 2022-07-10T18:46:21+08:00
-summary: now
+date: 2021-07-10T18:46:21+08:00
+summary: no
 ---
 
-### G-Mail
+### Outlook
 
-teochewness@gmail.com
+cinuni@outlook.com
 
 ### QQ 邮箱
 

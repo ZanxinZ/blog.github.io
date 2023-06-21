@@ -90,7 +90,30 @@ Factory Method Provide the method for creating an instance in the superclass, an
 在父类中提供创建对象的方法，允许子类决定实例化对象的类型。
 具备的部分：生产者协议、产品协议，往后就可以根据需要来扩展每一种产品。
 具体的生产者比如 MongoCakeCreator 的存在是为了实现与产品相关的核心业务逻辑，而不仅仅是创建 MongoCake 实例。工厂方法将核心业务逻辑从具体产品类中分离出来。
- // Creator  protocol CakeCreator {  func createCake() -&amp;gt; Cake  func doSomethingForCake(cake: Cake) -&amp;gt; Cake  }   // Product  protocol Cake {  func doWork()  }   // ConcreteCreator  class MongoCakeCreator: CakeCreator {  var cake: MongoCake?</description>
+// Creator protocol CakeCreator { func createCake() -&amp;gt; Cake func doSomethingForCake(cake: Cake) -&amp;gt; Cake } // Product protocol Cake { func doWork() } // ConcreteCreator class MongoCakeCreator: CakeCreator { var cake: MongoCake? func createCake() -&amp;gt; Cake { var cake = MongoCake() doSomethingForCake(cake: cake) return cake } func doSomethingForCake(cake: Cake) -&amp;gt; Cake{ cake.</description>
+    </item>
+    
+    <item>
+      <title>Mail</title>
+      <link>https://1-1.link/post/info/contact/mail/</link>
+      <pubDate>Sat, 10 Jul 2021 18:46:21 +0800</pubDate>
+      
+      <guid>https://1-1.link/post/info/contact/mail/</guid>
+      <description>false</description>
+    </item>
+    
+    <item>
+      <title>竞赛经历与奖项</title>
+      <link>https://1-1.link/post/info/certificate/</link>
+      <pubDate>Mon, 21 Jun 2021 10:17:24 +0800</pubDate>
+      
+      <guid>https://1-1.link/post/info/certificate/</guid>
+      <description>机器人比赛   2019.05 寻宝机器人
+  2019.05 超市购物机器人
+  2020.06 创意机器人比赛魔方组
+魔方机器人 🔗
+西门子智能制造挑战赛 2019.08
+大学生挑战杯 2022.07</description>
     </item>
     
   </channel>

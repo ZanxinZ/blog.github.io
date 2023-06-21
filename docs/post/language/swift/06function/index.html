@@ -1,201 +1,414 @@
-<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Function | CodePaper</title><meta name=keywords content="编程语言"><meta name=description content="Call the function(method) to do something detail."><meta name=author content><link rel=canonical href=https://1-1.link/post/language/swift/06function/><link crossorigin=anonymous href=/assets/css/stylesheet.6e97a6b79be998515e8c86c68e32a9f7a90e6917f550d2af32568b717f5ca785.css integrity="sha256-bpemt5vpmFFejIbGjjKp96kOaRf1UNKvMlaLcX9cp4U=" rel="preload stylesheet" as=style><script defer crossorigin=anonymous src=/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG+9vmJ0cTS+ovo0FeA=" onload=hljs.initHighlightingOnLoad()></script>
-<link rel=icon href=https://1-1.link/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://1-1.link/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://1-1.link/favicon-32x32.png><link rel=apple-touch-icon href=https://1-1.link/apple-touch-icon.png><link rel=mask-icon href=https://1-1.link/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><meta property="og:title" content="Function"><meta property="og:description" content="Call the function(method) to do something detail."><meta property="og:type" content="article"><meta property="og:url" content="https://1-1.link/post/language/swift/06function/"><meta property="article:section" content="post"><meta property="article:published_time" content="2022-04-02T16:08:40+08:00"><meta property="article:modified_time" content="2022-04-02T16:08:40+08:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="Function"><meta name=twitter:description content="Call the function(method) to do something detail."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":3,"name":"Function","item":"https://1-1.link/post/language/swift/06function/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Function","name":"Function","description":"Call the function(method) to do something detail.","keywords":["编程语言"],"articleBody":"The function has two way to affect the outside scope\n Use return value to tell the caller. Use the inout with reference to change the the original value outside.  Function Usages Without Parameter and Return Value\nfunc sayHello() { \tprint(\"Hello\") }  // Call the function, will print「hello」 sayHello() With Parameter\nfunc greet(name: String) { \tprint(\"Hello \\(name)\") }  // Call the function pass the String as the input to the function, will print 「Hello Mike」 greet(name: \"Mike\") With Multiple Parameter\nfunc addTwoNum(a: Int, b: Int) { \tvar c = a + b \tprint(c) }  // Call the function, pass two parameter to the function, will print 「11」  addTwoNum(a: 5, b: 6) With Return Value\nonce defined the return type of a function, it must have a return operation when the function logic end.\nfunc addTwoNum(a: Int, b: Int) - Int { \tvar c = a + b \treturn c }  // The res will be assigned as 「12」 var res = addTwoNum(a: 3, b: 9)  // The return value can be ignored. addTwoNum(a: 4, b: 9) With Multiple Return Value\n// Return as a tuple func getTwoNum() - (Int, Int) { \tvar a = 2 \tvar b = 4 \treturn (a, b) }  var nums = getTwoNum()  // Return as a optional dictionary  func getThreeNum() - (a: Int, b: Int, c: Int)? { \tvar a = 2 \tvar b = 4 \tvar c = 3 \treturn (a, b, c) } With Multiple Parameter and Multiple Return Value\nfunc minMax(array: Int[]) - (min: Int, max: Int)? { \tif array.isEmpty {return nil} \tvar curMin = array[0] \tvar curMax = array[0] \tfor value in array[1..\tif value  curMin { \tcurMin = value \t} \tif value  curMax { \tcurMax = value \t} \t} \treturn (curMin, curMax) }  // Use optional binding to check  if let bound = minMax(array: [3, 5, 5, 6, 22, 13, 16, 24, 11]) { \tprint(\"Min: \\(bound.min)\") \tprint(\"Max: \\(bound.max)\") } With Implicit Return\n It only allow the first one sentence to implicit return.  // It will return the result of a + b func sum(a: Int, b: Int) - Int{ \ta + b }  // It will not return a value func sum(a: Int, b: Int) { \ta + b }  // This can't work!!! It will trige compile-time error. func getTwoNum() - Int {  var a = 2  var b = 4  a + b \t// Here not allow to implicit return value \t// The implicit return only allow the first one sentence }  // This can work, because the getTwoNum only use first one sentence to return func get() - (Int, Int) {  var a = 5  return (5, 6) } func getTwoNum() - (Int, Int) {  get() // The implicit return can work. } Parameter Parameter Names and Argument Labels // Argument Labels func greet(person: String, from hometown: String) - String { \t// The 'person' and 'hometown' are parameter names. \t// The 'from' is a argument label of th second parameter. \treturn \"\\(person)is come from \\(hometown).\" } print(greet(person: \"Mike\", from: \"New York\")) Omitting Argument Labels Use the underscore to omit the label\nfunc readFromFile(_ path: String) { \tprint(path) }  readFromFile(\"./music/one.mp3\") Default Parameter Values func drawRect(x: Int, y: Int, w: Int, h: Int, color: (Int, Int, Int) = (0, 0, 0)) { \t// Here the color has default value (0, 0, 0) } Variadic Parameter  The values passed will be made as as an array. For example, the Double... passed will be made as [Double]  func average(_ nums: Double...) - Double{ \tvar total: Double = 0 \tfor num in nums { \ttotal += num \t} \treturn total / Double(nums.count) } print(average(3.3, 2.9, 4.6))   To make it unambiguous between the variadic parameter and normal parameters. The first parameter that comes after a variadic parameter must have an apparent argument label.\nfunc getOne(_ nums: Double..., cut cutLen: Int) - Double{  \treturn 1.0 } print(getOne(3.3, 2.9, 4.6, cut: 3))  // Another way func getAnotherOne(_ nums: Double..., cutLen: Int) - Double{ \treturn 1.0 } print(getAnotherOne(3.3, 2.9, 4.6, cutLen: 3))   In-Out Parameters Function parameters are constants by default.\nTo modify the parameter’s value and let the changes persist after the function call, we can use the inout keyword.\n(Using the inout keyword, we can change the origin value via the function call)\nThe inout value can’t have a default value, variadic parameters can’t be marked as inout .\n  Without inout\n func swap(_ a: Int, _ b: Int) { \tvar temp = a \ta = b // It will trigger the compile-time error.  \tb = temp // The parameters are constant. }  var x = 2 var y = 3 swap(x, y) print(\"x = \\(x), y = \\(y)\"   With inout\nfunc swap(_ a: inout Int, _ b: inout Int) { \tvar temp = a \ta = b \tb = temp }  var x = 2 var y = 3 swap(\u0026x, \u0026y) // Here should use the reference sign so that the funtion can konw where to change the value of the original variable. print(\"x = \\(x), y = \\(y)\") // It will print 「x = 3, y = 2」   Function Types To describe a function’s input and output.\nSuch as (Int, Int) - Int or () - Void .\nfunc addTwoInts(_ a: Int, _ b: Int) - Int {  return a + b }  var mathFunction: (Int, Int) - Int = addTwoInts Function Types as Parameter Type\nfunc addTwoInts(_ a: Int, _ b: Int) - Int {  return a + b }  func printResult(_ mathFunc: (Int, Int) - Int, _ a: Int, _ b: Int) { \tprint(\"Result: \\(mathFunc(a, b))\") }  printResult(addTwoInts, 2, 7) // Print 「Result: 9」 Function Types as Return Types\nfunc stepForward(_ input: Int) - Int {  return input + 1 } func stepBackward(_ input: Int) - Int {  return input - 1 }  // Return a function type func chooseStepFunction(backward: Bool) - (Int) - Int { \treturn backward ? stepBackward : stepForward }  var cur = 3 let moveNearToZero = chooseStepFunction(backward: cur  0) // So the moveNearToZero will refers to the stepBackward() function.  while cur != 0 { \tprint(\"Cur: \\(cur)\") \tcur = moveNearToZero(cur) }   result:\ncur: 3 cur: 2 cur: 1\n  Nested Function Hidden from the outside world by default.\nOnly when the nested function be returned, it can be used in the caller’s scope.\nfunc chooseStepFunction(backward: Bool) - (Int) - Int {  func stepForward(input: Int) - Int { return input + 1 }  func stepBackward(input: Int) - Int { return input - 1 }  return backward ? stepBackward : stepForward }  var cur = -4 let moveNearToZero = chooseStepFunction(backward: cur  0) // moveNearToZero now is refers tyo the nested stepForward() cur = moveNearToZero(cur) ","wordCount":"1106","inLanguage":"en","datePublished":"2022-04-02T16:08:40+08:00","dateModified":"2022-04-02T16:08:40+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://1-1.link/post/language/swift/06function/"},"publisher":{"@type":"Organization","name":"CodePaper","logo":{"@type":"ImageObject","url":"https://1-1.link/favicon.ico"}}}</script><link rel="shortcut icon" href=/img/favicon.ico type=image/x-icon></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://1-1.link accesskey=h title="CodePaper (Alt + H)">CodePaper</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://1-1.link/archive/ title=📦档案><span>📦档案</span></a></li><li><a href=https://1-1.link/categories/ title=📖类别><span>📖类别</span></a></li><li><a href=https://1-1.link/tags/ title=🏷️标签><span>🏷️标签</span></a></li><li><a href=https://1-1.link/search/ title="🔎搜索 (Alt + /)" accesskey=/><span>🔎搜索</span></a></li><li><a href=https://1-1.link/about/ title=🧑‍💻关于我><span>🧑‍💻关于我</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://1-1.link>Home</a></div><h1 class=post-title>Function</h1><div class=post-meta><span title="2022-04-02 16:08:40 +0800 CST">April 2, 2022</span></div></header><div class=toc><details><summary accesskey=c title="(Alt + C)"><span class=details>Table of Contents</span></summary><div class=inner><ul><li><a href=#function-usages aria-label="Function Usages">Function Usages</a></li><li><a href=#parameter aria-label=Parameter>Parameter</a><ul><li><a href=#parameter-names-and-argument-labels aria-label="Parameter Names and Argument Labels">Parameter Names and Argument Labels</a></li><li><a href=#omitting-argument-labels aria-label="Omitting Argument Labels">Omitting Argument Labels</a></li><li><a href=#default-parameter-values aria-label="Default Parameter Values">Default Parameter Values</a></li><li><a href=#variadic-parameter aria-label="Variadic Parameter">Variadic Parameter</a></li><li><a href=#in-out--parameters aria-label="In-Out  Parameters">In-Out Parameters</a></li><li><a href=#function-types aria-label="Function Types">Function Types</a></li></ul></li><li><a href=#nested-function aria-label="Nested Function">Nested Function</a></li></ul></div></details></div><div class=post-content><p>The function has two way to affect the outside scope</p><ul><li>Use return value to tell the caller.</li><li>Use the <code>inout</code> with reference to change the the original value outside.</li></ul><h2 id=function-usages>Function Usages<a hidden class=anchor aria-hidden=true href=#function-usages>#</a></h2><p>Without Parameter and Return Value</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>sayHello</span>() {
-</span></span><span style=display:flex><span>		print(<span style=color:#e6db74>&#34;Hello&#34;</span>)
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e>// Call the function, will print「hello」</span>
-</span></span><span style=display:flex><span>sayHello()       
-</span></span></code></pre></div><p>With Parameter</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>greet</span>(name: String) {
-</span></span><span style=display:flex><span>		print(<span style=color:#e6db74>&#34;Hello </span><span style=color:#e6db74>\(</span>name<span style=color:#e6db74>)</span><span style=color:#e6db74>&#34;</span>) 
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e>// Call the function pass the String as the input to the function, will print 「Hello Mike」</span>
-</span></span><span style=display:flex><span>greet(name: <span style=color:#e6db74>&#34;Mike&#34;</span>)    
-</span></span></code></pre></div><p>With Multiple Parameter</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>addTwoNum</span>(a: Int, b: Int) {
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>var</span> c = a <span style=color:#f92672>+</span> b
-</span></span><span style=display:flex><span>		print(c)
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e>// Call the function, pass two parameter to the function, will print 「11」 </span>
-</span></span><span style=display:flex><span>addTwoNum(a: <span style=color:#ae81ff>5</span>, b: <span style=color:#ae81ff>6</span>)  
-</span></span></code></pre></div><p>With Return Value</p><p>once defined the return type of a function, it must have a return operation when the function logic end.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>addTwoNum</span>(a: Int, b: Int) -&gt; Int {
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>var</span> c = a <span style=color:#f92672>+</span> b
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>return</span> c
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e>// The res will be assigned as 「12」</span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>var</span> res = addTwoNum(a: <span style=color:#ae81ff>3</span>, b: <span style=color:#ae81ff>9</span>)
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e>// The return value can be ignored.</span>
-</span></span><span style=display:flex><span>addTwoNum(a: <span style=color:#ae81ff>4</span>, b: <span style=color:#ae81ff>9</span>)
-</span></span></code></pre></div><p>With Multiple Return Value</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#75715e>// Return as a tuple</span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>getTwoNum</span>() -&gt; (Int, Int) {
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>var</span> a = <span style=color:#ae81ff>2</span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>var</span> b = <span style=color:#ae81ff>4</span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>return</span> (a, b)
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>var</span> nums = getTwoNum()
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e>// Return as a optional dictionary </span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>getThreeNum</span>() -&gt; (a: Int, b: Int, c: Int)? {
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>var</span> a = <span style=color:#ae81ff>2</span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>var</span> b = <span style=color:#ae81ff>4</span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>var</span> c = <span style=color:#ae81ff>3</span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>return</span> (a, b, c)
-</span></span><span style=display:flex><span>}
-</span></span></code></pre></div><p>With Multiple Parameter and Multiple Return Value</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>minMax</span>(array: Int[]) -&gt; (min: Int, max: Int)? {
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>if</span> array.isEmpty {<span style=color:#66d9ef>return</span> <span style=color:#66d9ef>nil</span>}
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>var</span> curMin = array[<span style=color:#ae81ff>0</span>]
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>var</span> curMax = array[<span style=color:#ae81ff>0</span>]
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>for</span> value <span style=color:#66d9ef>in</span> array[<span style=color:#ae81ff>1.</span>.&lt;array.count] {
-</span></span><span style=display:flex><span>				<span style=color:#66d9ef>if</span> value <span style=color:#f92672>&lt;</span> curMin {
-</span></span><span style=display:flex><span>						curMin = value
-</span></span><span style=display:flex><span>				}
-</span></span><span style=display:flex><span>				<span style=color:#66d9ef>if</span> value <span style=color:#f92672>&gt;</span> curMax {
-</span></span><span style=display:flex><span>						curMax = value
-</span></span><span style=display:flex><span>				}
-</span></span><span style=display:flex><span>		}
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>return</span> (curMin, curMax)
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e>// Use optional binding to check </span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> <span style=color:#66d9ef>let</span> bound = minMax(array: [<span style=color:#ae81ff>3</span>, <span style=color:#ae81ff>5</span>, <span style=color:#ae81ff>5</span>, <span style=color:#ae81ff>6</span>, <span style=color:#ae81ff>22</span>, <span style=color:#ae81ff>13</span>, <span style=color:#ae81ff>16</span>, <span style=color:#ae81ff>24</span>, <span style=color:#ae81ff>11</span>]) {
-</span></span><span style=display:flex><span>		print(<span style=color:#e6db74>&#34;Min: </span><span style=color:#e6db74>\(</span>bound.min<span style=color:#e6db74>)</span><span style=color:#e6db74>&#34;</span>)
-</span></span><span style=display:flex><span>		print(<span style=color:#e6db74>&#34;Max: </span><span style=color:#e6db74>\(</span>bound.max<span style=color:#e6db74>)</span><span style=color:#e6db74>&#34;</span>)
-</span></span><span style=display:flex><span>}
-</span></span></code></pre></div><p>With Implicit Return</p><ul><li>It only allow the first one sentence to implicit return.</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#75715e>// It will return the result of a + b</span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>sum</span>(a: Int, b: Int) -&gt; Int{
-</span></span><span style=display:flex><span>		a <span style=color:#f92672>+</span> b
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e>// It will not return a value</span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>sum</span>(a: Int, b: Int) {
-</span></span><span style=display:flex><span>		a <span style=color:#f92672>+</span> b
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e>// This can&#39;t work!!! It will trige compile-time error.</span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>getTwoNum</span>() -&gt; Int {
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> a = <span style=color:#ae81ff>2</span>
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> b = <span style=color:#ae81ff>4</span>
-</span></span><span style=display:flex><span>    a <span style=color:#f92672>+</span> b
-</span></span><span style=display:flex><span>		<span style=color:#75715e>// Here not allow to implicit return value</span>
-</span></span><span style=display:flex><span>		<span style=color:#75715e>// The implicit return only allow the first one sentence</span>
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e>// This can work, because the getTwoNum only use first one sentence to return</span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>get</span>() -&gt; (Int, Int) {
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> a = <span style=color:#ae81ff>5</span>
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> (<span style=color:#ae81ff>5</span>, <span style=color:#ae81ff>6</span>)
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>getTwoNum</span>() -&gt; (Int, Int) {
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>get</span>()    <span style=color:#75715e>// The implicit return can work.</span>
-</span></span><span style=display:flex><span>}
-</span></span></code></pre></div><h2 id=parameter>Parameter<a hidden class=anchor aria-hidden=true href=#parameter>#</a></h2><h3 id=parameter-names-and-argument-labels>Parameter Names and Argument Labels<a hidden class=anchor aria-hidden=true href=#parameter-names-and-argument-labels>#</a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#75715e>// Argument Labels</span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>greet</span>(person: String, from hometown: String) -&gt; String {
-</span></span><span style=display:flex><span>		<span style=color:#75715e>// The &#39;person&#39; and &#39;hometown&#39; are parameter names.</span>
-</span></span><span style=display:flex><span>		<span style=color:#75715e>// The &#39;from&#39; is a argument label of th second parameter.</span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>\(</span>person<span style=color:#e6db74>)</span><span style=color:#e6db74> is come from </span><span style=color:#e6db74>\(</span>hometown<span style=color:#e6db74>)</span><span style=color:#e6db74>.&#34;</span>
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>print(greet(person: <span style=color:#e6db74>&#34;Mike&#34;</span>, from: <span style=color:#e6db74>&#34;New York&#34;</span>))
-</span></span></code></pre></div><h3 id=omitting-argument-labels>Omitting Argument Labels<a hidden class=anchor aria-hidden=true href=#omitting-argument-labels>#</a></h3><p>Use the underscore to omit the label</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>readFromFile</span>(<span style=color:#66d9ef>_</span> path: String) {
-</span></span><span style=display:flex><span>		print(path)
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>readFromFile(<span style=color:#e6db74>&#34;./music/one.mp3&#34;</span>)
-</span></span></code></pre></div><h3 id=default-parameter-values>Default Parameter Values<a hidden class=anchor aria-hidden=true href=#default-parameter-values>#</a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>drawRect</span>(x: Int, y: Int, w: Int, h: Int, color: (Int, Int, Int) = (<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>)) {
-</span></span><span style=display:flex><span>		<span style=color:#75715e>// Here the color has default value (0, 0, 0)</span>
-</span></span><span style=display:flex><span>}
-</span></span></code></pre></div><h3 id=variadic-parameter>Variadic Parameter<a hidden class=anchor aria-hidden=true href=#variadic-parameter>#</a></h3><ul><li>The values passed will be made as as an <strong>array.</strong> For example, the <code>Double...</code> passed will be made as <code>[Double]</code></li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>average</span>(<span style=color:#66d9ef>_</span> nums: Double...) -&gt; Double{
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>var</span> total: Double = <span style=color:#ae81ff>0</span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>for</span> num <span style=color:#66d9ef>in</span> nums {
-</span></span><span style=display:flex><span>				total <span style=color:#f92672>+=</span> num
-</span></span><span style=display:flex><span>		}
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>return</span> total <span style=color:#f92672>/</span> Double(nums.count)
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>print(average(<span style=color:#ae81ff>3.3</span>, <span style=color:#ae81ff>2.9</span>, <span style=color:#ae81ff>4.6</span>))
-</span></span></code></pre></div><ul><li><p>To make it unambiguous between the variadic parameter and normal parameters. The first parameter that comes after a variadic parameter must have an apparent argument label.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>getOne</span>(<span style=color:#66d9ef>_</span> nums: Double..., cut cutLen: Int) -&gt; Double{
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>return</span> <span style=color:#ae81ff>1.0</span>
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>print(getOne(<span style=color:#ae81ff>3.3</span>, <span style=color:#ae81ff>2.9</span>, <span style=color:#ae81ff>4.6</span>, cut: <span style=color:#ae81ff>3</span>))
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e>// Another way</span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>getAnotherOne</span>(<span style=color:#66d9ef>_</span> nums: Double..., cutLen: Int) -&gt; Double{
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>return</span> <span style=color:#ae81ff>1.0</span>
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>print(getAnotherOne(<span style=color:#ae81ff>3.3</span>, <span style=color:#ae81ff>2.9</span>, <span style=color:#ae81ff>4.6</span>, cutLen: <span style=color:#ae81ff>3</span>))
-</span></span></code></pre></div></li></ul><h3 id=in-out--parameters>In-Out Parameters<a hidden class=anchor aria-hidden=true href=#in-out--parameters>#</a></h3><p>Function parameters are constants by default.</p><p>To modify the parameter’s value and let the changes persist after the function call, we can use the <code>inout</code> keyword.</p><p>(Using the <code>inout</code> keyword, we can <strong>change the origin value</strong> via the function call)</p><p>The <code>inout</code> value can’t have a default value, variadic parameters can’t be marked as <code>inout</code> .</p><ul><li><p>Without <code>inout</code></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>swap</span>(<span style=color:#66d9ef>_</span> a: Int, <span style=color:#66d9ef>_</span> b: Int) {
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>var</span> temp = a
-</span></span><span style=display:flex><span>		a = b       <span style=color:#75715e>// It will trigger the compile-time error. </span>
-</span></span><span style=display:flex><span>		b = temp    <span style=color:#75715e>// The parameters are constant.</span>
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>var</span> x = <span style=color:#ae81ff>2</span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>var</span> y = <span style=color:#ae81ff>3</span>
-</span></span><span style=display:flex><span>swap(x, y)
-</span></span><span style=display:flex><span>print(<span style=color:#e6db74>&#34;x = </span><span style=color:#e6db74>\(</span>x<span style=color:#e6db74>)</span><span style=color:#e6db74>, y = </span><span style=color:#e6db74>\(</span>y<span style=color:#e6db74>)</span><span style=color:#e6db74>&#34;</span>
-</span></span></code></pre></div></li><li><p>With <code>inout</code></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>swap</span>(<span style=color:#66d9ef>_</span> a: <span style=color:#66d9ef>inout</span> Int, <span style=color:#66d9ef>_</span> b: <span style=color:#66d9ef>inout</span> Int) {
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>var</span> temp = a
-</span></span><span style=display:flex><span>		a = b
-</span></span><span style=display:flex><span>		b = temp
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>var</span> x = <span style=color:#ae81ff>2</span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>var</span> y = <span style=color:#ae81ff>3</span>
-</span></span><span style=display:flex><span>swap(&amp;x, &amp;y)   <span style=color:#75715e>// Here should use the reference sign so that the funtion can konw where to change the value of the original variable.</span>
-</span></span><span style=display:flex><span>print(<span style=color:#e6db74>&#34;x = </span><span style=color:#e6db74>\(</span>x<span style=color:#e6db74>)</span><span style=color:#e6db74>, y = </span><span style=color:#e6db74>\(</span>y<span style=color:#e6db74>)</span><span style=color:#e6db74>&#34;</span>)
-</span></span><span style=display:flex><span><span style=color:#75715e>// It will print 「x = 3, y = 2」</span>
-</span></span></code></pre></div></li></ul><h3 id=function-types>Function Types<a hidden class=anchor aria-hidden=true href=#function-types>#</a></h3><p>To describe a function’s input and output.</p><p>Such as <code>(Int, Int) -> Int</code> or <code>() -> Void</code> .</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>addTwoInts</span>(<span style=color:#66d9ef>_</span> a: Int, <span style=color:#66d9ef>_</span> b: Int) -&gt; Int {
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> a <span style=color:#f92672>+</span> b
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>var</span> mathFunction: (Int, Int) -&gt; Int = addTwoInts
-</span></span></code></pre></div><p>Function Types as Parameter Type</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>addTwoInts</span>(<span style=color:#66d9ef>_</span> a: Int, <span style=color:#66d9ef>_</span> b: Int) -&gt; Int {
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> a <span style=color:#f92672>+</span> b
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>printResult</span>(<span style=color:#66d9ef>_</span> mathFunc: (Int, Int) -&gt; Int, <span style=color:#66d9ef>_</span> a: Int, <span style=color:#66d9ef>_</span> b: Int) {
-</span></span><span style=display:flex><span>		print(<span style=color:#e6db74>&#34;Result: </span><span style=color:#e6db74>\(</span>mathFunc<span style=color:#e6db74>(</span>a, b<span style=color:#e6db74>))</span><span style=color:#e6db74>&#34;</span>)
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>printResult(addTwoInts, <span style=color:#ae81ff>2</span>, <span style=color:#ae81ff>7</span>)
-</span></span><span style=display:flex><span><span style=color:#75715e>// Print 「Result: 9」</span>
-</span></span></code></pre></div><p>Function Types as Return Types</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>stepForward</span>(<span style=color:#66d9ef>_</span> input: Int) -&gt; Int {
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> input <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>stepBackward</span>(<span style=color:#66d9ef>_</span> input: Int) -&gt; Int {
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> input <span style=color:#f92672>-</span> <span style=color:#ae81ff>1</span>
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e>// Return a function type</span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>chooseStepFunction</span>(backward: Bool) -&gt; (Int) -&gt; Int {
-</span></span><span style=display:flex><span>		<span style=color:#66d9ef>return</span> backward ? stepBackward : stepForward
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>var</span> cur = <span style=color:#ae81ff>3</span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> moveNearToZero = chooseStepFunction(backward: cur <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>0</span>)
-</span></span><span style=display:flex><span><span style=color:#75715e>// So the moveNearToZero will refers to the stepBackward() function.</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>while</span> cur <span style=color:#f92672>!=</span> <span style=color:#ae81ff>0</span> {
-</span></span><span style=display:flex><span>		print(<span style=color:#e6db74>&#34;Cur: </span><span style=color:#e6db74>\(</span>cur<span style=color:#e6db74>)</span><span style=color:#e6db74>&#34;</span>)
-</span></span><span style=display:flex><span>		cur = moveNearToZero(cur)
-</span></span><span style=display:flex><span>}
-</span></span></code></pre></div><ul><li><p>result:</p><p>cur: 3
+<!doctype html><html lang=en dir=auto>
+<head><meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=robots content="index, follow">
+<title>Function | CodePaper</title>
+<meta name=keywords content="编程语言">
+<meta name=description content="Call the function(method) to do something detail.">
+<meta name=author content>
+<link rel=canonical href=https://1-1.link/post/language/swift/06function/>
+<link crossorigin=anonymous href=/assets/css/stylesheet.ea5f2fd568f688f106fb918bfebdccb965b2f6ecb642824b56e5e0a12f25311c.css integrity="sha256-6l8v1Wj2iPEG+5GL/r3MuWWy9uy2QoJLVuXgoS8lMRw=" rel="preload stylesheet" as=style>
+<script defer crossorigin=anonymous src=/assets/js/highlight.acb54fd32bbc1982428b8850317e45d076b95012730a5936667e6bc21777692a.js integrity="sha256-rLVP0yu8GYJCi4hQMX5F0Ha5UBJzClk2Zn5rwhd3aSo=" onload=hljs.initHighlightingOnLoad()></script>
+<link rel=icon href=https://1-1.link/favicon.ico>
+<link rel=icon type=image/png sizes=16x16 href=https://1-1.link/favicon-16x16.png>
+<link rel=icon type=image/png sizes=32x32 href=https://1-1.link/favicon-32x32.png>
+<link rel=apple-touch-icon href=https://1-1.link/apple-touch-icon.png>
+<link rel=mask-icon href=https://1-1.link/safari-pinned-tab.svg>
+<meta name=theme-color content="#2e2e33">
+<meta name=msapplication-TileColor content="#2e2e33">
+<noscript>
+<style>#theme-toggle,.top-link{display:none}</style>
+<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
+</noscript><meta property="og:title" content="Function">
+<meta property="og:description" content="Call the function(method) to do something detail.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://1-1.link/post/language/swift/06function/"><meta property="article:section" content="post">
+<meta property="article:published_time" content="2022-04-02T16:08:40+08:00">
+<meta property="article:modified_time" content="2022-04-02T16:08:40+08:00">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Function">
+<meta name=twitter:description content="Call the function(method) to do something detail.">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":3,"name":"Function","item":"https://1-1.link/post/language/swift/06function/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Function","name":"Function","description":"Call the function(method) to do something detail.","keywords":["编程语言"],"articleBody":"The function has two way to affect the outside scope\n Use return value to tell the caller. Use the inout with reference to change the the original value outside.  Function Usages Without Parameter and Return Value\nfunc sayHello() { print(\"Hello\") } // Call the function, will print「hello」 sayHello() With Parameter\nfunc greet(name: String) { print(\"Hello \\(name)\") } // Call the function pass the String as the input to the function, will print 「Hello Mike」 greet(name: \"Mike\") With Multiple Parameter\nfunc addTwoNum(a: Int, b: Int) { var c = a + b print(c) } // Call the function, pass two parameter to the function, will print 「11」  addTwoNum(a: 5, b: 6) With Return Value\nonce defined the return type of a function, it must have a return operation when the function logic end.\nfunc addTwoNum(a: Int, b: Int) - Int { var c = a + b return c } // The res will be assigned as 「12」 var res = addTwoNum(a: 3, b: 9) // The return value can be ignored. addTwoNum(a: 4, b: 9) With Multiple Return Value\n// Return as a tuple func getTwoNum() - (Int, Int) { var a = 2 var b = 4 return (a, b) } var nums = getTwoNum() // Return as a optional dictionary  func getThreeNum() - (a: Int, b: Int, c: Int)? { var a = 2 var b = 4 var c = 3 return (a, b, c) } With Multiple Parameter and Multiple Return Value\nfunc minMax(array: Int[]) - (min: Int, max: Int)? { if array.isEmpty {return nil} var curMin = array[0] var curMax = array[0] for value in array[1..if value  curMin { curMin = value } if value  curMax { curMax = value } } return (curMin, curMax) } // Use optional binding to check  if let bound = minMax(array: [3, 5, 5, 6, 22, 13, 16, 24, 11]) { print(\"Min: \\(bound.min)\") print(\"Max: \\(bound.max)\") } With Implicit Return\n It only allow the first one sentence to implicit return.  // It will return the result of a + b func sum(a: Int, b: Int) - Int{ a + b } // It will not return a value func sum(a: Int, b: Int) { a + b } // This can't work!!! It will trige compile-time error. func getTwoNum() - Int { var a = 2 var b = 4 a + b // Here not allow to implicit return value // The implicit return only allow the first one sentence } // This can work, because the getTwoNum only use first one sentence to return func get() - (Int, Int) { var a = 5 return (5, 6) } func getTwoNum() - (Int, Int) { get() // The implicit return can work. } Parameter Parameter Names and Argument Labels // Argument Labels func greet(person: String, from hometown: String) - String { // The 'person' and 'hometown' are parameter names. // The 'from' is a argument label of th second parameter. return \"\\(person)is come from \\(hometown).\" } print(greet(person: \"Mike\", from: \"New York\")) Omitting Argument Labels Use the underscore to omit the label\nfunc readFromFile(_ path: String) { print(path) } readFromFile(\"./music/one.mp3\") Default Parameter Values func drawRect(x: Int, y: Int, w: Int, h: Int, color: (Int, Int, Int) = (0, 0, 0)) { // Here the color has default value (0, 0, 0) } Variadic Parameter  The values passed will be made as as an array. For example, the Double... passed will be made as [Double]  func average(_ nums: Double...) - Double{ var total: Double = 0 for num in nums { total += num } return total / Double(nums.count) } print(average(3.3, 2.9, 4.6))   To make it unambiguous between the variadic parameter and normal parameters. The first parameter that comes after a variadic parameter must have an apparent argument label.\nfunc getOne(_ nums: Double..., cut cutLen: Int) - Double{ return 1.0 } print(getOne(3.3, 2.9, 4.6, cut: 3)) // Another way func getAnotherOne(_ nums: Double..., cutLen: Int) - Double{ return 1.0 } print(getAnotherOne(3.3, 2.9, 4.6, cutLen: 3))   In-Out Parameters Function parameters are constants by default.\nTo modify the parameter’s value and let the changes persist after the function call, we can use the inout keyword.\n(Using the inout keyword, we can change the origin value via the function call)\nThe inout value can’t have a default value, variadic parameters can’t be marked as inout .\n  Without inout\nfunc swap(_ a: Int, _ b: Int) { var temp = a a = b // It will trigger the compile-time error.  b = temp // The parameters are constant. } var x = 2 var y = 3 swap(x, y) print(\"x = \\(x), y = \\(y)\"   With inout\nfunc swap(_ a: inout Int, _ b: inout Int) { var temp = a a = b b = temp } var x = 2 var y = 3 swap(\u0026x, \u0026y) // Here should use the reference sign so that the funtion can konw where to change the value of the original variable. print(\"x = \\(x), y = \\(y)\") // It will print 「x = 3, y = 2」   Function Types To describe a function’s input and output.\nSuch as (Int, Int) - Int or () - Void .\nfunc addTwoInts(_ a: Int, _ b: Int) - Int { return a + b } var mathFunction: (Int, Int) - Int = addTwoInts Function Types as Parameter Type\nfunc addTwoInts(_ a: Int, _ b: Int) - Int { return a + b } func printResult(_ mathFunc: (Int, Int) - Int, _ a: Int, _ b: Int) { print(\"Result: \\(mathFunc(a, b))\") } printResult(addTwoInts, 2, 7) // Print 「Result: 9」 Function Types as Return Types\nfunc stepForward(_ input: Int) - Int { return input + 1 } func stepBackward(_ input: Int) - Int { return input - 1 } // Return a function type func chooseStepFunction(backward: Bool) - (Int) - Int { return backward ? stepBackward : stepForward } var cur = 3 let moveNearToZero = chooseStepFunction(backward: cur  0) // So the moveNearToZero will refers to the stepBackward() function. while cur != 0 { print(\"Cur: \\(cur)\") cur = moveNearToZero(cur) }   result:\ncur: 3 cur: 2 cur: 1\n  Nested Function Hidden from the outside world by default.\nOnly when the nested function be returned, it can be used in the caller’s scope.\nfunc chooseStepFunction(backward: Bool) - (Int) - Int { func stepForward(input: Int) - Int { return input + 1 } func stepBackward(input: Int) - Int { return input - 1 } return backward ? stepBackward : stepForward } var cur = -4 let moveNearToZero = chooseStepFunction(backward: cur  0) // moveNearToZero now is refers tyo the nested stepForward() cur = moveNearToZero(cur) ","wordCount":"1106","inLanguage":"en","datePublished":"2022-04-02T16:08:40+08:00","dateModified":"2022-04-02T16:08:40+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://1-1.link/post/language/swift/06function/"},"publisher":{"@type":"Organization","name":"CodePaper","logo":{"@type":"ImageObject","url":"https://1-1.link/favicon.ico"}}}</script>
+<link rel="shortcut icon" href=/img/favicon.ico type=image/x-icon>
+</head>
+<body id=top>
+<script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
+<header class=header>
+<nav class=nav>
+<div class=logo>
+<a href=https://1-1.link accesskey=h title="CodePaper (Alt + H)">CodePaper</a>
+<div class=logo-switches>
+<button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+</div>
+</div>
+<ul id=menu>
+<li>
+<a href=https://1-1.link/archive/ title=📦档案>
+<span>📦档案</span>
+</a>
+</li>
+<li>
+<a href=https://1-1.link/categories/ title=📖类别>
+<span>📖类别</span>
+</a>
+</li>
+<li>
+<a href=https://1-1.link/tags/ title=🏷️标签>
+<span>🏷️标签</span>
+</a>
+</li>
+<li>
+<a href=https://1-1.link/search/ title="🔎搜索 (Alt + /)" accesskey=/>
+<span>🔎搜索</span>
+</a>
+</li>
+<li>
+<a href=https://1-1.link/about/ title=🧑‍💻关于我>
+<span>🧑‍💻关于我</span>
+</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class=main>
+<article class=post-single>
+<header class=post-header>
+<div class=breadcrumbs><a href=https://1-1.link>Home</a></div>
+<h1 class=post-title>
+Function
+</h1>
+<div class=post-meta><span title="2022-04-02 16:08:40 +0800 CST">April 2, 2022</span>
+</div>
+</header> <div class=toc>
+<details>
+<summary accesskey=c title="(Alt + C)">
+<span class=details>Table of Contents</span>
+</summary>
+<div class=inner><ul>
+<li>
+<a href=#function-usages aria-label="Function Usages">Function Usages</a></li>
+<li>
+<a href=#parameter aria-label=Parameter>Parameter</a><ul>
+<li>
+<a href=#parameter-names-and-argument-labels aria-label="Parameter Names and Argument Labels">Parameter Names and Argument Labels</a></li>
+<li>
+<a href=#omitting-argument-labels aria-label="Omitting Argument Labels">Omitting Argument Labels</a></li>
+<li>
+<a href=#default-parameter-values aria-label="Default Parameter Values">Default Parameter Values</a></li>
+<li>
+<a href=#variadic-parameter aria-label="Variadic Parameter">Variadic Parameter</a></li>
+<li>
+<a href=#in-out--parameters aria-label="In-Out  Parameters">In-Out Parameters</a></li>
+<li>
+<a href=#function-types aria-label="Function Types">Function Types</a></li></ul>
+</li>
+<li>
+<a href=#nested-function aria-label="Nested Function">Nested Function</a>
+</li>
+</ul>
+</div>
+</details>
+</div>
+<div class=post-content><p>The function has two way to affect the outside scope</p>
+<ul>
+<li>Use return value to tell the caller.</li>
+<li>Use the <code>inout</code> with reference to change the the original value outside.</li>
+</ul>
+<h2 id=function-usages>Function Usages<a hidden class=anchor aria-hidden=true href=#function-usages>#</a></h2>
+<p>Without Parameter and Return Value</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>sayHello</span>() {
+		print(<span style=color:#e6db74>&#34;Hello&#34;</span>)
+}
+
+<span style=color:#75715e>// Call the function, will print「hello」</span>
+sayHello()       
+</code></pre></div><p>With Parameter</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>greet</span>(name: String) {
+		print(<span style=color:#e6db74>&#34;Hello </span><span style=color:#e6db74>\(</span>name<span style=color:#e6db74>)</span><span style=color:#e6db74>&#34;</span>) 
+}
+
+<span style=color:#75715e>// Call the function pass the String as the input to the function, will print 「Hello Mike」</span>
+greet(name: <span style=color:#e6db74>&#34;Mike&#34;</span>)    
+</code></pre></div><p>With Multiple Parameter</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>addTwoNum</span>(a: Int, b: Int) {
+		<span style=color:#66d9ef>var</span> c = a <span style=color:#f92672>+</span> b
+		print(c)
+}
+
+<span style=color:#75715e>// Call the function, pass two parameter to the function, will print 「11」 </span>
+addTwoNum(a: <span style=color:#ae81ff>5</span>, b: <span style=color:#ae81ff>6</span>)  
+</code></pre></div><p>With Return Value</p>
+<p>once defined the return type of a function, it must have a return operation when the function logic end.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>addTwoNum</span>(a: Int, b: Int) -&gt; Int {
+		<span style=color:#66d9ef>var</span> c = a <span style=color:#f92672>+</span> b
+		<span style=color:#66d9ef>return</span> c
+}
+
+<span style=color:#75715e>// The res will be assigned as 「12」</span>
+<span style=color:#66d9ef>var</span> res = addTwoNum(a: <span style=color:#ae81ff>3</span>, b: <span style=color:#ae81ff>9</span>)
+
+<span style=color:#75715e>// The return value can be ignored.</span>
+addTwoNum(a: <span style=color:#ae81ff>4</span>, b: <span style=color:#ae81ff>9</span>)
+</code></pre></div><p>With Multiple Return Value</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=color:#75715e>// Return as a tuple</span>
+<span style=color:#66d9ef>func</span> <span style=color:#a6e22e>getTwoNum</span>() -&gt; (Int, Int) {
+		<span style=color:#66d9ef>var</span> a = <span style=color:#ae81ff>2</span>
+		<span style=color:#66d9ef>var</span> b = <span style=color:#ae81ff>4</span>
+		<span style=color:#66d9ef>return</span> (a, b)
+}
+
+<span style=color:#66d9ef>var</span> nums = getTwoNum()
+
+<span style=color:#75715e>// Return as a optional dictionary </span>
+<span style=color:#66d9ef>func</span> <span style=color:#a6e22e>getThreeNum</span>() -&gt; (a: Int, b: Int, c: Int)? {
+		<span style=color:#66d9ef>var</span> a = <span style=color:#ae81ff>2</span>
+		<span style=color:#66d9ef>var</span> b = <span style=color:#ae81ff>4</span>
+		<span style=color:#66d9ef>var</span> c = <span style=color:#ae81ff>3</span>
+		<span style=color:#66d9ef>return</span> (a, b, c)
+}
+</code></pre></div><p>With Multiple Parameter and Multiple Return Value</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>minMax</span>(array: Int[]) -&gt; (min: Int, max: Int)? {
+		<span style=color:#66d9ef>if</span> array.isEmpty {<span style=color:#66d9ef>return</span> <span style=color:#66d9ef>nil</span>}
+		<span style=color:#66d9ef>var</span> curMin = array[<span style=color:#ae81ff>0</span>]
+		<span style=color:#66d9ef>var</span> curMax = array[<span style=color:#ae81ff>0</span>]
+		<span style=color:#66d9ef>for</span> value <span style=color:#66d9ef>in</span> array[<span style=color:#ae81ff>1.</span>.&lt;array.count] {
+				<span style=color:#66d9ef>if</span> value <span style=color:#f92672>&lt;</span> curMin {
+						curMin = value
+				}
+				<span style=color:#66d9ef>if</span> value <span style=color:#f92672>&gt;</span> curMax {
+						curMax = value
+				}
+		}
+		<span style=color:#66d9ef>return</span> (curMin, curMax)
+}
+
+<span style=color:#75715e>// Use optional binding to check </span>
+<span style=color:#66d9ef>if</span> <span style=color:#66d9ef>let</span> bound = minMax(array: [<span style=color:#ae81ff>3</span>, <span style=color:#ae81ff>5</span>, <span style=color:#ae81ff>5</span>, <span style=color:#ae81ff>6</span>, <span style=color:#ae81ff>22</span>, <span style=color:#ae81ff>13</span>, <span style=color:#ae81ff>16</span>, <span style=color:#ae81ff>24</span>, <span style=color:#ae81ff>11</span>]) {
+		print(<span style=color:#e6db74>&#34;Min: </span><span style=color:#e6db74>\(</span>bound.min<span style=color:#e6db74>)</span><span style=color:#e6db74>&#34;</span>)
+		print(<span style=color:#e6db74>&#34;Max: </span><span style=color:#e6db74>\(</span>bound.max<span style=color:#e6db74>)</span><span style=color:#e6db74>&#34;</span>)
+}
+</code></pre></div><p>With Implicit Return</p>
+<ul>
+<li>It only allow the first one sentence to implicit return.</li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=color:#75715e>// It will return the result of a + b</span>
+<span style=color:#66d9ef>func</span> <span style=color:#a6e22e>sum</span>(a: Int, b: Int) -&gt; Int{
+		a <span style=color:#f92672>+</span> b
+}
+
+<span style=color:#75715e>// It will not return a value</span>
+<span style=color:#66d9ef>func</span> <span style=color:#a6e22e>sum</span>(a: Int, b: Int) {
+		a <span style=color:#f92672>+</span> b
+}
+
+<span style=color:#75715e>// This can&#39;t work!!! It will trige compile-time error.</span>
+<span style=color:#66d9ef>func</span> <span style=color:#a6e22e>getTwoNum</span>() -&gt; Int {
+    <span style=color:#66d9ef>var</span> a = <span style=color:#ae81ff>2</span>
+    <span style=color:#66d9ef>var</span> b = <span style=color:#ae81ff>4</span>
+    a <span style=color:#f92672>+</span> b
+		<span style=color:#75715e>// Here not allow to implicit return value</span>
+		<span style=color:#75715e>// The implicit return only allow the first one sentence</span>
+}
+
+<span style=color:#75715e>// This can work, because the getTwoNum only use first one sentence to return</span>
+<span style=color:#66d9ef>func</span> <span style=color:#a6e22e>get</span>() -&gt; (Int, Int) {
+    <span style=color:#66d9ef>var</span> a = <span style=color:#ae81ff>5</span>
+    <span style=color:#66d9ef>return</span> (<span style=color:#ae81ff>5</span>, <span style=color:#ae81ff>6</span>)
+}
+<span style=color:#66d9ef>func</span> <span style=color:#a6e22e>getTwoNum</span>() -&gt; (Int, Int) {
+    <span style=color:#66d9ef>get</span>()    <span style=color:#75715e>// The implicit return can work.</span>
+}
+</code></pre></div><h2 id=parameter>Parameter<a hidden class=anchor aria-hidden=true href=#parameter>#</a></h2>
+<h3 id=parameter-names-and-argument-labels>Parameter Names and Argument Labels<a hidden class=anchor aria-hidden=true href=#parameter-names-and-argument-labels>#</a></h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=color:#75715e>// Argument Labels</span>
+<span style=color:#66d9ef>func</span> <span style=color:#a6e22e>greet</span>(person: String, from hometown: String) -&gt; String {
+		<span style=color:#75715e>// The &#39;person&#39; and &#39;hometown&#39; are parameter names.</span>
+		<span style=color:#75715e>// The &#39;from&#39; is a argument label of th second parameter.</span>
+		<span style=color:#66d9ef>return</span> <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>\(</span>person<span style=color:#e6db74>)</span><span style=color:#e6db74> is come from </span><span style=color:#e6db74>\(</span>hometown<span style=color:#e6db74>)</span><span style=color:#e6db74>.&#34;</span>
+}
+print(greet(person: <span style=color:#e6db74>&#34;Mike&#34;</span>, from: <span style=color:#e6db74>&#34;New York&#34;</span>))
+
+</code></pre></div><h3 id=omitting-argument-labels>Omitting Argument Labels<a hidden class=anchor aria-hidden=true href=#omitting-argument-labels>#</a></h3>
+<p>Use the underscore to omit the label</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>readFromFile</span>(<span style=color:#66d9ef>_</span> path: String) {
+		print(path)
+}
+
+readFromFile(<span style=color:#e6db74>&#34;./music/one.mp3&#34;</span>)
+</code></pre></div><h3 id=default-parameter-values>Default Parameter Values<a hidden class=anchor aria-hidden=true href=#default-parameter-values>#</a></h3>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>drawRect</span>(x: Int, y: Int, w: Int, h: Int, color: (Int, Int, Int) = (<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>)) {
+		<span style=color:#75715e>// Here the color has default value (0, 0, 0)</span>
+}
+</code></pre></div><h3 id=variadic-parameter>Variadic Parameter<a hidden class=anchor aria-hidden=true href=#variadic-parameter>#</a></h3>
+<ul>
+<li>The values passed will be made as as an <strong>array.</strong> For example, the <code>Double...</code> passed will be made as <code>[Double]</code></li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>average</span>(<span style=color:#66d9ef>_</span> nums: Double...) -&gt; Double{
+		<span style=color:#66d9ef>var</span> total: Double = <span style=color:#ae81ff>0</span>
+		<span style=color:#66d9ef>for</span> num <span style=color:#66d9ef>in</span> nums {
+				total <span style=color:#f92672>+=</span> num
+		}
+		<span style=color:#66d9ef>return</span> total <span style=color:#f92672>/</span> Double(nums.count)
+}
+print(average(<span style=color:#ae81ff>3.3</span>, <span style=color:#ae81ff>2.9</span>, <span style=color:#ae81ff>4.6</span>))
+</code></pre></div><ul>
+<li>
+<p>To make it unambiguous between the variadic parameter and normal parameters. The first parameter that comes after a variadic parameter must have an apparent argument label.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>getOne</span>(<span style=color:#66d9ef>_</span> nums: Double..., cut cutLen: Int) -&gt; Double{
+
+        <span style=color:#66d9ef>return</span> <span style=color:#ae81ff>1.0</span>
+}
+print(getOne(<span style=color:#ae81ff>3.3</span>, <span style=color:#ae81ff>2.9</span>, <span style=color:#ae81ff>4.6</span>, cut: <span style=color:#ae81ff>3</span>))
+
+<span style=color:#75715e>// Another way</span>
+<span style=color:#66d9ef>func</span> <span style=color:#a6e22e>getAnotherOne</span>(<span style=color:#66d9ef>_</span> nums: Double..., cutLen: Int) -&gt; Double{
+        <span style=color:#66d9ef>return</span> <span style=color:#ae81ff>1.0</span>
+}
+print(getAnotherOne(<span style=color:#ae81ff>3.3</span>, <span style=color:#ae81ff>2.9</span>, <span style=color:#ae81ff>4.6</span>, cutLen: <span style=color:#ae81ff>3</span>))
+</code></pre></div></li>
+</ul>
+<h3 id=in-out--parameters>In-Out Parameters<a hidden class=anchor aria-hidden=true href=#in-out--parameters>#</a></h3>
+<p>Function parameters are constants by default.</p>
+<p>To modify the parameter’s value and let the changes persist after the function call, we can use the <code>inout</code> keyword.</p>
+<p>(Using the <code>inout</code> keyword, we can <strong>change the origin value</strong> via the function call)</p>
+<p>The <code>inout</code> value can’t have a default value, variadic parameters can’t be marked as <code>inout</code> .</p>
+<ul>
+<li>
+<p>Without <code>inout</code></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift>
+<span style=color:#66d9ef>func</span> <span style=color:#a6e22e>swap</span>(<span style=color:#66d9ef>_</span> a: Int, <span style=color:#66d9ef>_</span> b: Int) {
+        <span style=color:#66d9ef>var</span> temp = a
+        a = b       <span style=color:#75715e>// It will trigger the compile-time error. </span>
+        b = temp    <span style=color:#75715e>// The parameters are constant.</span>
+}
+
+<span style=color:#66d9ef>var</span> x = <span style=color:#ae81ff>2</span>
+<span style=color:#66d9ef>var</span> y = <span style=color:#ae81ff>3</span>
+swap(x, y)
+print(<span style=color:#e6db74>&#34;x = </span><span style=color:#e6db74>\(</span>x<span style=color:#e6db74>)</span><span style=color:#e6db74>, y = </span><span style=color:#e6db74>\(</span>y<span style=color:#e6db74>)</span><span style=color:#e6db74>&#34;</span>
+</code></pre></div></li>
+<li>
+<p>With <code>inout</code></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>swap</span>(<span style=color:#66d9ef>_</span> a: <span style=color:#66d9ef>inout</span> Int, <span style=color:#66d9ef>_</span> b: <span style=color:#66d9ef>inout</span> Int) {
+        <span style=color:#66d9ef>var</span> temp = a
+        a = b
+        b = temp
+}
+
+<span style=color:#66d9ef>var</span> x = <span style=color:#ae81ff>2</span>
+<span style=color:#66d9ef>var</span> y = <span style=color:#ae81ff>3</span>
+swap(&amp;x, &amp;y)   <span style=color:#75715e>// Here should use the reference sign so that the funtion can konw where to change the value of the original variable.</span>
+print(<span style=color:#e6db74>&#34;x = </span><span style=color:#e6db74>\(</span>x<span style=color:#e6db74>)</span><span style=color:#e6db74>, y = </span><span style=color:#e6db74>\(</span>y<span style=color:#e6db74>)</span><span style=color:#e6db74>&#34;</span>)
+<span style=color:#75715e>// It will print 「x = 3, y = 2」</span>
+</code></pre></div></li>
+</ul>
+<h3 id=function-types>Function Types<a hidden class=anchor aria-hidden=true href=#function-types>#</a></h3>
+<p>To describe a function’s input and output.</p>
+<p>Such as <code>(Int, Int) -> Int</code> or <code>() -> Void</code> .</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>addTwoInts</span>(<span style=color:#66d9ef>_</span> a: Int, <span style=color:#66d9ef>_</span> b: Int) -&gt; Int {
+    <span style=color:#66d9ef>return</span> a <span style=color:#f92672>+</span> b
+}
+
+<span style=color:#66d9ef>var</span> mathFunction: (Int, Int) -&gt; Int = addTwoInts
+</code></pre></div><p>Function Types as Parameter Type</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>addTwoInts</span>(<span style=color:#66d9ef>_</span> a: Int, <span style=color:#66d9ef>_</span> b: Int) -&gt; Int {
+    <span style=color:#66d9ef>return</span> a <span style=color:#f92672>+</span> b
+}
+
+<span style=color:#66d9ef>func</span> <span style=color:#a6e22e>printResult</span>(<span style=color:#66d9ef>_</span> mathFunc: (Int, Int) -&gt; Int, <span style=color:#66d9ef>_</span> a: Int, <span style=color:#66d9ef>_</span> b: Int) {
+		print(<span style=color:#e6db74>&#34;Result: </span><span style=color:#e6db74>\(</span>mathFunc<span style=color:#e6db74>(</span>a, b<span style=color:#e6db74>))</span><span style=color:#e6db74>&#34;</span>)
+}
+
+printResult(addTwoInts, <span style=color:#ae81ff>2</span>, <span style=color:#ae81ff>7</span>)
+<span style=color:#75715e>// Print 「Result: 9」</span>
+</code></pre></div><p>Function Types as Return Types</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>stepForward</span>(<span style=color:#66d9ef>_</span> input: Int) -&gt; Int {
+    <span style=color:#66d9ef>return</span> input <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>
+}
+<span style=color:#66d9ef>func</span> <span style=color:#a6e22e>stepBackward</span>(<span style=color:#66d9ef>_</span> input: Int) -&gt; Int {
+    <span style=color:#66d9ef>return</span> input <span style=color:#f92672>-</span> <span style=color:#ae81ff>1</span>
+}
+
+<span style=color:#75715e>// Return a function type</span>
+<span style=color:#66d9ef>func</span> <span style=color:#a6e22e>chooseStepFunction</span>(backward: Bool) -&gt; (Int) -&gt; Int {
+		<span style=color:#66d9ef>return</span> backward ? stepBackward : stepForward
+}
+
+<span style=color:#66d9ef>var</span> cur = <span style=color:#ae81ff>3</span>
+<span style=color:#66d9ef>let</span> moveNearToZero = chooseStepFunction(backward: cur <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>0</span>)
+<span style=color:#75715e>// So the moveNearToZero will refers to the stepBackward() function.</span>
+
+<span style=color:#66d9ef>while</span> cur <span style=color:#f92672>!=</span> <span style=color:#ae81ff>0</span> {
+		print(<span style=color:#e6db74>&#34;Cur: </span><span style=color:#e6db74>\(</span>cur<span style=color:#e6db74>)</span><span style=color:#e6db74>&#34;</span>)
+		cur = moveNearToZero(cur)
+}
+
+</code></pre></div><ul>
+<li>
+<p>result:</p>
+<p>cur: 3
 cur: 2
-cur: 1</p></li></ul><h2 id=nested-function>Nested Function<a hidden class=anchor aria-hidden=true href=#nested-function>#</a></h2><p>Hidden from the outside world by default.</p><p><strong>Only when the nested function be returned, it can be used in the caller’s scope.</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>chooseStepFunction</span>(backward: Bool) -&gt; (Int) -&gt; Int {
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>stepForward</span>(input: Int) -&gt; Int { <span style=color:#66d9ef>return</span> input <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span> }
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>stepBackward</span>(input: Int) -&gt; Int { <span style=color:#66d9ef>return</span> input <span style=color:#f92672>-</span> <span style=color:#ae81ff>1</span> }
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> backward ? stepBackward : stepForward
-</span></span><span style=display:flex><span>}
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>var</span> cur = <span style=color:#f92672>-</span><span style=color:#ae81ff>4</span>
-</span></span><span style=display:flex><span><span style=color:#66d9ef>let</span> moveNearToZero = chooseStepFunction(backward: cur <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>0</span>)
-</span></span><span style=display:flex><span><span style=color:#75715e>// moveNearToZero now is refers tyo the nested stepForward()</span>
-</span></span><span style=display:flex><span>cur = moveNearToZero(cur)
-</span></span></code></pre></div></div><footer class=post-footer><ul class=post-tags><li><a href=https://1-1.link/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/>编程语言</a></li></ul><nav class=paginav><a class=prev href=https://1-1.link/post/language/swift/07closures/><span class=title>« Prev</span><br><span>Closures</span></a>
-<a class=next href=https://1-1.link/post/language/swift/05control-flow/><span class=title>Next »</span><br><span>Control Flow</span></a></nav><div class=share-buttons><a target=_blank rel="noopener noreferrer" aria-label="share Function on twitter" href="https://twitter.com/intent/tweet/?text=Function&url=https%3a%2f%2f1-1.link%2fpost%2flanguage%2fswift%2f06function%2f&hashtags=%e7%bc%96%e7%a8%8b%e8%af%ad%e8%a8%80"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentcolor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM195.519 424.544c135.939.0 210.268-112.643 210.268-210.268.0-3.218.0-6.437-.153-9.502 14.406-10.421 26.973-23.448 36.935-38.314-13.18 5.824-27.433 9.809-42.452 11.648 15.326-9.196 26.973-23.602 32.49-40.92-14.252 8.429-30.038 14.56-46.896 17.931-13.487-14.406-32.644-23.295-53.946-23.295-40.767.0-73.87 33.104-73.87 73.87.0 5.824.613 11.494 1.992 16.858-61.456-3.065-115.862-32.49-152.337-77.241-6.284 10.881-9.962 23.601-9.962 37.088.0 25.594 13.027 48.276 32.95 61.456-12.107-.307-23.448-3.678-33.41-9.196v.92c0 35.862 25.441 65.594 59.311 72.49-6.13 1.686-12.72 2.606-19.464 2.606-4.751.0-9.348-.46-13.946-1.38 9.349 29.426 36.628 50.728 68.965 51.341-25.287 19.771-57.164 31.571-91.8 31.571-5.977.0-11.801-.306-17.625-1.073 32.337 21.15 71.264 33.41 112.95 33.41z"/></svg></a><a target=_blank rel="noopener noreferrer" aria-label="share Function on reddit" href="https://reddit.com/submit?url=https%3a%2f%2f1-1.link%2fpost%2flanguage%2fswift%2f06function%2f&title=Function"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentcolor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM446 265.638c0-22.964-18.616-41.58-41.58-41.58-11.211.0-21.361 4.457-28.841 11.666-28.424-20.508-67.586-33.757-111.204-35.278l18.941-89.121 61.884 13.157c.756 15.734 13.642 28.29 29.56 28.29 16.407.0 29.706-13.299 29.706-29.701.0-16.403-13.299-29.702-29.706-29.702-11.666.0-21.657 6.792-26.515 16.578l-69.105-14.69c-1.922-.418-3.939-.042-5.585 1.036-1.658 1.073-2.811 2.761-3.224 4.686l-21.152 99.438c-44.258 1.228-84.046 14.494-112.837 35.232-7.468-7.164-17.589-11.591-28.757-11.591-22.965.0-41.585 18.616-41.585 41.58.0 16.896 10.095 31.41 24.568 37.918-.639 4.135-.99 8.328-.99 12.576.0 63.977 74.469 115.836 166.33 115.836s166.334-51.859 166.334-115.836c0-4.218-.347-8.387-.977-12.493 14.564-6.47 24.735-21.034 24.735-38.001zM326.526 373.831c-20.27 20.241-59.115 21.816-70.534 21.816-11.428.0-50.277-1.575-70.522-21.82-3.007-3.008-3.007-7.882.0-10.889 3.003-2.999 7.882-3.003 10.885.0 12.777 12.781 40.11 17.317 59.637 17.317 19.522.0 46.86-4.536 59.657-17.321 3.016-2.999 7.886-2.995 10.885.008 3.008 3.011 3.003 7.882-.008 10.889zm-5.23-48.781c-16.373.0-29.701-13.324-29.701-29.698.0-16.381 13.328-29.714 29.701-29.714 16.378.0 29.706 13.333 29.706 29.714.0 16.374-13.328 29.698-29.706 29.698zM160.91 295.348c0-16.381 13.328-29.71 29.714-29.71 16.369.0 29.689 13.329 29.689 29.71.0 16.373-13.32 29.693-29.689 29.693-16.386.0-29.714-13.32-29.714-29.693z"/></svg></a><a target=_blank rel="noopener noreferrer" aria-label="share Function on telegram" href="https://telegram.me/share/url?text=Function&url=https%3a%2f%2f1-1.link%2fpost%2flanguage%2fswift%2f06function%2f"><svg viewBox="2 2 28 28" height="30" width="30" fill="currentcolor"><path d="M26.49 29.86H5.5a3.37 3.37.0 01-2.47-1 3.35 3.35.0 01-1-2.47V5.48A3.36 3.36.0 013 3 3.37 3.37.0 015.5 2h21A3.38 3.38.0 0129 3a3.36 3.36.0 011 2.46V26.37a3.35 3.35.0 01-1 2.47 3.38 3.38.0 01-2.51 1.02zm-5.38-6.71a.79.79.0 00.85-.66L24.73 9.24a.55.55.0 00-.18-.46.62.62.0 00-.41-.17q-.08.0-16.53 6.11a.59.59.0 00-.41.59.57.57.0 00.43.52l4 1.24 1.61 4.83a.62.62.0 00.63.43.56.56.0 00.4-.17L16.54 20l4.09 3A.9.9.0 0021.11 23.15zM13.8 20.71l-1.21-4q8.72-5.55 8.78-5.55c.15.0.23.0.23.16a.18.18.0 010 .06s-2.51 2.3-7.52 6.8z"/></svg></a></div></footer></article></main><footer class=footer><span>&copy; 2023 <a href=https://1-1.link>CodePaper</a></span>
-<span>Powered by
+cur: 1</p>
+</li>
+</ul>
+<h2 id=nested-function>Nested Function<a hidden class=anchor aria-hidden=true href=#nested-function>#</a></h2>
+<p>Hidden from the outside world by default.</p>
+<p><strong>Only when the nested function be returned, it can be used in the caller’s scope.</strong></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=color:#66d9ef>func</span> <span style=color:#a6e22e>chooseStepFunction</span>(backward: Bool) -&gt; (Int) -&gt; Int {
+    <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>stepForward</span>(input: Int) -&gt; Int { <span style=color:#66d9ef>return</span> input <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span> }
+    <span style=color:#66d9ef>func</span> <span style=color:#a6e22e>stepBackward</span>(input: Int) -&gt; Int { <span style=color:#66d9ef>return</span> input <span style=color:#f92672>-</span> <span style=color:#ae81ff>1</span> }
+    <span style=color:#66d9ef>return</span> backward ? stepBackward : stepForward
+}
+
+<span style=color:#66d9ef>var</span> cur = <span style=color:#f92672>-</span><span style=color:#ae81ff>4</span>
+<span style=color:#66d9ef>let</span> moveNearToZero = chooseStepFunction(backward: cur <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>0</span>)
+<span style=color:#75715e>// moveNearToZero now is refers tyo the nested stepForward()</span>
+cur = moveNearToZero(cur)
+</code></pre></div>
+</div>
+<footer class=post-footer>
+<ul class=post-tags>
+<li><a href=https://1-1.link/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/>编程语言</a></li>
+</ul>
+<nav class=paginav>
+<a class=prev href=https://1-1.link/post/language/swift/07closures/>
+<span class=title>« Prev</span>
+<br>
+<span>Closures</span>
+</a>
+<a class=next href=https://1-1.link/post/language/swift/05control-flow/>
+<span class=title>Next »</span>
+<br>
+<span>Control Flow</span>
+</a>
+</nav>
+<div class=share-buttons>
+<a target=_blank rel="noopener noreferrer" aria-label="share Function on twitter" href="https://twitter.com/intent/tweet/?text=Function&url=https%3a%2f%2f1-1.link%2fpost%2flanguage%2fswift%2f06function%2f&hashtags=%e7%bc%96%e7%a8%8b%e8%af%ad%e8%a8%80"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentcolor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM195.519 424.544c135.939.0 210.268-112.643 210.268-210.268.0-3.218.0-6.437-.153-9.502 14.406-10.421 26.973-23.448 36.935-38.314-13.18 5.824-27.433 9.809-42.452 11.648 15.326-9.196 26.973-23.602 32.49-40.92-14.252 8.429-30.038 14.56-46.896 17.931-13.487-14.406-32.644-23.295-53.946-23.295-40.767.0-73.87 33.104-73.87 73.87.0 5.824.613 11.494 1.992 16.858-61.456-3.065-115.862-32.49-152.337-77.241-6.284 10.881-9.962 23.601-9.962 37.088.0 25.594 13.027 48.276 32.95 61.456-12.107-.307-23.448-3.678-33.41-9.196v.92c0 35.862 25.441 65.594 59.311 72.49-6.13 1.686-12.72 2.606-19.464 2.606-4.751.0-9.348-.46-13.946-1.38 9.349 29.426 36.628 50.728 68.965 51.341-25.287 19.771-57.164 31.571-91.8 31.571-5.977.0-11.801-.306-17.625-1.073 32.337 21.15 71.264 33.41 112.95 33.41z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share Function on reddit" href="https://reddit.com/submit?url=https%3a%2f%2f1-1.link%2fpost%2flanguage%2fswift%2f06function%2f&title=Function"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentcolor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM446 265.638c0-22.964-18.616-41.58-41.58-41.58-11.211.0-21.361 4.457-28.841 11.666-28.424-20.508-67.586-33.757-111.204-35.278l18.941-89.121 61.884 13.157c.756 15.734 13.642 28.29 29.56 28.29 16.407.0 29.706-13.299 29.706-29.701.0-16.403-13.299-29.702-29.706-29.702-11.666.0-21.657 6.792-26.515 16.578l-69.105-14.69c-1.922-.418-3.939-.042-5.585 1.036-1.658 1.073-2.811 2.761-3.224 4.686l-21.152 99.438c-44.258 1.228-84.046 14.494-112.837 35.232-7.468-7.164-17.589-11.591-28.757-11.591-22.965.0-41.585 18.616-41.585 41.58.0 16.896 10.095 31.41 24.568 37.918-.639 4.135-.99 8.328-.99 12.576.0 63.977 74.469 115.836 166.33 115.836s166.334-51.859 166.334-115.836c0-4.218-.347-8.387-.977-12.493 14.564-6.47 24.735-21.034 24.735-38.001zM326.526 373.831c-20.27 20.241-59.115 21.816-70.534 21.816-11.428.0-50.277-1.575-70.522-21.82-3.007-3.008-3.007-7.882.0-10.889 3.003-2.999 7.882-3.003 10.885.0 12.777 12.781 40.11 17.317 59.637 17.317 19.522.0 46.86-4.536 59.657-17.321 3.016-2.999 7.886-2.995 10.885.008 3.008 3.011 3.003 7.882-.008 10.889zm-5.23-48.781c-16.373.0-29.701-13.324-29.701-29.698.0-16.381 13.328-29.714 29.701-29.714 16.378.0 29.706 13.333 29.706 29.714.0 16.374-13.328 29.698-29.706 29.698zM160.91 295.348c0-16.381 13.328-29.71 29.714-29.71 16.369.0 29.689 13.329 29.689 29.71.0 16.373-13.32 29.693-29.689 29.693-16.386.0-29.714-13.32-29.714-29.693z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share Function on telegram" href="https://telegram.me/share/url?text=Function&url=https%3a%2f%2f1-1.link%2fpost%2flanguage%2fswift%2f06function%2f"><svg viewBox="2 2 28 28" height="30" width="30" fill="currentcolor"><path d="M26.49 29.86H5.5a3.37 3.37.0 01-2.47-1 3.35 3.35.0 01-1-2.47V5.48A3.36 3.36.0 013 3 3.37 3.37.0 015.5 2h21A3.38 3.38.0 0129 3a3.36 3.36.0 011 2.46V26.37a3.35 3.35.0 01-1 2.47 3.38 3.38.0 01-2.51 1.02zm-5.38-6.71a.79.79.0 00.85-.66L24.73 9.24a.55.55.0 00-.18-.46.62.62.0 00-.41-.17q-.08.0-16.53 6.11a.59.59.0 00-.41.59.57.57.0 00.43.52l4 1.24 1.61 4.83a.62.62.0 00.63.43.56.56.0 00.4-.17L16.54 20l4.09 3A.9.9.0 0021.11 23.15zM13.8 20.71l-1.21-4q8.72-5.55 8.78-5.55c.15.0.23.0.23.16a.18.18.0 010 .06s-2.51 2.3-7.52 6.8z"/></svg>
+</a>
+</div>
+</footer>
+</article>
+</main>
+<footer class=footer>
+<span>&copy; 2023 <a href=https://1-1.link>CodePaper</a></span>
+<span>
+Powered by
 <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-        <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(t){t.preventDefault();var e=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(e)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(e)}']`).scrollIntoView({behavior:"smooth"}),e==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${e}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(t=>{const n=t.parentNode.parentNode,e=document.createElement("button");e.classList.add("copy-code"),e.innerHTML="copy";function s(){e.innerHTML="copied!",setTimeout(()=>{e.innerHTML="copy"},2e3)}e.addEventListener("click",o=>{if("clipboard"in navigator){navigator.clipboard.writeText(t.textContent),s();return}const e=document.createRange();e.selectNodeContents(t);const n=window.getSelection();n.removeAllRanges(),n.addRange(e);try{document.execCommand("copy"),s()}catch(e){}n.removeRange(e)}),n.classList.contains("highlight")?n.appendChild(e):n.parentNode.firstChild==n||(t.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?t.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(e):t.parentNode.appendChild(e))})</script></body></html>
+        <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a>
+</span>
+</footer>
+<a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a>
+<script>let menu=document.getElementById('menu');menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script>
+<script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
+<script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script>
+<script>document.querySelectorAll('pre > code').forEach(b=>{const c=b.parentNode.parentNode,a=document.createElement('button');a.classList.add('copy-code'),a.innerHTML='copy';function d(){a.innerHTML='copied!',setTimeout(()=>{a.innerHTML='copy'},2e3)}a.addEventListener('click',e=>{if('clipboard'in navigator){navigator.clipboard.writeText(b.textContent),d();return}const a=document.createRange();a.selectNodeContents(b);const c=window.getSelection();c.removeAllRanges(),c.addRange(a);try{document.execCommand('copy'),d()}catch(a){}c.removeRange(a)}),c.classList.contains("highlight")?c.appendChild(a):c.parentNode.firstChild==c||(b.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?b.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(a):b.parentNode.appendChild(a))})</script>
+</body>
+</html>

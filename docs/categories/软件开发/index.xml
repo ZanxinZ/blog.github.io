@@ -31,7 +31,7 @@ Factory Method Provide the method for creating an instance in the superclass, an
 在父类中提供创建对象的方法，允许子类决定实例化对象的类型。
 具备的部分：生产者协议、产品协议，往后就可以根据需要来扩展每一种产品。
 具体的生产者比如 MongoCakeCreator 的存在是为了实现与产品相关的核心业务逻辑，而不仅仅是创建 MongoCake 实例。工厂方法将核心业务逻辑从具体产品类中分离出来。
- // Creator  protocol CakeCreator {  func createCake() -&amp;gt; Cake  func doSomethingForCake(cake: Cake) -&amp;gt; Cake  }   // Product  protocol Cake {  func doWork()  }   // ConcreteCreator  class MongoCakeCreator: CakeCreator {  var cake: MongoCake?</description>
+// Creator protocol CakeCreator { func createCake() -&amp;gt; Cake func doSomethingForCake(cake: Cake) -&amp;gt; Cake } // Product protocol Cake { func doWork() } // ConcreteCreator class MongoCakeCreator: CakeCreator { var cake: MongoCake? func createCake() -&amp;gt; Cake { var cake = MongoCake() doSomethingForCake(cake: cake) return cake } func doSomethingForCake(cake: Cake) -&amp;gt; Cake{ cake.</description>
     </item>
     
   </channel>

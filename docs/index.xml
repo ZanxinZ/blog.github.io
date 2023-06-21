@@ -89,21 +89,21 @@ notion 支持导出的文件格式：PDF，HTML，MD 可是，这几种方法都
     </item>
     
     <item>
-      <title>关于我</title>
+      <title>个人简历</title>
       <link>https://1-1.link/about/</link>
       <pubDate>Tue, 12 Jul 2022 14:46:26 +0800</pubDate>
       
       <guid>https://1-1.link/about/</guid>
-      <description>简历  教育经历  2017&amp;ndash;2021 中国计量大学（本科）自动化专业 2021&amp;ndash;今 中国计量大学（研究生）电子信息专业  技术栈  掌握常见的数据结构与算法 熟悉各个设计模式的思想 熟悉 Swift &amp;amp; UIKit 开发 Java 服务端开发  项目经历   2021.05 跨平台文件传输 5 号电池 AAcell 🔗
+      <description>出生年月：1998.01 籍贯：广东揭阳 学历：硕士研究生
+联系方式：13757116490
+Github：https://github.com/ZanxinZ
+ 教育经历  2017&amp;ndash;2021 中国计量大学（本科）自动化专业 2021&amp;ndash;2024 中国计量大学（研究生）电子信息专业  技术栈  熟悉基本数据结构与算法 熟悉 iOS Swift &amp;amp; UIKit 开发 Java 服务端开发 熟悉各个设计模式的思想 熟悉基本 Git 操作 掌握基本 C 语言编程 熟悉基本 Python 语法  项目经历   2022-2023 iOS App《小速记》实现 ToDo、每日打卡、数字记录、统计功能。
+  2021.05 跨平台文件传输 5 号电池 AAcell 🔗
 负责后端部分，使用 Java 语言，基于 SpringBoot 框架搭建了 web 服务，实现仅依赖于浏览器的文件传输便捷服务。
 多台不同系统的设备使用房间号和密码可以进入同一个房间。
 使用拦截器配合 JWT (Json Web Token) 对请求建立连接的用户进行验证。
 密码使用 sha-256 非对称加密，在具有密文的情况下也无法获取用户设置的源密码。
-使用 MySQL 数据库存放房间信息和用户发送的消息。
-每一个房间的文件是直接以分类别的方式存放在固定文件夹。
-使用 WebSocket 让多个客户端向服务器订阅消息，使用房间号作为标识。
-  2021.02 本科毕设项目，基于 Mask-RCNN 和双目视觉对快递包裹内物体的三维定位。 Mask-RCNN 图像分割将包裹内的物体的种类和物体边缘识别出来，再使用双目视觉测得物体的与相机的距离，从而得到每一个物体的三维坐标值，为后续机械臂抓取物体提供坐标信息。
-  2021.07 安卓平板点餐 App CakeTouch 🔗 前台工作人员为客户记录每一个订单需要的商品，在确认订单之后，通过蓝牙打印机打印出商品的需求信息。</description>
+使用 MySQL 数据库存放房间信息和用户发送的消息。</description>
     </item>
     
     <item>
@@ -117,16 +117,7 @@ Factory Method Provide the method for creating an instance in the superclass, an
 在父类中提供创建对象的方法，允许子类决定实例化对象的类型。
 具备的部分：生产者协议、产品协议，往后就可以根据需要来扩展每一种产品。
 具体的生产者比如 MongoCakeCreator 的存在是为了实现与产品相关的核心业务逻辑，而不仅仅是创建 MongoCake 实例。工厂方法将核心业务逻辑从具体产品类中分离出来。
- // Creator  protocol CakeCreator {  func createCake() -&amp;gt; Cake  func doSomethingForCake(cake: Cake) -&amp;gt; Cake  }   // Product  protocol Cake {  func doWork()  }   // ConcreteCreator  class MongoCakeCreator: CakeCreator {  var cake: MongoCake?</description>
-    </item>
-    
-    <item>
-      <title>Mail</title>
-      <link>https://1-1.link/post/info/contact/mail/</link>
-      <pubDate>Sun, 10 Jul 2022 18:46:21 +0800</pubDate>
-      
-      <guid>https://1-1.link/post/info/contact/mail/</guid>
-      <description>now</description>
+// Creator protocol CakeCreator { func createCake() -&amp;gt; Cake func doSomethingForCake(cake: Cake) -&amp;gt; Cake } // Product protocol Cake { func doWork() } // ConcreteCreator class MongoCakeCreator: CakeCreator { var cake: MongoCake? func createCake() -&amp;gt; Cake { var cake = MongoCake() doSomethingForCake(cake: cake) return cake } func doSomethingForCake(cake: Cake) -&amp;gt; Cake{ cake.</description>
     </item>
     
     
@@ -149,7 +140,7 @@ Factory Method Provide the method for creating an instance in the superclass, an
       <description>Unlike arithmetic operators in C, arithmetic operators in Swift don’t overflow by default. If want to overflow by default, use the overflow operation begin with ampersand (&amp;amp;). For example, the overflow addition operator (&amp;amp;+).
 It’s so free to define custom infix, prefix, postfix and assignment operators, precedence and associativity values.
 Bitwise Operators Here we use a function to pad 0 for the number’s print result.
-func pad(num: UInt8, count: Int) -&amp;gt; String {  var str = String(num, radix: 2)  var res: String = str  for _ in 0.</description>
+func pad(num: UInt8, count: Int) -&amp;gt; String { var str = String(num, radix: 2) var res: String = str for _ in 0.</description>
     </item>
     
     <item>
@@ -194,7 +185,7 @@ Reference:
       <guid>https://1-1.link/post/language/swift/24opaque-type/</guid>
       <description>A function with an opaque type hides its return value’s type information. Hiding type information at some boundaries between a module and code that calls into the module. Unlike returning a value whose type is a protocol type, opaque type preserve type identity —the compile has access to the type information, but clients of the module don’t.
 The Situation Here we have a Shape protocol.
-protocol Shape {  func draw() -&amp;gt; String } The struct Triangle conform to the Shape.</description>
+protocol Shape { func draw() -&amp;gt; String } The struct Triangle conform to the Shape.</description>
     </item>
     
     <item>
@@ -241,7 +232,7 @@ Optional Chaining as an Alternative to Forced Unwrapping  ! force unwrapping tri
       
       <guid>https://1-1.link/post/language/swift/20nested-types/</guid>
       <description>Enumerations, classes or structures can be nested in another type.
-struct Closh {  enum Size: String{  case H = &amp;#34;high&amp;#34;, M = &amp;#34;Medium&amp;#34;, L = &amp;#34;Low&amp;#34;  }   enum Detail: Int {  case H = 180, M = 170, L = 160  struct Price {  let normal: Int, discount: Int?  }  var price: Price {  switch self {  case .</description>
+struct Closh { enum Size: String{ case H = &amp;#34;high&amp;#34;, M = &amp;#34;Medium&amp;#34;, L = &amp;#34;Low&amp;#34; } enum Detail: Int { case H = 180, M = 170, L = 160 struct Price { let normal: Int, discount: Int? } var price: Price { switch self { case .H: return Price(normal: 100, discount: 90) case .M: return Price(normal: 90, discount: 80) case .</description>
     </item>
     
     <item>
@@ -252,7 +243,7 @@ struct Closh {  enum Size: String{  case H = &amp;#34;high&amp;#34;, M = &amp;#3
       <guid>https://1-1.link/post/language/swift/19type-casting/</guid>
       <description>Type casting in Swift is implemented with is and as operators.
 Type casting:
- A subclass instance can be use as a superclass instance.  Defining a Class Hierarchy class Media {  var name: String  init(name: String) {  self.name = name  } }  class Song: Media {  var artist: String  init(name: String, artist: String) {  self.artist = artist  super.init(name: name)  } }  class Movie: Media {  var director: String  init(name: String, director: String) {  self.</description>
+ A subclass instance can be use as a superclass instance.  Defining a Class Hierarchy class Media { var name: String init(name: String) { self.name = name } } class Song: Media { var artist: String init(name: String, artist: String) { self.artist = artist super.init(name: name) } } class Movie: Media { var director: String init(name: String, director: String) { self.</description>
     </item>
     
     <item>
@@ -264,7 +255,7 @@ Type casting:
       <description>Swift has built-in support for writing asynchronous and parallel code in a structured way.
 Parallel code means multiple pieces of code run simultaneously.
  Concurrency will make the code harder to debug. Swift can help to catch problem at compile time.  Although it’s possible to write concurrent code without using Swift language support, that code tends to be hard to read.
-listPhotos(inGallery: &amp;#34;Summer Vacation&amp;#34;) { photoNames in  let sortedNames = photoNames.</description>
+listPhotos(inGallery: &amp;#34;Summer Vacation&amp;#34;) { photoNames in let sortedNames = photoNames.</description>
     </item>
     
     <item>
@@ -328,7 +319,7 @@ Provide by classes, structures, enumerations.
   Usually associated with instance of a particular type, can be associated with the type itself(type properties).
 Can define property observers to monitor changes in a property’s value, which can respond to with custom action.
 Can use a property wrapper to reuse code in the getter and setter.
-Stored Properties **struct Setting {  var width: Int  let height: Int } var appSetting = Setting(width: 100, height: 200) appSetting.</description>
+Stored Properties **struct Setting { var width: Int let height: Int } var appSetting = Setting(width: 100, height: 200) appSetting.</description>
     </item>
     
     <item>
@@ -346,8 +337,8 @@ Stored Properties **struct Setting {  var width: Int  let height: Int } var appS
       <pubDate>Sun, 10 Apr 2022 16:08:40 +0800</pubDate>
       
       <guid>https://1-1.link/post/language/swift/08enumerations/</guid>
-      <description>Syntax enum Direction { 	case up 	case down 	case left 	case right } Multiple case can appear on a single line, separated by commas:
-enum { 	case up, down, left, right } Use the Enumeration
+      <description>Syntax enum Direction { case up case down case left case right } Multiple case can appear on a single line, separated by commas:
+enum { case up, down, left, right } Use the Enumeration
 var dir = Direction.up When we want to modify the var after the initialized, we can use a shorter form of the enumeration.
 var dir = Direction.up dir = .down // The value&amp;#39;s type has been inferred when the value is in initializing.</description>
     </item>
@@ -404,7 +395,7 @@ var dir = Direction.up dir = .down // The value&amp;#39;s type has been inferred
       
       <guid>https://1-1.link/post/language/swift/03strings-and-characters/</guid>
       <description>String type is bridged with Foundation’s NSString. Foundation extends String to expose methods defines by NSString. If import Foundation, you can access those NSString methods on String without casting.
-String Literals // &amp;#34;Hello World!&amp;#34; is a String literal.  let sentence = &amp;#34;Hello World!&amp;#34;  // Multiline let story = &amp;#34;&amp;#34;&amp;#34; There are some people in the room. They are having a party. Because today is the Christmas. &amp;#34;&amp;#34;&amp;#34; // every line has the line breaks.</description>
+String Literals // &amp;#34;Hello World!&amp;#34; is a String literal.  let sentence = &amp;#34;Hello World!&amp;#34; // Multiline let story = &amp;#34;&amp;#34;&amp;#34; There are some people in the room. They are having a party. Because today is the Christmas. &amp;#34;&amp;#34;&amp;#34; // every line has the line breaks.</description>
     </item>
     
     <item>
@@ -423,6 +414,29 @@ String Literals // &amp;#34;Hello World!&amp;#34; is a String literal.  let sent
       
       <guid>https://1-1.link/post/language/swift/01basic/</guid>
       <description>Basic usage of the swift syntax.</description>
+    </item>
+    
+    <item>
+      <title>Mail</title>
+      <link>https://1-1.link/post/info/contact/mail/</link>
+      <pubDate>Sat, 10 Jul 2021 18:46:21 +0800</pubDate>
+      
+      <guid>https://1-1.link/post/info/contact/mail/</guid>
+      <description>false</description>
+    </item>
+    
+    <item>
+      <title>竞赛经历与奖项</title>
+      <link>https://1-1.link/post/info/certificate/</link>
+      <pubDate>Mon, 21 Jun 2021 10:17:24 +0800</pubDate>
+      
+      <guid>https://1-1.link/post/info/certificate/</guid>
+      <description>机器人比赛   2019.05 寻宝机器人
+  2019.05 超市购物机器人
+  2020.06 创意机器人比赛魔方组
+魔方机器人 🔗
+西门子智能制造挑战赛 2019.08
+大学生挑战杯 2022.07</description>
     </item>
     
   </channel>
