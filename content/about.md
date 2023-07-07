@@ -49,7 +49,7 @@ Github：[https://github.com/ZanxinZ](https://github.com/ZanxinZ)
 
   每一个房间的文件是直接以分类别的方式存放在固定文件夹；
 
-  使用 WebSocket 让多个客户端向服务器订阅消息，使用房间号作为标识。
+  使用 STOMP(Streaming Text Oriented Messaging Protocol 底层是 WebSocket) 让多个客户端向服务器订阅消息，使用房间号作为标识。
 
 - 2021.02 本科毕设项目，基于 Mask-RCNN 和双目视觉对快递包裹内物体的三维定位。
   Mask-RCNN 识别包裹内的物体种类和物体边缘，使用双目视觉测得物体的与相机的距离，从而得到每一个物体的三维坐标值，为后续机械臂抓取物体提供坐标信息。
@@ -59,7 +59,7 @@ Github：[https://github.com/ZanxinZ](https://github.com/ZanxinZ)
 ### 获奖经历 
 [证书 🔗](/post/info/certificate)
 - 2019.05 参加浙江省第四届大学生机器人比赛，寻宝机器人组，二等奖
-- 2019.10 参加大学生挑战杯，鸡枞根部切削机器人项目，国赛二等奖
+- 2019.10 参加大学生挑战杯，鸡枞根部切削机器人项目，国赛三等奖
 - 2022.07 参加 “兆易创新杯” 第十七届研究生电子设计竞赛，华东赛区团队二等奖，《基于 YOLOX 和 DeepLabv3+的鸣笛抓拍系统检测装置》
   
 ### 兴趣爱好
