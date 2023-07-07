@@ -24,8 +24,7 @@ Github：https://github.com/ZanxinZ
 密码使用 sha-256 非对称加密，在具有密文的情况下也无法获取用户设置的源密码；
 使用 MySQL 数据库存放房间信息和用户发送的消息；
 每一个房间的文件是直接以分类别的方式存放在固定文件夹；
-使用 WebSocket 让多个客户端向服务器订阅消息，使用房间号作为标识。
-2021.02 本科毕设项目，基于 Mask-RCNN 和双目视觉对快递包裹内物体的三维定位。 Mask-RCNN 识别包裹内的物体种类和物体边缘，使用双目视觉测得物体的与相机的距离，从而得到每一个物体的三维坐标值，为后续机械臂抓取物体提供坐标信息。</description>
+使用 STOMP(Streaming Text Oriented Messaging Protocol 底层是 WebSocket) 让多个客户端向服务器订阅消息，使用房间号作为标识。</description>
     </item>
     
   </channel>
