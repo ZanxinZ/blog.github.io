@@ -43,7 +43,7 @@ Github：[https://github.com/ZanxinZ](https://github.com/ZanxinZ)
 
   使用拦截器配合 JWT (Json Web Token) 对请求建立连接的用户进行验证；
 
-  密码使用 sha-256 非对称加密，在具有密文的情况下也无法获取用户设置的源密码；
+  密码使用 SHA-256 摘要密文保存，在仅具有密文的情况下无法获取用户设置的源密码；
 
   使用 MySQL 数据库存放房间信息和用户发送的消息；
 
