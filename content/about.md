@@ -61,6 +61,7 @@ Github：[https://github.com/ZanxinZ](https://github.com/ZanxinZ)
   房间使用期限一周，过期将被完全销毁。
 
 - 2021.07 安卓平板点餐 App [CakeTouch 🔗](https://github.com/ZanxinZ/CakeTouch)
+  
   前台工作人员为客户记录每一个订单需要的商品，在确认订单之后，App连接蓝牙打印机打印出商品订单信息。
 
 - 2021.02 本科毕设项目，基于 Mask-RCNN 和双目视觉对快递包裹内物体的三维定位。
