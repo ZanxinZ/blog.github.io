@@ -34,7 +34,7 @@ Github：[https://github.com/ZanxinZ](https://github.com/ZanxinZ)
 
 ### 项目经历
 
-- 2022-2023 iOS App《小速记》
+- 2022-2023 iOS App [《小速记》🔗](/post/ios/checkthempicsh)
   
   为了帮助用户对自己的一些小计划做记录，以及激励用户去达成这些小计划，开发了这样一款简洁的 App。具有 ToDo、每日打卡、数字记录、统计功能。
 
@@ -43,7 +43,7 @@ Github：[https://github.com/ZanxinZ](https://github.com/ZanxinZ)
   使用CoreData管理各个对象信息；
   使用UIKit各个原生控件做App功能的实现；
   支持简体中文、繁体、英文本地化。
-  App 介绍页面：</post/ios/checkthempicsh>
+  
   
 - 2021.05 跨平台文件传输 [5 号电池 AAcell 🔗](https://aacell.me)
   
@@ -61,11 +61,12 @@ Github：[https://github.com/ZanxinZ](https://github.com/ZanxinZ)
   
   房间使用期限一周，过期将被完全销毁。
 
-- 2021.02 本科毕设项目，基于 Mask-RCNN 和双目视觉对快递包裹内物体的三维定位。
-  Mask-RCNN 识别包裹内的物体种类和物体边缘，使用双目视觉测得物体的与相机的距离，从而得到每一个物体的三维坐标值，为后续机械臂抓取物体提供坐标信息。
 - 2021.07 安卓平板点餐 App [CakeTouch 🔗](https://github.com/ZanxinZ/CakeTouch)
   前台工作人员为客户记录每一个订单需要的商品，在确认订单之后，App连接蓝牙打印机打印出商品订单信息。
 
+- 2021.02 本科毕设项目，基于 Mask-RCNN 和双目视觉对快递包裹内物体的三维定位。
+  Mask-RCNN 识别包裹内的物体种类和物体边缘，使用双目视觉测得物体的与相机的距离，从而得到每一个物体的三维坐标值，为后续机械臂抓取物体提供坐标信息。
+  
 ### 校园经历
 
 [证书 🔗](/post/info/certificate)

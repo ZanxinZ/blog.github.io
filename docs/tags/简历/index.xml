@@ -16,9 +16,9 @@
       <description>出生年月：1998.01 籍贯：广东揭阳 学历：硕士研究生
 联系方式：13757116490
 Github：https://github.com/ZanxinZ
- 教育经历  2017&amp;ndash;2021 中国计量大学（本科）自动化专业 2021&amp;ndash;2024 中国计量大学（研究生）电子信息专业  技术栈  熟悉基本数据结构与算法 熟悉 iOS Swift &amp;amp; UIKit 开发流程 Java 服务端开发 熟悉各个设计模式的思想 熟悉基本 Git 操作 掌握基本 C 语言编程 熟悉基本 Python 语法  项目经历   2022-2023 iOS App《小速记》
+ 教育经历  2017&amp;ndash;2021 中国计量大学（本科）自动化专业 2021&amp;ndash;2024 中国计量大学（研究生）电子信息专业  技术栈  熟悉基本数据结构与算法 熟悉 iOS Swift &amp;amp; UIKit 开发流程 Java 服务端开发 熟悉各个设计模式的思想 熟悉基本 Git 操作 掌握基本 C 语言编程 熟悉基本 Python 语法  项目经历   2022-2023 iOS App 《小速记》🔗
 为了帮助用户对自己的一些小计划做记录，以及激励用户去达成这些小计划，开发了这样一款简洁的 App。具有 ToDo、每日打卡、数字记录、统计功能。
-主要技术： 在Xcode平台Swift开发； 使用CoreData管理各个对象信息； 使用UIKit各个原生控件做App功能的实现； 支持简体中文、繁体、英文本地化。 App 介绍页面：&amp;lt;/post/ios/checkthempicsh&amp;gt;
+主要技术： 在Xcode平台Swift开发； 使用CoreData管理各个对象信息； 使用UIKit各个原生控件做App功能的实现； 支持简体中文、繁体、英文本地化。
   2021.05 跨平台文件传输 5 号电池 AAcell 🔗
 负责后端部分 Java 开发，基于 SpringBoot 框架搭建 web 服务，实现仅依赖于浏览器的文件传输便捷服务；
 多台不同系统的设备使用房间号和密码可以进入同一个房间；
