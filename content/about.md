@@ -44,7 +44,6 @@ Github：[https://github.com/ZanxinZ](https://github.com/ZanxinZ)
   使用UIKit各个原生控件做App功能的实现；
   支持简体中文、繁体、英文本地化。
   
-  
 - 2021.05 跨平台文件传输 [5 号电池 AAcell 🔗](https://aacell.me)
   
   负责后端部分 Java 开发，基于 SpringBoot 框架搭建 web 服务，实现仅依赖于浏览器的文件传输便捷服务；
@@ -66,7 +65,7 @@ Github：[https://github.com/ZanxinZ](https://github.com/ZanxinZ)
 
 - 2021.02 本科毕设项目，基于 Mask-RCNN 和双目视觉对快递包裹内物体的三维定位。
   Mask-RCNN 识别包裹内的物体种类和物体边缘，使用双目视觉测得物体的与相机的距离，从而得到每一个物体的三维坐标值，为后续机械臂抓取物体提供坐标信息。
-  
+
 ### 校园经历
 
 [证书 🔗](/post/info/certificate)
