@@ -34,7 +34,7 @@ Github：[https://github.com/ZanxinZ](https://github.com/ZanxinZ)
 
 ### 项目经历
 
-- 2022-2023 iOS App [《小速记》🔗](/post/ios/checkthempicsh)
+- 2022-2023 iOS App [《小速记》🔗](/post/ios/checkthempicshow)
   
   为了帮助用户对自己的一些小计划做记录，以及激励用户去达成这些小计划，开发了这样一款简洁的 App。具有 ToDo、每日打卡、数字记录、统计功能。
 
