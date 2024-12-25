@@ -4,7 +4,6 @@ title: CodePaper
 theme: "PaperMod"
 publishdir: "./docs/"
 
-
 buildDrafts: false
 buildFuture: false
 buildExpired: false
