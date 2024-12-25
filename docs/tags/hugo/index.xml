@@ -4,14 +4,14 @@
     <title>Hugo on CodePaper</title>
     <link>https://wowios.com/tags/hugo/</link>
     <description>Recent content in Hugo on CodePaper</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.140.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 Mar 2023 16:59:18 +0800</lastBuildDate><atom:link href="https://wowios.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Mar 2023 16:59:18 +0800</lastBuildDate>
+    <atom:link href="https://wowios.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo 的一些问题</title>
       <link>https://wowios.com/post/tool/usehugo/someproblem/</link>
       <pubDate>Sat, 11 Mar 2023 16:59:18 +0800</pubDate>
-      
       <guid>https://wowios.com/post/tool/usehugo/someproblem/</guid>
       <description>&lt;h2 id=&#34;若域名有变动&#34;&gt;若域名有变动&lt;/h2&gt;
 &lt;p&gt;需要修改三个地方&lt;/p&gt;
@@ -21,12 +21,10 @@
 &lt;li&gt;Github repository setting &lt;code&gt;Pages&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>Hugo 发布一篇文章的过程</title>
       <link>https://wowios.com/post/tool/usehugo/publisharticle/</link>
       <pubDate>Sat, 11 Mar 2023 16:00:07 +0800</pubDate>
-      
       <guid>https://wowios.com/post/tool/usehugo/publisharticle/</guid>
       <description>&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
 &lt;ul&gt;
@@ -57,6 +55,5 @@
 &lt;h3 id=&#34;github-page-需要重新填写域名&#34;&gt;&lt;del&gt;Github Page 需要重新填写域名&lt;/del&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;del&gt;因为 Github Action 在执行的时候会把 master 分支中的 /docs 内所有内容拷贝到 main 分支，这里面不包括 CNAME 文件。所以在 repository 的 setting 的 pages 重新填写域名。&lt;/del&gt;&lt;strong&gt;（问题已经解决，在 workflow &lt;code&gt;action.yml&lt;/code&gt; 中添加 &lt;code&gt;cname: 1-1.link&lt;/code&gt;，所以如果域名有改动，需要在这修改）&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>
