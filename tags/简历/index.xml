@@ -4,18 +4,17 @@
     <title>简历 on CodePaper</title>
     <link>https://wowios.com/tags/%E7%AE%80%E5%8E%86/</link>
     <description>Recent content in 简历 on CodePaper</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.140.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Jul 2022 14:46:26 +0800</lastBuildDate><atom:link href="https://wowios.com/tags/%E7%AE%80%E5%8E%86/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Jul 2022 14:46:26 +0800</lastBuildDate>
+    <atom:link href="https://wowios.com/tags/%E7%AE%80%E5%8E%86/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>个人简历</title>
       <link>https://wowios.com/about/</link>
       <pubDate>Tue, 12 Jul 2022 14:46:26 +0800</pubDate>
-      
       <guid>https://wowios.com/about/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i.postimg.cc/KYWJnw5G/avatar-s.jpg&#34; alt=&#34;me&#34;  /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;me&#34; loading=&#34;lazy&#34; src=&#34;https://i.postimg.cc/KYWJnw5G/avatar-s.jpg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;出生年月：1998.01 籍贯：广东揭阳   学历：硕士研究生&lt;/p&gt;
 &lt;p&gt;联系方式：13757116490&lt;/p&gt;
 &lt;p&gt;Github：&lt;a href=&#34;https://github.com/ZanxinZ&#34;&gt;https://github.com/ZanxinZ&lt;/a&gt;&lt;/p&gt;
@@ -53,6 +52,5 @@
 &lt;p&gt;使用拦截器配合 JWT (Json Web Token) 对请求建立连接的用户进行验证；&lt;/p&gt;
 &lt;p&gt;密码使用 SHA-256 摘要密文保存，在仅具有密文的情况下无法获取用户设置的源密码；&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

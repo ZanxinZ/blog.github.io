@@ -4,44 +4,37 @@
     <title>Categories on CodePaper</title>
     <link>https://wowios.com/categories/</link>
     <description>Recent content in Categories on CodePaper</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.140.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Jul 2023 13:12:14 +0800</lastBuildDate><atom:link href="https://wowios.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Jul 2023 13:12:14 +0800</lastBuildDate>
+    <atom:link href="https://wowios.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>软件开发</title>
       <link>https://wowios.com/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</link>
       <pubDate>Fri, 07 Jul 2023 13:12:14 +0800</pubDate>
-      
       <guid>https://wowios.com/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>工具</title>
       <link>https://wowios.com/categories/%E5%B7%A5%E5%85%B7/</link>
       <pubDate>Sat, 13 May 2023 22:43:27 +0800</pubDate>
-      
       <guid>https://wowios.com/categories/%E5%B7%A5%E5%85%B7/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Java</title>
       <link>https://wowios.com/categories/java/</link>
       <pubDate>Tue, 12 Jul 2022 21:45:46 +0800</pubDate>
-      
       <guid>https://wowios.com/categories/java/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Swift</title>
       <link>https://wowios.com/categories/swift/</link>
       <pubDate>Sun, 19 Jun 2022 16:00:40 +0800</pubDate>
-      
       <guid>https://wowios.com/categories/swift/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>
