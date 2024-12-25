@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Home on CodePaper</title>
-    <link>https://wowios.com/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content in Home on CodePaper</description>
     <generator>Hugo -- 0.140.1</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 07 Jul 2023 13:12:14 +0800</lastBuildDate>
-    <atom:link href="https://wowios.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>“小速记” App 介绍</title>
-      <link>https://wowios.com/post/ios/checkthempicshow/</link>
+      <link>http://localhost:1313/post/ios/checkthempicshow/</link>
       <pubDate>Fri, 07 Jul 2023 13:12:14 +0800</pubDate>
-      <guid>https://wowios.com/post/ios/checkthempicshow/</guid>
+      <guid>http://localhost:1313/post/ios/checkthempicshow/</guid>
       <description>&lt;h3 id=&#34;小速记各部分功能介绍&#34;&gt;《小速记》各部分功能介绍&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -50,9 +50,9 @@
     </item>
     <item>
       <title>如何通过点击 UICollectionViewCell 跳转至对应的 UIViewController</title>
-      <link>https://wowios.com/post/ios/viewcontrollertransform/</link>
+      <link>http://localhost:1313/post/ios/viewcontrollertransform/</link>
       <pubDate>Wed, 17 May 2023 22:41:55 +0800</pubDate>
-      <guid>https://wowios.com/post/ios/viewcontrollertransform/</guid>
+      <guid>http://localhost:1313/post/ios/viewcontrollertransform/</guid>
       <description>&lt;h2 id=&#34;跳转部分的实现&#34;&gt;跳转部分的实现&lt;/h2&gt;
 &lt;p&gt;我需要从我的 HomeViewController 通过点击不同的 CollectionViewCell 跳至不同的 ViewController&lt;/p&gt;
 &lt;p&gt;&lt;img alt=&#34;Untitled&#34; loading=&#34;lazy&#34; src=&#34;../%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E7%82%B9%E5%87%BB%20UICollectionViewCell%20%E8%B7%B3%E8%BD%AC%E8%87%B3%E5%AF%B9%E5%BA%94%E7%9A%84%20UIViewController/Untitled.png&#34;&gt;&lt;/p&gt;
@@ -86,9 +86,9 @@
     </item>
     <item>
       <title>N4000 四网口工控机组网</title>
-      <link>https://wowios.com/post/tool/wrt/setnetwork/</link>
+      <link>http://localhost:1313/post/tool/wrt/setnetwork/</link>
       <pubDate>Sat, 13 May 2023 22:43:27 +0800</pubDate>
-      <guid>https://wowios.com/post/tool/wrt/setnetwork/</guid>
+      <guid>http://localhost:1313/post/tool/wrt/setnetwork/</guid>
       <description>&lt;h3 id=&#34;需要用到的硬件&#34;&gt;需要用到的硬件&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;工控机本体这里称为 A，&lt;/li&gt;
@@ -113,9 +113,9 @@
     </item>
     <item>
       <title>Hugo 的一些问题</title>
-      <link>https://wowios.com/post/tool/usehugo/someproblem/</link>
+      <link>http://localhost:1313/post/tool/usehugo/someproblem/</link>
       <pubDate>Sat, 11 Mar 2023 16:59:18 +0800</pubDate>
-      <guid>https://wowios.com/post/tool/usehugo/someproblem/</guid>
+      <guid>http://localhost:1313/post/tool/usehugo/someproblem/</guid>
       <description>&lt;h2 id=&#34;若域名有变动&#34;&gt;若域名有变动&lt;/h2&gt;
 &lt;p&gt;需要修改三个地方&lt;/p&gt;
 &lt;ul&gt;
@@ -126,9 +126,9 @@
     </item>
     <item>
       <title>Hugo 发布一篇文章的过程</title>
-      <link>https://wowios.com/post/tool/usehugo/publisharticle/</link>
+      <link>http://localhost:1313/post/tool/usehugo/publisharticle/</link>
       <pubDate>Sat, 11 Mar 2023 16:00:07 +0800</pubDate>
-      <guid>https://wowios.com/post/tool/usehugo/publisharticle/</guid>
+      <guid>http://localhost:1313/post/tool/usehugo/publisharticle/</guid>
       <description>&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;windows：确保有 hugo.exe 在工程目录下, 并且 .gitignore 里面写上 &lt;code&gt;hugo.exe&lt;/code&gt;，即可&lt;/li&gt;
@@ -160,9 +160,9 @@
     </item>
     <item>
       <title>Notion文件导出</title>
-      <link>https://wowios.com/post/tool/notion/notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/</link>
+      <link>http://localhost:1313/post/tool/notion/notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/</link>
       <pubDate>Sat, 11 Mar 2023 15:11:32 +0800</pubDate>
-      <guid>https://wowios.com/post/tool/notion/notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/</guid>
+      <guid>http://localhost:1313/post/tool/notion/notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/</guid>
       <description>&lt;h2 id=&#34;notion-批量文件导出以-pfd格式&#34;&gt;Notion 批量文件导出，以 PFD格式&lt;/h2&gt;
 &lt;p&gt;Notion 是一款 markdown 笔记软件，可以快速书写，多端同步，支持文件导出，十分方便。
 我在 notion 中写了很多页面，有时要转移到别的地方保存，那么应该怎么做呢？&lt;/p&gt;
@@ -215,17 +215,17 @@
     </item>
     <item>
       <title>Java</title>
-      <link>https://wowios.com/post/language/java/java/</link>
+      <link>http://localhost:1313/post/language/java/java/</link>
       <pubDate>Tue, 12 Jul 2022 21:45:46 +0800</pubDate>
-      <guid>https://wowios.com/post/language/java/java/</guid>
+      <guid>http://localhost:1313/post/language/java/java/</guid>
       <description>&lt;h2 id=&#34;多线程&#34;&gt;多线程&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://1-1-1.site&#34;&gt;Java 多线程编程笔记 🔗&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>个人简历</title>
-      <link>https://wowios.com/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Tue, 12 Jul 2022 14:46:26 +0800</pubDate>
-      <guid>https://wowios.com/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;&lt;img alt=&#34;me&#34; loading=&#34;lazy&#34; src=&#34;https://i.postimg.cc/KYWJnw5G/avatar-s.jpg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;出生年月：1998.01 籍贯：广东揭阳   学历：硕士研究生&lt;/p&gt;
@@ -250,7 +250,7 @@
 &lt;h3 id=&#34;项目经历&#34;&gt;项目经历&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;2022-2023 iOS App &lt;a href=&#34;https://wowios.com/post/ios/checkthempicshow&#34;&gt;《小速记》🔗&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2022-2023 iOS App &lt;a href=&#34;http://localhost:1313/post/ios/checkthempicshow&#34;&gt;《小速记》🔗&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;为了帮助用户对自己的一些小计划做记录，以及激励用户去达成这些小计划，开发了这样一款简洁的 App。具有 ToDo、每日打卡、数字记录、统计功能。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;主要技术&lt;/strong&gt;：
 在Xcode平台Swift开发；
@@ -267,9 +267,9 @@
     </item>
     <item>
       <title>各种设计模式</title>
-      <link>https://wowios.com/post/design-pattern/all-design-pattern/</link>
+      <link>http://localhost:1313/post/design-pattern/all-design-pattern/</link>
       <pubDate>Mon, 11 Jul 2022 18:27:35 +0800</pubDate>
-      <guid>https://wowios.com/post/design-pattern/all-design-pattern/</guid>
+      <guid>http://localhost:1313/post/design-pattern/all-design-pattern/</guid>
       <description>&lt;h2 id=&#34;creational&#34;&gt;Creational&lt;/h2&gt;
 &lt;p&gt;Object Created Pattern&lt;/p&gt;
 &lt;h3 id=&#34;factory-method&#34;&gt;Factory Method&lt;/h3&gt;
@@ -340,16 +340,16 @@
     </item>
     <item>
       <title>home</title>
-      <link>https://wowios.com/home/</link>
+      <link>http://localhost:1313/home/</link>
       <pubDate>Sat, 09 Jul 2022 16:25:12 +0800</pubDate>
-      <guid>https://wowios.com/home/</guid>
+      <guid>http://localhost:1313/home/</guid>
       <description>&lt;p&gt;Hey&lt;/p&gt;</description>
     </item>
     <item>
       <title>Advanced Operators</title>
-      <link>https://wowios.com/post/language/swift/28advanced-operators/</link>
+      <link>http://localhost:1313/post/language/swift/28advanced-operators/</link>
       <pubDate>Sun, 19 Jun 2022 16:00:40 +0800</pubDate>
-      <guid>https://wowios.com/post/language/swift/28advanced-operators/</guid>
+      <guid>http://localhost:1313/post/language/swift/28advanced-operators/</guid>
       <description>&lt;p&gt;Unlike arithmetic operators in C, arithmetic operators in Swift don’t overflow by default. If want to overflow by default, use the overflow operation begin with ampersand (&lt;code&gt;&amp;amp;&lt;/code&gt;). For example, the overflow addition operator (&lt;code&gt;&amp;amp;+&lt;/code&gt;).&lt;/p&gt;
 &lt;p&gt;It’s so free to define custom infix, prefix, postfix and assignment operators, precedence and associativity values.&lt;/p&gt;
 &lt;h2 id=&#34;bitwise-operators&#34;&gt;Bitwise Operators&lt;/h2&gt;
@@ -370,18 +370,18 @@
     </item>
     <item>
       <title>Access Control</title>
-      <link>https://wowios.com/post/language/swift/27access-control/</link>
+      <link>http://localhost:1313/post/language/swift/27access-control/</link>
       <pubDate>Sat, 18 Jun 2022 16:00:40 +0800</pubDate>
-      <guid>https://wowios.com/post/language/swift/27access-control/</guid>
+      <guid>http://localhost:1313/post/language/swift/27access-control/</guid>
       <description>&lt;p&gt;Access control restrict access to part of the code form code in other source files and modules. It enable us to &lt;strong&gt;hide the implement detail&lt;/strong&gt; of the code, and to &lt;strong&gt;specify a preferred interface&lt;/strong&gt; which that code can be accessed and used.&lt;/p&gt;
 &lt;p&gt;Set access levels to individual types (classes, structures, enumerations), as well as to properties, methods, initializers, and subscripts belonging to those types.&lt;/p&gt;
 &lt;p&gt;Protocols can be restricted to a certain context, as can global constants, variable, and functions.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Memory Safty</title>
-      <link>https://wowios.com/post/language/swift/26memory-safety/</link>
+      <link>http://localhost:1313/post/language/swift/26memory-safety/</link>
       <pubDate>Sun, 12 Jun 2022 16:05:40 +0800</pubDate>
-      <guid>https://wowios.com/post/language/swift/26memory-safety/</guid>
+      <guid>http://localhost:1313/post/language/swift/26memory-safety/</guid>
       <description>&lt;p&gt;Most of the time we don’t have to think about accessing memory, but it’s important to understand where potential conflicts can occur, so we can avoid writing code that has conflicting access to memory.&lt;/p&gt;
 &lt;p&gt;Here we are talking about the situation that happen on a single thread.&lt;/p&gt;
 &lt;h2 id=&#34;memory-access&#34;&gt;Memory Access&lt;/h2&gt;
@@ -391,9 +391,9 @@
     </item>
     <item>
       <title>Automatic Reference Counting</title>
-      <link>https://wowios.com/post/language/swift/25automatic-reference-counting/</link>
+      <link>http://localhost:1313/post/language/swift/25automatic-reference-counting/</link>
       <pubDate>Sun, 12 Jun 2022 16:00:40 +0800</pubDate>
-      <guid>https://wowios.com/post/language/swift/25automatic-reference-counting/</guid>
+      <guid>http://localhost:1313/post/language/swift/25automatic-reference-counting/</guid>
       <description>&lt;p&gt;Swift use ARC to track and manage the app’s memory usage. ARC frees up the memory used by class instances when those instances are no longer needed.&lt;/p&gt;
 &lt;p&gt;Reference counting &lt;strong&gt;applies only to instance of classes.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Reference:&lt;/p&gt;
@@ -407,9 +407,9 @@
     </item>
     <item>
       <title>Opaque Type</title>
-      <link>https://wowios.com/post/language/swift/24opaque-type/</link>
+      <link>http://localhost:1313/post/language/swift/24opaque-type/</link>
       <pubDate>Sun, 05 Jun 2022 16:05:40 +0800</pubDate>
-      <guid>https://wowios.com/post/language/swift/24opaque-type/</guid>
+      <guid>http://localhost:1313/post/language/swift/24opaque-type/</guid>
       <description>&lt;p&gt;A function with an opaque type hides its return value’s type information. Hiding type information at some boundaries between a module and code that calls into the module. Unlike returning a value whose type is a protocol type, opaque type preserve type identity —the compile has access to the type information, but clients of the module don’t.&lt;/p&gt;
 &lt;h2 id=&#34;the-situation&#34;&gt;The Situation&lt;/h2&gt;
 &lt;p&gt;Here we have a &lt;code&gt;Shape&lt;/code&gt; protocol.&lt;/p&gt;
@@ -420,16 +420,16 @@
     </item>
     <item>
       <title>Generics</title>
-      <link>https://wowios.com/post/language/swift/23generics/</link>
+      <link>http://localhost:1313/post/language/swift/23generics/</link>
       <pubDate>Sun, 05 Jun 2022 16:00:40 +0800</pubDate>
-      <guid>https://wowios.com/post/language/swift/23generics/</guid>
+      <guid>http://localhost:1313/post/language/swift/23generics/</guid>
       <description>Define a class with template type &lt;!-- raw HTML omitted --&gt;, then should illustract the type when use the class.</description>
     </item>
     <item>
       <title>Optional Chaining</title>
-      <link>https://wowios.com/post/language/swift/16optional-chaining/</link>
+      <link>http://localhost:1313/post/language/swift/16optional-chaining/</link>
       <pubDate>Tue, 24 May 2022 16:05:40 +0800</pubDate>
-      <guid>https://wowios.com/post/language/swift/16optional-chaining/</guid>
+      <guid>http://localhost:1313/post/language/swift/16optional-chaining/</guid>
       <description>&lt;p&gt;A process for querying and calling properties, methods, and subscripts on an optional that might currently be &lt;code&gt;nil&lt;/code&gt; .Multiple queries can be chained together, and the chain fails gracefully if any link in the chain is &lt;code&gt;nil&lt;/code&gt; .&lt;/p&gt;
 &lt;h2 id=&#34;optional-chaining-as-an-alternative-to-forced-unwrapping&#34;&gt;Optional Chaining as an Alternative to Forced Unwrapping&lt;/h2&gt;
 &lt;ul&gt;
@@ -445,23 +445,23 @@
     </item>
     <item>
       <title>Protocol</title>
-      <link>https://wowios.com/post/language/swift/22protocols/</link>
+      <link>http://localhost:1313/post/language/swift/22protocols/</link>
       <pubDate>Sun, 22 May 2022 16:00:40 +0800</pubDate>
-      <guid>https://wowios.com/post/language/swift/22protocols/</guid>
+      <guid>http://localhost:1313/post/language/swift/22protocols/</guid>
       <description>A protocol defines a blueprint with methods, properties.</description>
     </item>
     <item>
       <title>Extension</title>
-      <link>https://wowios.com/post/language/swift/21extensions/</link>
+      <link>http://localhost:1313/post/language/swift/21extensions/</link>
       <pubDate>Sat, 21 May 2022 16:00:40 +0800</pubDate>
-      <guid>https://wowios.com/post/language/swift/21extensions/</guid>
+      <guid>http://localhost:1313/post/language/swift/21extensions/</guid>
       <description>Extension add new functionality to an existing class, structure, enumeration, or protocol type.</description>
     </item>
     <item>
       <title>Nested Types</title>
-      <link>https://wowios.com/post/language/swift/20nested-types/</link>
+      <link>http://localhost:1313/post/language/swift/20nested-types/</link>
       <pubDate>Mon, 16 May 2022 16:05:40 +0800</pubDate>
-      <guid>https://wowios.com/post/language/swift/20nested-types/</guid>
+      <guid>http://localhost:1313/post/language/swift/20nested-types/</guid>
       <description>&lt;p&gt;Enumerations, classes or structures can be nested in another type.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;struct&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Closh&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;enum&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Size&lt;/span&gt;: String{
@@ -500,9 +500,9 @@
     </item>
     <item>
       <title>Type Casting</title>
-      <link>https://wowios.com/post/language/swift/19type-casting/</link>
+      <link>http://localhost:1313/post/language/swift/19type-casting/</link>
       <pubDate>Mon, 16 May 2022 16:00:40 +0800</pubDate>
-      <guid>https://wowios.com/post/language/swift/19type-casting/</guid>
+      <guid>http://localhost:1313/post/language/swift/19type-casting/</guid>
       <description>&lt;p&gt;Type casting in Swift is implemented with &lt;code&gt;is&lt;/code&gt; and &lt;code&gt;as&lt;/code&gt; operators.&lt;/p&gt;
 &lt;p&gt;Type casting:&lt;/p&gt;
 &lt;ul&gt;
@@ -551,9 +551,9 @@
     </item>
     <item>
       <title>Concurrency</title>
-      <link>https://wowios.com/post/language/swift/18concurrency/</link>
+      <link>http://localhost:1313/post/language/swift/18concurrency/</link>
       <pubDate>Sun, 08 May 2022 16:00:40 +0800</pubDate>
-      <guid>https://wowios.com/post/language/swift/18concurrency/</guid>
+      <guid>http://localhost:1313/post/language/swift/18concurrency/</guid>
       <description>&lt;p&gt;Swift has built-in support for writing asynchronous and parallel code in a structured way.&lt;/p&gt;
 &lt;p&gt;Parallel code means multiple pieces of code run simultaneously.&lt;/p&gt;
 &lt;ul&gt;
@@ -572,9 +572,9 @@
     </item>
     <item>
       <title>Error Handling</title>
-      <link>https://wowios.com/post/language/swift/17error-handling/</link>
+      <link>http://localhost:1313/post/language/swift/17error-handling/</link>
       <pubDate>Sat, 07 May 2022 16:00:40 +0800</pubDate>
-      <guid>https://wowios.com/post/language/swift/17error-handling/</guid>
+      <guid>http://localhost:1313/post/language/swift/17error-handling/</guid>
       <description>&lt;p&gt;A class support for throwing, catching, propagating, and manipulating recoverable errors at &lt;em&gt;runtime&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;When an optional fails, it’s useful to understand what cause the failure, so that the code can respond accordingly.&lt;/p&gt;
 &lt;h2 id=&#34;example&#34;&gt;Example:&lt;/h2&gt;
@@ -588,37 +588,37 @@
     </item>
     <item>
       <title>Deinitialization</title>
-      <link>https://wowios.com/post/language/swift/15deinitialization/</link>
+      <link>http://localhost:1313/post/language/swift/15deinitialization/</link>
       <pubDate>Mon, 02 May 2022 16:00:40 +0800</pubDate>
-      <guid>https://wowios.com/post/language/swift/15deinitialization/</guid>
+      <guid>http://localhost:1313/post/language/swift/15deinitialization/</guid>
       <description>Before the object is recycle, the deinitializer solve the post events.</description>
     </item>
     <item>
       <title>Initialization</title>
-      <link>https://wowios.com/post/language/swift/14initialization/</link>
+      <link>http://localhost:1313/post/language/swift/14initialization/</link>
       <pubDate>Sat, 30 Apr 2022 16:00:40 +0800</pubDate>
-      <guid>https://wowios.com/post/language/swift/14initialization/</guid>
+      <guid>http://localhost:1313/post/language/swift/14initialization/</guid>
       <description>The class&amp;rsquo;s initializer set the original state for the object.</description>
     </item>
     <item>
       <title>Inheritance</title>
-      <link>https://wowios.com/post/language/swift/13inheritance/</link>
+      <link>http://localhost:1313/post/language/swift/13inheritance/</link>
       <pubDate>Sun, 24 Apr 2022 16:00:40 +0800</pubDate>
-      <guid>https://wowios.com/post/language/swift/13inheritance/</guid>
+      <guid>http://localhost:1313/post/language/swift/13inheritance/</guid>
       <description>A class inherit another class call super class, and get some ability from super class.</description>
     </item>
     <item>
       <title>Method</title>
-      <link>https://wowios.com/post/language/swift/11method/</link>
+      <link>http://localhost:1313/post/language/swift/11method/</link>
       <pubDate>Sun, 17 Apr 2022 16:15:40 +0800</pubDate>
-      <guid>https://wowios.com/post/language/swift/11method/</guid>
+      <guid>http://localhost:1313/post/language/swift/11method/</guid>
       <description>The object have some method to provide functionality.</description>
     </item>
     <item>
       <title>Properties</title>
-      <link>https://wowios.com/post/language/swift/10properties/</link>
+      <link>http://localhost:1313/post/language/swift/10properties/</link>
       <pubDate>Sun, 17 Apr 2022 16:12:40 +0800</pubDate>
-      <guid>https://wowios.com/post/language/swift/10properties/</guid>
+      <guid>http://localhost:1313/post/language/swift/10properties/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Stored properties&lt;/p&gt;
@@ -647,16 +647,16 @@
     </item>
     <item>
       <title>Structures and Classes</title>
-      <link>https://wowios.com/post/language/swift/09structures-and-classes/</link>
+      <link>http://localhost:1313/post/language/swift/09structures-and-classes/</link>
       <pubDate>Sun, 10 Apr 2022 16:12:40 +0800</pubDate>
-      <guid>https://wowios.com/post/language/swift/09structures-and-classes/</guid>
+      <guid>http://localhost:1313/post/language/swift/09structures-and-classes/</guid>
       <description>The object oriented programming.</description>
     </item>
     <item>
       <title>Enumerations</title>
-      <link>https://wowios.com/post/language/swift/08enumerations/</link>
+      <link>http://localhost:1313/post/language/swift/08enumerations/</link>
       <pubDate>Sun, 10 Apr 2022 16:08:40 +0800</pubDate>
-      <guid>https://wowios.com/post/language/swift/08enumerations/</guid>
+      <guid>http://localhost:1313/post/language/swift/08enumerations/</guid>
       <description>&lt;h2 id=&#34;syntax&#34;&gt;Syntax&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;enum&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Direction&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; up
@@ -696,44 +696,44 @@
     </item>
     <item>
       <title>Subscripts</title>
-      <link>https://wowios.com/post/language/swift/12subscripts/</link>
+      <link>http://localhost:1313/post/language/swift/12subscripts/</link>
       <pubDate>Sun, 10 Apr 2022 16:00:40 +0800</pubDate>
-      <guid>https://wowios.com/post/language/swift/12subscripts/</guid>
+      <guid>http://localhost:1313/post/language/swift/12subscripts/</guid>
       <description>Set subscript(index: Int) in the class to index the data of the instance of the this class.</description>
     </item>
     <item>
       <title>Closures</title>
-      <link>https://wowios.com/post/language/swift/07closures/</link>
+      <link>http://localhost:1313/post/language/swift/07closures/</link>
       <pubDate>Sat, 02 Apr 2022 16:10:40 +0800</pubDate>
-      <guid>https://wowios.com/post/language/swift/07closures/</guid>
+      <guid>http://localhost:1313/post/language/swift/07closures/</guid>
       <description>The closures can cantains something by the curly bracket.</description>
     </item>
     <item>
       <title>Function</title>
-      <link>https://wowios.com/post/language/swift/06function/</link>
+      <link>http://localhost:1313/post/language/swift/06function/</link>
       <pubDate>Sat, 02 Apr 2022 16:08:40 +0800</pubDate>
-      <guid>https://wowios.com/post/language/swift/06function/</guid>
+      <guid>http://localhost:1313/post/language/swift/06function/</guid>
       <description>Call the function(method) to do something detail.</description>
     </item>
     <item>
       <title>Control Flow</title>
-      <link>https://wowios.com/post/language/swift/05control-flow/</link>
+      <link>http://localhost:1313/post/language/swift/05control-flow/</link>
       <pubDate>Mon, 28 Mar 2022 16:08:40 +0800</pubDate>
-      <guid>https://wowios.com/post/language/swift/05control-flow/</guid>
+      <guid>http://localhost:1313/post/language/swift/05control-flow/</guid>
       <description>loop, condition branch, control transfer.</description>
     </item>
     <item>
       <title>Collection Type</title>
-      <link>https://wowios.com/post/language/swift/04collection-type/</link>
+      <link>http://localhost:1313/post/language/swift/04collection-type/</link>
       <pubDate>Mon, 28 Mar 2022 16:04:40 +0800</pubDate>
-      <guid>https://wowios.com/post/language/swift/04collection-type/</guid>
+      <guid>http://localhost:1313/post/language/swift/04collection-type/</guid>
       <description>The array, set, and dictionary.</description>
     </item>
     <item>
       <title>Strings and Characters</title>
-      <link>https://wowios.com/post/language/swift/03strings-and-characters/</link>
+      <link>http://localhost:1313/post/language/swift/03strings-and-characters/</link>
       <pubDate>Sun, 20 Mar 2022 16:04:40 +0800</pubDate>
-      <guid>https://wowios.com/post/language/swift/03strings-and-characters/</guid>
+      <guid>http://localhost:1313/post/language/swift/03strings-and-characters/</guid>
       <description>&lt;p&gt;String type is bridged with Foundation’s NSString. Foundation extends String to expose methods defines by NSString. If import Foundation, you can access those NSString methods on String without casting.&lt;/p&gt;
 &lt;h2 id=&#34;string-literals&#34;&gt;String Literals&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// &amp;#34;Hello World!&amp;#34; is a String literal. &lt;/span&gt;
@@ -774,30 +774,30 @@
     </item>
     <item>
       <title>Basic Operators</title>
-      <link>https://wowios.com/post/language/swift/02basic-operators/</link>
+      <link>http://localhost:1313/post/language/swift/02basic-operators/</link>
       <pubDate>Sat, 19 Mar 2022 16:00:40 +0800</pubDate>
-      <guid>https://wowios.com/post/language/swift/02basic-operators/</guid>
+      <guid>http://localhost:1313/post/language/swift/02basic-operators/</guid>
       <description>Basic usage of the operators.</description>
     </item>
     <item>
       <title>Basic</title>
-      <link>https://wowios.com/post/language/swift/01basic/</link>
+      <link>http://localhost:1313/post/language/swift/01basic/</link>
       <pubDate>Sat, 12 Mar 2022 15:55:40 +0800</pubDate>
-      <guid>https://wowios.com/post/language/swift/01basic/</guid>
+      <guid>http://localhost:1313/post/language/swift/01basic/</guid>
       <description>Basic usage of the swift syntax.</description>
     </item>
     <item>
       <title>Mail</title>
-      <link>https://wowios.com/post/info/contact/mail/</link>
+      <link>http://localhost:1313/post/info/contact/mail/</link>
       <pubDate>Sat, 10 Jul 2021 18:46:21 +0800</pubDate>
-      <guid>https://wowios.com/post/info/contact/mail/</guid>
+      <guid>http://localhost:1313/post/info/contact/mail/</guid>
       <description>false</description>
     </item>
     <item>
       <title>竞赛经历与奖项</title>
-      <link>https://wowios.com/post/info/certificate/</link>
+      <link>http://localhost:1313/post/info/certificate/</link>
       <pubDate>Mon, 21 Jun 2021 10:17:24 +0800</pubDate>
-      <guid>https://wowios.com/post/info/certificate/</guid>
+      <guid>http://localhost:1313/post/info/certificate/</guid>
       <description>&lt;h3 id=&#34;机器人比赛&#34;&gt;机器人比赛&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;

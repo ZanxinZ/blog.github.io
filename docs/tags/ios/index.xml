@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>IOS on CodePaper</title>
-    <link>https://wowios.com/tags/ios/</link>
+    <link>http://localhost:1313/tags/ios/</link>
     <description>Recent content in IOS on CodePaper</description>
     <generator>Hugo -- 0.140.1</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 07 Jul 2023 13:12:14 +0800</lastBuildDate>
-    <atom:link href="https://wowios.com/tags/ios/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/ios/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>“小速记” App 介绍</title>
-      <link>https://wowios.com/post/ios/checkthempicshow/</link>
+      <link>http://localhost:1313/post/ios/checkthempicshow/</link>
       <pubDate>Fri, 07 Jul 2023 13:12:14 +0800</pubDate>
-      <guid>https://wowios.com/post/ios/checkthempicshow/</guid>
+      <guid>http://localhost:1313/post/ios/checkthempicshow/</guid>
       <description>&lt;h3 id=&#34;小速记各部分功能介绍&#34;&gt;《小速记》各部分功能介绍&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -50,9 +50,9 @@
     </item>
     <item>
       <title>如何通过点击 UICollectionViewCell 跳转至对应的 UIViewController</title>
-      <link>https://wowios.com/post/ios/viewcontrollertransform/</link>
+      <link>http://localhost:1313/post/ios/viewcontrollertransform/</link>
       <pubDate>Wed, 17 May 2023 22:41:55 +0800</pubDate>
-      <guid>https://wowios.com/post/ios/viewcontrollertransform/</guid>
+      <guid>http://localhost:1313/post/ios/viewcontrollertransform/</guid>
       <description>&lt;h2 id=&#34;跳转部分的实现&#34;&gt;跳转部分的实现&lt;/h2&gt;
 &lt;p&gt;我需要从我的 HomeViewController 通过点击不同的 CollectionViewCell 跳至不同的 ViewController&lt;/p&gt;
 &lt;p&gt;&lt;img alt=&#34;Untitled&#34; loading=&#34;lazy&#34; src=&#34;../%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E7%82%B9%E5%87%BB%20UICollectionViewCell%20%E8%B7%B3%E8%BD%AC%E8%87%B3%E5%AF%B9%E5%BA%94%E7%9A%84%20UIViewController/Untitled.png&#34;&gt;&lt;/p&gt;

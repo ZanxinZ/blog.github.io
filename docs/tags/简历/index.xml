@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>简历 on CodePaper</title>
-    <link>https://wowios.com/tags/%E7%AE%80%E5%8E%86/</link>
+    <link>http://localhost:1313/tags/%E7%AE%80%E5%8E%86/</link>
     <description>Recent content in 简历 on CodePaper</description>
     <generator>Hugo -- 0.140.1</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 12 Jul 2022 14:46:26 +0800</lastBuildDate>
-    <atom:link href="https://wowios.com/tags/%E7%AE%80%E5%8E%86/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/%E7%AE%80%E5%8E%86/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>个人简历</title>
-      <link>https://wowios.com/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Tue, 12 Jul 2022 14:46:26 +0800</pubDate>
-      <guid>https://wowios.com/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;&lt;img alt=&#34;me&#34; loading=&#34;lazy&#34; src=&#34;https://i.postimg.cc/KYWJnw5G/avatar-s.jpg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;出生年月：1998.01 籍贯：广东揭阳   学历：硕士研究生&lt;/p&gt;
@@ -37,7 +37,7 @@
 &lt;h3 id=&#34;项目经历&#34;&gt;项目经历&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;2022-2023 iOS App &lt;a href=&#34;https://wowios.com/post/ios/checkthempicshow&#34;&gt;《小速记》🔗&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2022-2023 iOS App &lt;a href=&#34;http://localhost:1313/post/ios/checkthempicshow&#34;&gt;《小速记》🔗&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;为了帮助用户对自己的一些小计划做记录，以及激励用户去达成这些小计划，开发了这样一款简洁的 App。具有 ToDo、每日打卡、数字记录、统计功能。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;主要技术&lt;/strong&gt;：
 在Xcode平台Swift开发；
