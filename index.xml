@@ -2,466 +2,932 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Home on CodePaper</title>
-    <link>https://1-1.link/</link>
+    <link>https://wowios.com/</link>
     <description>Recent content in Home on CodePaper</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 Jul 2022 17:19:01 +0800</lastBuildDate><atom:link href="https://1-1.link/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 09 Jul 2022 17:19:01 +0800</lastBuildDate><atom:link href="https://wowios.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>“小速记” App 介绍</title>
-      <link>https://1-1.link/post/ios/checkthempicshow/</link>
+      <link>https://wowios.com/post/ios/checkthempicshow/</link>
       <pubDate>Fri, 07 Jul 2023 13:12:14 +0800</pubDate>
       
-      <guid>https://1-1.link/post/ios/checkthempicshow/</guid>
-      <description>《小速记》各部分功能介绍 主页面，各个功能入口
-ToDo 功能
-新建 Todo 时，可设定 Todo 的表情 emoji 、时间段。 右滑删除，左滑完成 Todo，长按 Todo 可设定一个在几分钟后的系统通知推送（提醒这个 Todo）
-每日打卡
-可以新建任务，设定为每日打卡、每周打卡或每月打卡。 打卡任务有进度，任务完成后会将任务归档。
-数字记录器
-可以为某一件事情添加计数器，用于腐竹记忆生活中的琐碎数字。
-数据
-Todo、每日打卡、数字记录器是都作为任务，使用 CoreData 存放于本地。 对应的，有 ArchivedTodo、ArchivedDailyTask、ArchivedRecord 作为归档对象，在任务完成后作为记录存放于本地。
-演示
-App 使用视频演示</description>
+      <guid>https://wowios.com/post/ios/checkthempicshow/</guid>
+      <description>&lt;h3 id=&#34;小速记各部分功能介绍&#34;&gt;《小速记》各部分功能介绍&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;主页面，各个功能入口&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../CheckThemPickShow/1.png&#34; alt=&#34;&#34;  /&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ToDo 功能&lt;/p&gt;
+&lt;p&gt;新建 Todo 时，可设定 Todo 的表情 emoji 、时间段。
+右滑删除，左滑完成 Todo，长按 Todo 可设定一个在几分钟后的系统通知推送（提醒这个 Todo）&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../CheckThemPickShow//2.png&#34; alt=&#34;&#34;  /&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;每日打卡&lt;/p&gt;
+&lt;p&gt;可以新建任务，设定为每日打卡、每周打卡或每月打卡。
+打卡任务有进度，任务完成后会将任务归档。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../CheckThemPickShow/4.png&#34; alt=&#34;&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../CheckThemPickShow/3.png&#34; alt=&#34;&#34;  /&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数字记录器&lt;/p&gt;
+&lt;p&gt;可以为某一件事情添加计数器，用于腐竹记忆生活中的琐碎数字。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../CheckThemPickShow//5.png&#34; alt=&#34;&#34;  /&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据&lt;/p&gt;
+&lt;p&gt;Todo、每日打卡、数字记录器是都作为任务，使用 CoreData 存放于本地。
+对应的，有 ArchivedTodo、ArchivedDailyTask、ArchivedRecord 作为归档对象，在任务完成后作为记录存放于本地。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;演示&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1Vh4y1E7Gx/?vd_source=c24c919e207e47d8f84bb5082e08de26&#34;&gt;App 使用视频演示&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description>
     </item>
     
     <item>
       <title>如何通过点击 UICollectionViewCell 跳转至对应的 UIViewController</title>
-      <link>https://1-1.link/post/ios/viewcontrollertransform/</link>
+      <link>https://wowios.com/post/ios/viewcontrollertransform/</link>
       <pubDate>Wed, 17 May 2023 22:41:55 +0800</pubDate>
       
-      <guid>https://1-1.link/post/ios/viewcontrollertransform/</guid>
-      <description>跳转部分的实现 我需要从我的 HomeViewController 通过点击不同的 CollectionViewCell 跳至不同的 ViewController
-思路：
-首先是需要把目标 ViewController 存放起来，在点击 cell 时可以作为目的地进行 present 跳转。 因为我的多个不同的 ViewController 都继承自 UIViewController， 那么我想用它作为父类型存放在cell中。
-先把 Main storyboard 存为当前类的属性，以方便初始化各个 collectionView 然后使用 storyboard 自带的动态反射方法 instantiateViewController，通过字符串找到对应的 ViewController 在 dataSource 的实现中，将 cell 的属性绑定为对应的 controllerView 目标。 最后是 didTapCell 方法，是点击后的具体要做的动作，即跳转。这里的 target 类型是 UIController。 发现这样实现不了，原因是第 1 步中 MainChoiceCell 中的 targetController 不能是 weak，若为 weak 那么它在被赋值然后在函数结束时（closure 结束）会释放引用也就是恢复为 nil，所以正确的做法应该是把 weak 去掉。
-手指触碰 UICollectionViewCell 但未释放，这属于 Highlight UICollectionViewCell 底层来自 UIView。重写 highlight 的 willSet， 手指点在 UICollectionViewCell 区域会触发 highlight 置为 true ；手指不松开，移动到不属于 UICollectionViewCell 的区域，则会触发 highlight 置为 false。</description>
+      <guid>https://wowios.com/post/ios/viewcontrollertransform/</guid>
+      <description>&lt;h2 id=&#34;跳转部分的实现&#34;&gt;跳转部分的实现&lt;/h2&gt;
+&lt;p&gt;我需要从我的 HomeViewController 通过点击不同的 CollectionViewCell 跳至不同的 ViewController&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E7%82%B9%E5%87%BB%20UICollectionViewCell%20%E8%B7%B3%E8%BD%AC%E8%87%B3%E5%AF%B9%E5%BA%94%E7%9A%84%20UIViewController/Untitled.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E7%82%B9%E5%87%BB%20UICollectionViewCell%20%E8%B7%B3%E8%BD%AC%E8%87%B3%E5%AF%B9%E5%BA%94%E7%9A%84%20UIViewController/Untitled%201.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;思路：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;首先是需要把目标 ViewController 存放起来，在点击 cell 时可以作为目的地进行 present 跳转。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;因为我的多个不同的 ViewController 都继承自 UIViewController， 那么我想用它作为父类型存放在cell中。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E7%82%B9%E5%87%BB%20UICollectionViewCell%20%E8%B7%B3%E8%BD%AC%E8%87%B3%E5%AF%B9%E5%BA%94%E7%9A%84%20UIViewController/Untitled%202.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;先把 Main storyboard 存为当前类的属性，以方便初始化各个 collectionView&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E7%82%B9%E5%87%BB%20UICollectionViewCell%20%E8%B7%B3%E8%BD%AC%E8%87%B3%E5%AF%B9%E5%BA%94%E7%9A%84%20UIViewController/Untitled%203.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;然后使用 storyboard 自带的动态反射方法 instantiateViewController，通过字符串找到对应的 ViewController&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E7%82%B9%E5%87%BB%20UICollectionViewCell%20%E8%B7%B3%E8%BD%AC%E8%87%B3%E5%AF%B9%E5%BA%94%E7%9A%84%20UIViewController/Untitled%204.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在 dataSource 的实现中，将 cell 的属性绑定为对应的 controllerView 目标。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E7%82%B9%E5%87%BB%20UICollectionViewCell%20%E8%B7%B3%E8%BD%AC%E8%87%B3%E5%AF%B9%E5%BA%94%E7%9A%84%20UIViewController/Untitled%205.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;最后是 didTapCell 方法，是点击后的具体要做的动作，即跳转。这里的 target 类型是 UIController。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E7%82%B9%E5%87%BB%20UICollectionViewCell%20%E8%B7%B3%E8%BD%AC%E8%87%B3%E5%AF%B9%E5%BA%94%E7%9A%84%20UIViewController/Untitled%206.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;发现这样实现不了，原因是第 1 步中 MainChoiceCell 中的 targetController 不能是 weak，若为 weak 那么它在被赋值然后在函数结束时（closure 结束）会释放引用也就是恢复为 nil，所以正确的做法应该是把 weak 去掉。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>N4000 四网口工控机组网</title>
-      <link>https://1-1.link/post/tool/wrt/setnetwork/</link>
+      <link>https://wowios.com/post/tool/wrt/setnetwork/</link>
       <pubDate>Sat, 13 May 2023 22:43:27 +0800</pubDate>
       
-      <guid>https://1-1.link/post/tool/wrt/setnetwork/</guid>
-      <description>需要用到的硬件 工控机本体这里称为 A， 一台可以连接 WiFi 或者可插入以太网网线的设备称为 B。 公网的接入端口线称为 C。 一个 Wifi 路由器D。 键盘与HDMI 显示器（用于命令行查看系统信息，可省略）、两条网线。 方法一：”不同网段“接法 软路由的 LAN 接 WiFi 的 WAN，连接 WiFi 的设备和直连软路由的设备不算是同一网段。
-WiFi 所在 192.168.1.x
-软路由所在 192.168.11.x
-关键步骤：
-以太网连接，从 C 上接一条网线到 A 的 eth1 端口。D 的 WAN 网口和 A 的 eth0 用网线连接。 使用设备 B，连接 WiFi，然后登入后台管理页面，网址一般在 WiFi 路由器背后有写明。 设备B 需要关键一步：设置为 自动 IP 分配，那么才可以在 B 上访问到 192.168.11.1
-关键配置：
-登入D 的 后台页面（依据不同品牌而定，我这里是 192.168.1.1）。WiFi 路由器 D 的设置，需要设置为 自动获得 IP 地址，拔掉 WiFi 的电源，重启，它会通过A、公网 C 自动获得 IP。这时，连接到该 WiFi 的设备就可以通过 192.</description>
+      <guid>https://wowios.com/post/tool/wrt/setnetwork/</guid>
+      <description>&lt;h3 id=&#34;需要用到的硬件&#34;&gt;需要用到的硬件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;工控机本体这里称为 A，&lt;/li&gt;
+&lt;li&gt;一台可以连接 WiFi 或者可插入以太网网线的设备称为 B。&lt;/li&gt;
+&lt;li&gt;公网的接入端口线称为 C。&lt;/li&gt;
+&lt;li&gt;一个 Wifi 路由器D。&lt;/li&gt;
+&lt;li&gt;键盘与HDMI 显示器（用于命令行查看系统信息，可省略）、两条网线。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;方法一不同网段接法&#34;&gt;方法一：”不同网段“接法&lt;/h3&gt;
+&lt;p&gt;软路由的 LAN 接 WiFi 的 WAN，连接 WiFi 的设备和直连软路由的设备不算是同一网段。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../N4000%20%E5%9B%9B%E7%BD%91%E5%8F%A3%E5%B7%A5%E6%8E%A7%E6%9C%BA%E7%BB%84%E7%BD%91/Untitled.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;WiFi 所在 192.168.1.x&lt;/p&gt;
+&lt;p&gt;软路由所在 192.168.11.x&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;关键步骤：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;以太网连接，从 C 上接一条网线到 A 的 eth1 端口。D 的 WAN 网口和 A 的 eth0 用网线连接。&lt;/li&gt;
+&lt;li&gt;使用设备 B，连接 WiFi，然后登入后台管理页面，网址一般在 WiFi 路由器背后有写明。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;设备B 需要关键一步：设置为 自动 IP 分配，那么才可以在 B 上访问到 192.168.11.1&lt;/p&gt;
+&lt;p&gt;关键配置：&lt;/p&gt;
+&lt;p&gt;登入D 的 后台页面（依据不同品牌而定，我这里是 192.168.1.1）。WiFi 路由器 D 的设置，需要设置为 自动获得 IP 地址，拔掉 WiFi 的电源，重启，它会通过A、公网 C 自动获得 IP。这时，连接到该 WiFi 的设备就可以通过 192.168.11.1 进入软路由的管理页面了。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Hugo 的一些问题</title>
-      <link>https://1-1.link/post/tool/usehugo/someproblem/</link>
+      <link>https://wowios.com/post/tool/usehugo/someproblem/</link>
       <pubDate>Sat, 11 Mar 2023 16:59:18 +0800</pubDate>
       
-      <guid>https://1-1.link/post/tool/usehugo/someproblem/</guid>
-      <description>若域名有变动 需要修改三个地方
-workflow 文件夹里 Github Acction 配置文件 Action.yml 中的 cname: config.yaml 中的 baseURL Github repository setting Pages </description>
+      <guid>https://wowios.com/post/tool/usehugo/someproblem/</guid>
+      <description>&lt;h2 id=&#34;若域名有变动&#34;&gt;若域名有变动&lt;/h2&gt;
+&lt;p&gt;需要修改三个地方&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;workflow 文件夹里 Github Acction 配置文件 &lt;code&gt;Action.yml&lt;/code&gt; 中的 &lt;code&gt;cname:&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;config.yaml 中的 &lt;code&gt;baseURL&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Github repository setting &lt;code&gt;Pages&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
       <title>Hugo 发布一篇文章的过程</title>
-      <link>https://1-1.link/post/tool/usehugo/publisharticle/</link>
+      <link>https://wowios.com/post/tool/usehugo/publisharticle/</link>
       <pubDate>Sat, 11 Mar 2023 16:00:07 +0800</pubDate>
       
-      <guid>https://1-1.link/post/tool/usehugo/publisharticle/</guid>
-      <description>安装 windows：确保有 hugo.exe 在工程目录下, 并且 .gitignore 里面写上 hugo.exe，即可 Mac：确保 hugo 已安装就可以 新建 一般，都在 post 文件夹下放 markdown 文件，使用不同文件夹来归类
-hugo new post/tool/useHugo/publishArticle.md
-书写 设定文章的 title, categories, tags 写入内容。标题大小从 ## 开始 本地预览 hugo server
-编译成 html，输出到 /docs （路径与 GitHub Action 对应） hugo
-到这里，就完成了写作
-Git Push 先 fetch，再 commit，再 push。
-Github Page 需要重新填写域名 因为 Github Action 在执行的时候会把 master 分支中的 /docs 内所有内容拷贝到 main 分支，这里面不包括 CNAME 文件。所以在 repository 的 setting 的 pages 重新填写域名。（问题已经解决，在 workflow action.yml 中添加 cname: 1-1.</description>
+      <guid>https://wowios.com/post/tool/usehugo/publisharticle/</guid>
+      <description>&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;windows：确保有 hugo.exe 在工程目录下, 并且 .gitignore 里面写上 &lt;code&gt;hugo.exe&lt;/code&gt;，即可&lt;/li&gt;
+&lt;li&gt;Mac：确保 hugo 已安装就可以&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;新建&#34;&gt;新建&lt;/h2&gt;
+&lt;p&gt;一般，都在 post 文件夹下放 markdown 文件，使用不同文件夹来归类&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;hugo new post/tool/useHugo/publishArticle.md&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;书写&#34;&gt;书写&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;设定文章的 title, categories, tags&lt;/li&gt;
+&lt;li&gt;写入内容。标题大小从 &lt;code&gt;##&lt;/code&gt; 开始&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;本地预览&#34;&gt;本地预览&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;hugo server&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;编译成-html输出到-docs-路径与-github-action-对应&#34;&gt;编译成 html，输出到 /docs （路径与 GitHub Action 对应）&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;hugo&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;到这里，就完成了写作&lt;/p&gt;
+&lt;h2 id=&#34;git-push&#34;&gt;Git Push&lt;/h2&gt;
+&lt;p&gt;先 fetch，再 commit，再 push。&lt;/p&gt;
+&lt;h3 id=&#34;github-page-需要重新填写域名&#34;&gt;&lt;del&gt;Github Page 需要重新填写域名&lt;/del&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;del&gt;因为 Github Action 在执行的时候会把 master 分支中的 /docs 内所有内容拷贝到 main 分支，这里面不包括 CNAME 文件。所以在 repository 的 setting 的 pages 重新填写域名。&lt;/del&gt;&lt;strong&gt;（问题已经解决，在 workflow &lt;code&gt;action.yml&lt;/code&gt; 中添加 &lt;code&gt;cname: 1-1.link&lt;/code&gt;，所以如果域名有改动，需要在这修改）&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Notion文件导出</title>
-      <link>https://1-1.link/post/tool/notion/notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/</link>
+      <link>https://wowios.com/post/tool/notion/notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/</link>
       <pubDate>Sat, 11 Mar 2023 15:11:32 +0800</pubDate>
       
-      <guid>https://1-1.link/post/tool/notion/notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/</guid>
-      <description>Notion 批量文件导出，以 PFD格式 Notion 是一款 markdown 笔记软件，可以快速书写，多端同步，支持文件导出，十分方便。 我在 notion 中写了很多页面，有时要转移到别的地方保存，那么应该怎么做呢？
-notion 支持导出的文件格式：PDF，HTML，MD 可是，这几种方法都有缺点。
-PDF：只能当前页面，导出所有子页面，需要升级 Pro HTML：多出了一些附带的文件，文件散乱，转移和浏览都不方便 MD：导出之后，图片和文本都分开，转移不方便，文件散乱 那么，有没有更简单的办法获取我自己写的许多页面，且保存为 PDF ？ 有的，步骤如下：
-在notion中包含子页面导出 markdown 使用 vs code 打开，使用插件 Markdown PDF 逐页导出。 具体操作步骤 下图可以看到我的一个页面包含了多个子页面。
-右上角三个点的按钮，选择 export
-导出 markdown
-会得到页面和子页面的目录结构
-使用 vscode 打开。
-安装插件 ”Markdown PDF“
-搜索 Markdown PDF， 点击安装 install。
-设置 ”auto convert when save “
-在插件库里可以看到已安装 Markdown PDF
-这样一来，打开一个 md 文件，ctrl + s，它就自动转换为 pdf 并输出到源路径了。
-当然，也可以自己设定输出的路径，方便批量管理。
-总结 到这里，就实现了 Notion 写作内容的固化和转移啦！</description>
+      <guid>https://wowios.com/post/tool/notion/notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/</guid>
+      <description>&lt;h2 id=&#34;notion-批量文件导出以-pfd格式&#34;&gt;Notion 批量文件导出，以 PFD格式&lt;/h2&gt;
+&lt;p&gt;Notion 是一款 markdown 笔记软件，可以快速书写，多端同步，支持文件导出，十分方便。
+我在 notion 中写了很多页面，有时要转移到别的地方保存，那么应该怎么做呢？&lt;/p&gt;
+&lt;h3 id=&#34;notion-支持导出的文件格式pdfhtmlmd&#34;&gt;notion 支持导出的文件格式：PDF，HTML，MD&lt;/h3&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../Notion%e6%96%87%e4%bb%b6%e5%af%bc%e5%87%ba/Untitled.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;可是，这几种方法都有缺点。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PDF：只能当前页面，导出所有子页面，需要升级 Pro&lt;/li&gt;
+&lt;li&gt;HTML：多出了一些附带的文件，文件散乱，转移和浏览都不方便&lt;/li&gt;
+&lt;li&gt;MD：导出之后，图片和文本都分开，转移不方便，文件散乱&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;那么有没有更简单的办法获取我自己写的许多页面且保存为-pdf-&#34;&gt;那么，有没有更简单的办法获取我自己写的许多页面，且保存为 PDF ？&lt;/h3&gt;
+&lt;p&gt;有的，步骤如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在notion中包含子页面导出 markdown&lt;/li&gt;
+&lt;li&gt;使用 vs code 打开，使用插件 Markdown PDF 逐页导出。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;具体操作步骤&#34;&gt;具体操作步骤&lt;/h3&gt;
+&lt;p&gt;下图可以看到我的一个页面包含了多个子页面。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../Notion%e6%96%87%e4%bb%b6%e5%af%bc%e5%87%ba/Untitled1.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;右上角三个点的按钮，选择 export&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../Notion%e6%96%87%e4%bb%b6%e5%af%bc%e5%87%ba/Untitled2.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;导出 markdown&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../Notion%e6%96%87%e4%bb%b6%e5%af%bc%e5%87%ba/Untitled3.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;会得到页面和子页面的目录结构&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../Notion%e6%96%87%e4%bb%b6%e5%af%bc%e5%87%ba/Untitled4.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../Notion%e6%96%87%e4%bb%b6%e5%af%bc%e5%87%ba/Untitled5.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;使用 vscode 打开。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装插件 ”Markdown PDF“&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../Notion%e6%96%87%e4%bb%b6%e5%af%bc%e5%87%ba/Untitled6.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;搜索 Markdown PDF， 点击安装 install。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../Notion%e6%96%87%e4%bb%b6%e5%af%bc%e5%87%ba/Untitled7.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;设置 ”auto convert when save “&lt;/p&gt;
+&lt;p&gt;在插件库里可以看到已安装 Markdown PDF&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Java</title>
-      <link>https://1-1.link/post/language/java/java/</link>
+      <link>https://wowios.com/post/language/java/java/</link>
       <pubDate>Tue, 12 Jul 2022 21:45:46 +0800</pubDate>
       
-      <guid>https://1-1.link/post/language/java/java/</guid>
-      <description>多线程 Java 多线程编程笔记 🔗</description>
+      <guid>https://wowios.com/post/language/java/java/</guid>
+      <description>&lt;h2 id=&#34;多线程&#34;&gt;多线程&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://1-1-1.site&#34;&gt;Java 多线程编程笔记 🔗&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>个人简历</title>
-      <link>https://1-1.link/about/</link>
+      <link>https://wowios.com/about/</link>
       <pubDate>Tue, 12 Jul 2022 14:46:26 +0800</pubDate>
       
-      <guid>https://1-1.link/about/</guid>
-      <description>出生年月：1998.01 籍贯：广东揭阳 学历：硕士研究生
-联系方式：13757116490
-Github：https://github.com/ZanxinZ
-教育经历 2017&amp;ndash;2021 中国计量大学（本科）自动化专业 2021&amp;ndash;2024 中国计量大学（研究生）电子信息专业 技术栈 熟悉基本数据结构与算法 熟悉 iOS Swift &amp;amp; UIKit 开发流程 Java 服务端开发 熟悉各个设计模式的思想 熟悉基本 Git 操作 掌握基本 C 语言编程 熟悉基本 Python 语法 项目经历 2022-2023 iOS App 《小速记》🔗
-为了帮助用户对自己的一些小计划做记录，以及激励用户去达成这些小计划，开发了这样一款简洁的 App。具有 ToDo、每日打卡、数字记录、统计功能。
-主要技术： 在Xcode平台Swift开发； 使用CoreData管理各个对象信息； 使用UIKit各个原生控件做App功能的实现； 支持简体中文、繁体、英文本地化。
-2021.05 跨平台文件传输 5 号电池 AAcell 🔗
-负责后端部分 Java 开发，基于 SpringBoot 框架搭建 web 服务，实现仅依赖于浏览器的文件传输便捷服务；
-多台不同系统的设备使用房间号和密码可以进入同一个房间；
-使用拦截器配合 JWT (Json Web Token) 对请求建立连接的用户进行验证；
-密码使用 SHA-256 摘要密文保存，在仅具有密文的情况下无法获取用户设置的源密码；
-使用 MySQL 数据库存放房间信息和用户发送的消息；</description>
+      <guid>https://wowios.com/about/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i.postimg.cc/KYWJnw5G/avatar-s.jpg&#34; alt=&#34;me&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;出生年月：1998.01 籍贯：广东揭阳   学历：硕士研究生&lt;/p&gt;
+&lt;p&gt;联系方式：13757116490&lt;/p&gt;
+&lt;p&gt;Github：&lt;a href=&#34;https://github.com/ZanxinZ&#34;&gt;https://github.com/ZanxinZ&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;教育经历&#34;&gt;教育经历&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;2017&amp;ndash;2021 中国计量大学（本科）自动化专业&lt;/li&gt;
+&lt;li&gt;2021&amp;ndash;2024 中国计量大学（研究生）电子信息专业&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;技术栈&#34;&gt;技术栈&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;熟悉基本数据结构与算法&lt;/li&gt;
+&lt;li&gt;熟悉 iOS Swift &amp;amp; UIKit 开发流程&lt;/li&gt;
+&lt;li&gt;Java 服务端开发&lt;/li&gt;
+&lt;li&gt;熟悉各个设计模式的思想&lt;/li&gt;
+&lt;li&gt;熟悉基本 Git 操作&lt;/li&gt;
+&lt;li&gt;掌握基本 C 语言编程&lt;/li&gt;
+&lt;li&gt;熟悉基本 Python 语法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;项目经历&#34;&gt;项目经历&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;2022-2023 iOS App &lt;a href=&#34;https://wowios.com/post/ios/checkthempicshow&#34;&gt;《小速记》🔗&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;为了帮助用户对自己的一些小计划做记录，以及激励用户去达成这些小计划，开发了这样一款简洁的 App。具有 ToDo、每日打卡、数字记录、统计功能。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;主要技术&lt;/strong&gt;：
+在Xcode平台Swift开发；
+使用CoreData管理各个对象信息；
+使用UIKit各个原生控件做App功能的实现；
+支持简体中文、繁体、英文本地化。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;2021.05 跨平台文件传输 &lt;a href=&#34;https://aacell.me&#34;&gt;5 号电池 AAcell 🔗&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;负责后端部分 Java 开发，基于 SpringBoot 框架搭建 web 服务，实现仅依赖于浏览器的文件传输便捷服务；&lt;/p&gt;
+&lt;p&gt;多台不同系统的设备使用房间号和密码可以进入同一个房间；&lt;/p&gt;
+&lt;p&gt;使用拦截器配合 JWT (Json Web Token) 对请求建立连接的用户进行验证；&lt;/p&gt;
+&lt;p&gt;密码使用 SHA-256 摘要密文保存，在仅具有密文的情况下无法获取用户设置的源密码；&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>各种设计模式</title>
-      <link>https://1-1.link/post/design-pattern/all-design-pattern/</link>
+      <link>https://wowios.com/post/design-pattern/all-design-pattern/</link>
       <pubDate>Mon, 11 Jul 2022 18:27:35 +0800</pubDate>
       
-      <guid>https://1-1.link/post/design-pattern/all-design-pattern/</guid>
-      <description>Creational Object Created Pattern
-Factory Method Provide the method for creating an instance in the superclass, and allow the subclass to choose the type of the instance.
-在父类中提供创建对象的方法，允许子类决定实例化对象的类型。
-具备的部分：生产者协议、产品协议，往后就可以根据需要来扩展每一种产品。
-具体的生产者比如 MongoCakeCreator 的存在是为了实现与产品相关的核心业务逻辑，而不仅仅是创建 MongoCake 实例。工厂方法将核心业务逻辑从具体产品类中分离出来。
-// Creator protocol CakeCreator { func createCake() -&amp;gt; Cake func doSomethingForCake(cake: Cake) -&amp;gt; Cake } // Product protocol Cake { func doWork() } // ConcreteCreator class MongoCakeCreator: CakeCreator { var cake: MongoCake? func createCake() -&amp;gt; Cake { var cake = MongoCake() doSomethingForCake(cake: cake) return cake } func doSomethingForCake(cake: Cake) -&amp;gt; Cake{ cake.</description>
+      <guid>https://wowios.com/post/design-pattern/all-design-pattern/</guid>
+      <description>&lt;h2 id=&#34;creational&#34;&gt;Creational&lt;/h2&gt;
+&lt;p&gt;Object Created Pattern&lt;/p&gt;
+&lt;h3 id=&#34;factory-method&#34;&gt;Factory Method&lt;/h3&gt;
+&lt;p&gt;Provide the method for creating an instance in the superclass, and allow the subclass to choose the type of the instance.&lt;/p&gt;
+&lt;p&gt;在父类中提供创建对象的方法，允许子类决定实例化对象的类型。&lt;/p&gt;
+&lt;p&gt;具备的部分：生产者协议、产品协议，往后就可以根据需要来扩展每一种产品。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../imgs/factory.png&#34; alt=&#34;factory&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;具体的生产者比如 &lt;code&gt;MongoCakeCreator&lt;/code&gt; 的存在是为了实现与产品相关的核心业务逻辑，而不仅仅是创建 &lt;code&gt;MongoCake&lt;/code&gt; 实例。工厂方法将核心业务逻辑从具体产品类中分离出来。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// Creator&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;protocol&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;CakeCreator&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;createCake&lt;/span&gt;() -&amp;gt; Cake
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;doSomethingForCake&lt;/span&gt;(cake: Cake) -&amp;gt; Cake
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// Product&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;protocol&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Cake&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;doWork&lt;/span&gt;()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// ConcreteCreator&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;MongoCakeCreator&lt;/span&gt;: CakeCreator {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; cake: MongoCake?
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;createCake&lt;/span&gt;() -&amp;gt; Cake {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; cake = MongoCake()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            doSomethingForCake(cake: cake)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; cake
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;doSomethingForCake&lt;/span&gt;(cake: Cake) -&amp;gt; Cake{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            cake.doWork()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            cake.doWork()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; cake
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// ConcreteCreator&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ChocolateCakeCreator&lt;/span&gt;: CakeCreator {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;createCake&lt;/span&gt;() -&amp;gt; Cake {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; cake = ChocolateCake()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            doSomethingForCake(cake: cake)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; cake
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;doSomethingForCake&lt;/span&gt;(cake: Cake) -&amp;gt; Cake{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            cake.doWork()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; cake
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;MongoCake&lt;/span&gt;: Cake {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;doWork&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Add some mongo&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ChocolateCake&lt;/span&gt;: Cake {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;doWork&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Add some chocolate&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// If we want to add a type of cake call &amp;#34;PinapleCake&amp;#34;, just need to &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// make it conform to Cake and add a creator that conform to the CakeCreator for the &amp;#34;PinapleCake&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; cakeOne = MongoCakeCreator().createCake()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;abstract-factory&#34;&gt;Abstract Factory&lt;/h3&gt;
+&lt;p&gt;Base on the factory method, add an abstract factory. We can call the same abstract factory method to create different mode’s product. If we want to create another mode’s product, we need to change the concrete factory.&lt;/p&gt;</description>
     </item>
     
     
     
     <item>
       <title>home</title>
-      <link>https://1-1.link/home/</link>
+      <link>https://wowios.com/home/</link>
       <pubDate>Sat, 09 Jul 2022 16:25:12 +0800</pubDate>
       
-      <guid>https://1-1.link/home/</guid>
-      <description>Hey</description>
+      <guid>https://wowios.com/home/</guid>
+      <description>&lt;p&gt;Hey&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Advanced Operators</title>
-      <link>https://1-1.link/post/language/swift/28advanced-operators/</link>
+      <link>https://wowios.com/post/language/swift/28advanced-operators/</link>
       <pubDate>Sun, 19 Jun 2022 16:00:40 +0800</pubDate>
       
-      <guid>https://1-1.link/post/language/swift/28advanced-operators/</guid>
-      <description>Unlike arithmetic operators in C, arithmetic operators in Swift don’t overflow by default. If want to overflow by default, use the overflow operation begin with ampersand (&amp;amp;). For example, the overflow addition operator (&amp;amp;+).
-It’s so free to define custom infix, prefix, postfix and assignment operators, precedence and associativity values.
-Bitwise Operators Here we use a function to pad 0 for the number’s print result.
-func pad(num: UInt8, count: Int) -&amp;gt; String { var str = String(num, radix: 2) var res: String = str for _ in 0.</description>
+      <guid>https://wowios.com/post/language/swift/28advanced-operators/</guid>
+      <description>&lt;p&gt;Unlike arithmetic operators in C, arithmetic operators in Swift don’t overflow by default. If want to overflow by default, use the overflow operation begin with ampersand (&lt;code&gt;&amp;amp;&lt;/code&gt;). For example, the overflow addition operator (&lt;code&gt;&amp;amp;+&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;It’s so free to define custom infix, prefix, postfix and assignment operators, precedence and associativity values.&lt;/p&gt;
+&lt;h2 id=&#34;bitwise-operators&#34;&gt;Bitwise Operators&lt;/h2&gt;
+&lt;p&gt;Here we use a function to pad 0 for the number’s print result.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;pad&lt;/span&gt;(num: UInt8, count: Int) -&amp;gt; String {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; str = String(num, radix: &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; res: String = str
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;_&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;in&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.&lt;/span&gt;.&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;(count &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; str.count) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        res = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; res
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt;  res
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;~&lt;/code&gt; NOT&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Access Control</title>
-      <link>https://1-1.link/post/language/swift/27access-control/</link>
+      <link>https://wowios.com/post/language/swift/27access-control/</link>
       <pubDate>Sat, 18 Jun 2022 16:00:40 +0800</pubDate>
       
-      <guid>https://1-1.link/post/language/swift/27access-control/</guid>
-      <description>Access control restrict access to part of the code form code in other source files and modules. It enable us to hide the implement detail of the code, and to specify a preferred interface which that code can be accessed and used.
-Set access levels to individual types (classes, structures, enumerations), as well as to properties, methods, initializers, and subscripts belonging to those types.
-Protocols can be restricted to a certain context, as can global constants, variable, and functions.</description>
+      <guid>https://wowios.com/post/language/swift/27access-control/</guid>
+      <description>&lt;p&gt;Access control restrict access to part of the code form code in other source files and modules. It enable us to &lt;strong&gt;hide the implement detail&lt;/strong&gt; of the code, and to &lt;strong&gt;specify a preferred interface&lt;/strong&gt; which that code can be accessed and used.&lt;/p&gt;
+&lt;p&gt;Set access levels to individual types (classes, structures, enumerations), as well as to properties, methods, initializers, and subscripts belonging to those types.&lt;/p&gt;
+&lt;p&gt;Protocols can be restricted to a certain context, as can global constants, variable, and functions.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Memory Safty</title>
-      <link>https://1-1.link/post/language/swift/26memory-safety/</link>
+      <link>https://wowios.com/post/language/swift/26memory-safety/</link>
       <pubDate>Sun, 12 Jun 2022 16:05:40 +0800</pubDate>
       
-      <guid>https://1-1.link/post/language/swift/26memory-safety/</guid>
-      <description>Most of the time we don’t have to think about accessing memory, but it’s important to understand where potential conflicts can occur, so we can avoid writing code that has conflicting access to memory.
-Here we are talking about the situation that happen on a single thread.
-Memory Access var one = 1 // write access to the memory one is stored. print(&amp;#34;\(one)&amp;#34;) // read access from the memory one is stored.</description>
+      <guid>https://wowios.com/post/language/swift/26memory-safety/</guid>
+      <description>&lt;p&gt;Most of the time we don’t have to think about accessing memory, but it’s important to understand where potential conflicts can occur, so we can avoid writing code that has conflicting access to memory.&lt;/p&gt;
+&lt;p&gt;Here we are talking about the situation that happen on a single thread.&lt;/p&gt;
+&lt;h2 id=&#34;memory-access&#34;&gt;Memory Access&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; one = &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;     &lt;span style=&#34;color:#75715e&#34;&gt;// write access to the memory one is stored.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;\(&lt;/span&gt;one&lt;span style=&#34;color:#e6db74&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#75715e&#34;&gt;// read access from the memory one is stored.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The conflicting access to memory can occur when different part of the code are trying to access the same location in memory at the same time.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Automatic Reference Counting</title>
-      <link>https://1-1.link/post/language/swift/25automatic-reference-counting/</link>
+      <link>https://wowios.com/post/language/swift/25automatic-reference-counting/</link>
       <pubDate>Sun, 12 Jun 2022 16:00:40 +0800</pubDate>
       
-      <guid>https://1-1.link/post/language/swift/25automatic-reference-counting/</guid>
-      <description>Swift use ARC to track and manage the app’s memory usage. ARC frees up the memory used by class instances when those instances are no longer needed.
-Reference counting applies only to instance of classes.
-Reference:
-strong: retain the obj. (default) weak: don’t retain the object referred to, track the object referred to. unowned: don’t retain the object referred to, don’t tract the object referred to. How ARC Work Allocate a chunk of memory to store information about that instance</description>
+      <guid>https://wowios.com/post/language/swift/25automatic-reference-counting/</guid>
+      <description>&lt;p&gt;Swift use ARC to track and manage the app’s memory usage. ARC frees up the memory used by class instances when those instances are no longer needed.&lt;/p&gt;
+&lt;p&gt;Reference counting &lt;strong&gt;applies only to instance of classes.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Reference:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;strong: retain the obj. (default)&lt;/li&gt;
+&lt;li&gt;weak:  don’t retain the object referred to, track the object referred to.&lt;/li&gt;
+&lt;li&gt;unowned: don’t retain the object referred to, don’t tract the object referred to.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;how-arc-work&#34;&gt;How ARC Work&lt;/h2&gt;
+&lt;p&gt;Allocate a chunk of memory to store information about that instance&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Opaque Type</title>
-      <link>https://1-1.link/post/language/swift/24opaque-type/</link>
+      <link>https://wowios.com/post/language/swift/24opaque-type/</link>
       <pubDate>Sun, 05 Jun 2022 16:05:40 +0800</pubDate>
       
-      <guid>https://1-1.link/post/language/swift/24opaque-type/</guid>
-      <description>A function with an opaque type hides its return value’s type information. Hiding type information at some boundaries between a module and code that calls into the module. Unlike returning a value whose type is a protocol type, opaque type preserve type identity —the compile has access to the type information, but clients of the module don’t.
-The Situation Here we have a Shape protocol.
-protocol Shape { func draw() -&amp;gt; String } The struct Triangle conform to the Shape.</description>
+      <guid>https://wowios.com/post/language/swift/24opaque-type/</guid>
+      <description>&lt;p&gt;A function with an opaque type hides its return value’s type information. Hiding type information at some boundaries between a module and code that calls into the module. Unlike returning a value whose type is a protocol type, opaque type preserve type identity —the compile has access to the type information, but clients of the module don’t.&lt;/p&gt;
+&lt;h2 id=&#34;the-situation&#34;&gt;The Situation&lt;/h2&gt;
+&lt;p&gt;Here we have a &lt;code&gt;Shape&lt;/code&gt; protocol.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;protocol&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Shape&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;draw&lt;/span&gt;() -&amp;gt; String
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The struct &lt;code&gt;Triangle&lt;/code&gt; conform to the &lt;code&gt;Shape&lt;/code&gt;. Describe how to &lt;code&gt;draw()&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Generics</title>
-      <link>https://1-1.link/post/language/swift/23generics/</link>
+      <link>https://wowios.com/post/language/swift/23generics/</link>
       <pubDate>Sun, 05 Jun 2022 16:00:40 +0800</pubDate>
       
-      <guid>https://1-1.link/post/language/swift/23generics/</guid>
+      <guid>https://wowios.com/post/language/swift/23generics/</guid>
       <description>Define a class with template type &lt;!-- raw HTML omitted --&gt;, then should illustract the type when use the class.</description>
     </item>
     
     <item>
       <title>Optional Chaining</title>
-      <link>https://1-1.link/post/language/swift/16optional-chaining/</link>
+      <link>https://wowios.com/post/language/swift/16optional-chaining/</link>
       <pubDate>Tue, 24 May 2022 16:05:40 +0800</pubDate>
       
-      <guid>https://1-1.link/post/language/swift/16optional-chaining/</guid>
-      <description>A process for querying and calling properties, methods, and subscripts on an optional that might currently be nil .Multiple queries can be chained together, and the chain fails gracefully if any link in the chain is nil .
-Optional Chaining as an Alternative to Forced Unwrapping ! force unwrapping triggers a runtime error when the optional is nil . Use the optional chaining to check if the optional value querying is succeed.</description>
+      <guid>https://wowios.com/post/language/swift/16optional-chaining/</guid>
+      <description>&lt;p&gt;A process for querying and calling properties, methods, and subscripts on an optional that might currently be &lt;code&gt;nil&lt;/code&gt; .Multiple queries can be chained together, and the chain fails gracefully if any link in the chain is &lt;code&gt;nil&lt;/code&gt; .&lt;/p&gt;
+&lt;h2 id=&#34;optional-chaining-as-an-alternative-to-forced-unwrapping&#34;&gt;Optional Chaining as an Alternative to Forced Unwrapping&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;!&lt;/code&gt; force unwrapping triggers a runtime error when the optional is &lt;code&gt;nil&lt;/code&gt; .&lt;/li&gt;
+&lt;li&gt;Use the optional chaining to check if the optional value querying is succeed.
+&lt;ul&gt;
+&lt;li&gt;the chain return optional value is &lt;code&gt;nil&lt;/code&gt; , the optional chaining fail.&lt;/li&gt;
+&lt;li&gt;the chain return optional contains a value, the optional chaining succeed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Force Unwrapping&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Protocol</title>
-      <link>https://1-1.link/post/language/swift/22protocols/</link>
+      <link>https://wowios.com/post/language/swift/22protocols/</link>
       <pubDate>Sun, 22 May 2022 16:00:40 +0800</pubDate>
       
-      <guid>https://1-1.link/post/language/swift/22protocols/</guid>
+      <guid>https://wowios.com/post/language/swift/22protocols/</guid>
       <description>A protocol defines a blueprint with methods, properties.</description>
     </item>
     
     <item>
       <title>Extension</title>
-      <link>https://1-1.link/post/language/swift/21extensions/</link>
+      <link>https://wowios.com/post/language/swift/21extensions/</link>
       <pubDate>Sat, 21 May 2022 16:00:40 +0800</pubDate>
       
-      <guid>https://1-1.link/post/language/swift/21extensions/</guid>
+      <guid>https://wowios.com/post/language/swift/21extensions/</guid>
       <description>Extension add new functionality to an existing class, structure, enumeration, or protocol type.</description>
     </item>
     
     <item>
       <title>Nested Types</title>
-      <link>https://1-1.link/post/language/swift/20nested-types/</link>
+      <link>https://wowios.com/post/language/swift/20nested-types/</link>
       <pubDate>Mon, 16 May 2022 16:05:40 +0800</pubDate>
       
-      <guid>https://1-1.link/post/language/swift/20nested-types/</guid>
-      <description>Enumerations, classes or structures can be nested in another type.
-struct Closh { enum Size: String{ case H = &amp;#34;high&amp;#34;, M = &amp;#34;Medium&amp;#34;, L = &amp;#34;Low&amp;#34; } enum Detail: Int { case H = 180, M = 170, L = 160 struct Price { let normal: Int, discount: Int? } var price: Price { switch self { case .H: return Price(normal: 100, discount: 90) case .M: return Price(normal: 90, discount: 80) case .</description>
+      <guid>https://wowios.com/post/language/swift/20nested-types/</guid>
+      <description>&lt;p&gt;Enumerations, classes or structures can be nested in another type.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;struct&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Closh&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;enum&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Size&lt;/span&gt;: String{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; H = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;high&amp;#34;&lt;/span&gt;, M = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Medium&amp;#34;&lt;/span&gt;, L = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Low&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;enum&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Detail&lt;/span&gt;: Int {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; H = &lt;span style=&#34;color:#ae81ff&#34;&gt;180&lt;/span&gt;, M = &lt;span style=&#34;color:#ae81ff&#34;&gt;170&lt;/span&gt;, L = &lt;span style=&#34;color:#ae81ff&#34;&gt;160&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;struct&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Price&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; normal: Int, discount: Int?
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; price: Price {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;switch&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;self&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; .H:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; Price(normal: &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;, discount: &lt;span style=&#34;color:#ae81ff&#34;&gt;90&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; .M:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; Price(normal: &lt;span style=&#34;color:#ae81ff&#34;&gt;90&lt;/span&gt;, discount: &lt;span style=&#34;color:#ae81ff&#34;&gt;80&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; .L:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; Price(normal: &lt;span style=&#34;color:#ae81ff&#34;&gt;80&lt;/span&gt;, discount: &lt;span style=&#34;color:#ae81ff&#34;&gt;70&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;default&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; Price(normal: &lt;span style=&#34;color:#66d9ef&#34;&gt;self&lt;/span&gt;.rawValue, discount: &lt;span style=&#34;color:#66d9ef&#34;&gt;nil&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; size: Size, detail: Detail
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; description: String {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;\(&lt;/span&gt;size.rawValue&lt;span style=&#34;color:#e6db74&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;, PriceNormal: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;\(&lt;/span&gt;detail.price.normal&lt;span style=&#34;color:#e6db74&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; PriceDiscount: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;\(&lt;/span&gt;detail.price.discount&lt;span style=&#34;color:#e6db74&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; closh = Closh(size: .M, detail: .M)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(closh.description)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Print: Medium, PriceNormal: 90 PriceDiscount: Optional(80)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Referring to Nested Types&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Type Casting</title>
-      <link>https://1-1.link/post/language/swift/19type-casting/</link>
+      <link>https://wowios.com/post/language/swift/19type-casting/</link>
       <pubDate>Mon, 16 May 2022 16:00:40 +0800</pubDate>
       
-      <guid>https://1-1.link/post/language/swift/19type-casting/</guid>
-      <description>Type casting in Swift is implemented with is and as operators.
-Type casting:
-A subclass instance can be use as a superclass instance. Defining a Class Hierarchy class Media { var name: String init(name: String) { self.name = name } } class Song: Media { var artist: String init(name: String, artist: String) { self.artist = artist super.init(name: name) } } class Movie: Media { var director: String init(name: String, director: String) { self.</description>
+      <guid>https://wowios.com/post/language/swift/19type-casting/</guid>
+      <description>&lt;p&gt;Type casting in Swift is implemented with &lt;code&gt;is&lt;/code&gt; and &lt;code&gt;as&lt;/code&gt; operators.&lt;/p&gt;
+&lt;p&gt;Type casting:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A subclass instance can be use as a superclass instance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;defining-a-class-hierarchy&#34;&gt;Defining a Class Hierarchy&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Media&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; name: String
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;init&lt;/span&gt;(name: String) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;self&lt;/span&gt;.name = name
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Song&lt;/span&gt;: Media {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; artist: String
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;init&lt;/span&gt;(name: String, artist: String) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;self&lt;/span&gt;.artist = artist
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;super&lt;/span&gt;.&lt;span style=&#34;color:#66d9ef&#34;&gt;init&lt;/span&gt;(name: name)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Movie&lt;/span&gt;: Media {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; director: String
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;init&lt;/span&gt;(name: String, director: String) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;self&lt;/span&gt;.director = director
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;super&lt;/span&gt;.&lt;span style=&#34;color:#66d9ef&#34;&gt;init&lt;/span&gt;(name: name)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; library = [
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Movie(name: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;A&amp;#34;&lt;/span&gt;, director: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Michael&amp;#34;&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Song(name: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;B&amp;#34;&lt;/span&gt;, artist: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Elvis&amp;#34;&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Movie(name: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;C&amp;#34;&lt;/span&gt;, director: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Orson&amp;#34;&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Song(name: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;D&amp;#34;&lt;/span&gt;, artist: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Rick&amp;#34;&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Media(name: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;E&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// The &amp;#34;library&amp;#34; is inferred to be [Media] &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; item &lt;span style=&#34;color:#66d9ef&#34;&gt;in&lt;/span&gt; library {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(item.name)  &lt;span style=&#34;color:#75715e&#34;&gt;// Here the item is of &amp;#34;Media&amp;#34; type &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// If we want to use the library&amp;#39;s item as the subclass instance, we should downcast the item.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;checking-type&#34;&gt;Checking Type&lt;/h2&gt;
+&lt;p&gt;Use &lt;code&gt;is&lt;/code&gt; to check whether an instance is of a certain subclass type.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Concurrency</title>
-      <link>https://1-1.link/post/language/swift/18concurrency/</link>
+      <link>https://wowios.com/post/language/swift/18concurrency/</link>
       <pubDate>Sun, 08 May 2022 16:00:40 +0800</pubDate>
       
-      <guid>https://1-1.link/post/language/swift/18concurrency/</guid>
-      <description>Swift has built-in support for writing asynchronous and parallel code in a structured way.
-Parallel code means multiple pieces of code run simultaneously.
-Concurrency will make the code harder to debug. Swift can help to catch problem at compile time. Although it’s possible to write concurrent code without using Swift language support, that code tends to be hard to read.
-listPhotos(inGallery: &amp;#34;Summer Vacation&amp;#34;) { photoNames in let sortedNames = photoNames.sorted() let name = sortedNames[0] downloadPhoto(named: name) { photo in show(photo) } } Keywords:</description>
+      <guid>https://wowios.com/post/language/swift/18concurrency/</guid>
+      <description>&lt;p&gt;Swift has built-in support for writing asynchronous and parallel code in a structured way.&lt;/p&gt;
+&lt;p&gt;Parallel code means multiple pieces of code run simultaneously.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Concurrency will make the code harder to debug.&lt;/li&gt;
+&lt;li&gt;Swift can help to catch problem at compile time.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Although it’s possible to write concurrent code without using Swift language support, that code tends to be hard to read.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;listPhotos(inGallery: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Summer Vacation&amp;#34;&lt;/span&gt;) { photoNames &lt;span style=&#34;color:#66d9ef&#34;&gt;in&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; sortedNames = photoNames.sorted()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; name = sortedNames[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    downloadPhoto(named: name) { photo &lt;span style=&#34;color:#66d9ef&#34;&gt;in&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        show(photo)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Keywords:&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Error Handling</title>
-      <link>https://1-1.link/post/language/swift/17error-handling/</link>
+      <link>https://wowios.com/post/language/swift/17error-handling/</link>
       <pubDate>Sat, 07 May 2022 16:00:40 +0800</pubDate>
       
-      <guid>https://1-1.link/post/language/swift/17error-handling/</guid>
-      <description>A class support for throwing, catching, propagating, and manipulating recoverable errors at runtime.
-When an optional fails, it’s useful to understand what cause the failure, so that the code can respond accordingly.
-Example: Reading a file from the disk may be fail in some way.
-File not exist Have no permission to read. File not being encoded in a compatible format. Distinguishing among these different situations allows a program to resolve some errors and to communicate to the user any errors it can’t resolve.</description>
+      <guid>https://wowios.com/post/language/swift/17error-handling/</guid>
+      <description>&lt;p&gt;A class support for throwing, catching, propagating, and manipulating recoverable errors at &lt;em&gt;runtime&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;When an optional fails, it’s useful to understand what cause the failure, so that the code can respond accordingly.&lt;/p&gt;
+&lt;h2 id=&#34;example&#34;&gt;Example:&lt;/h2&gt;
+&lt;p&gt;Reading a file from the disk may be fail in some way.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;File not exist&lt;/li&gt;
+&lt;li&gt;Have no permission to read.&lt;/li&gt;
+&lt;li&gt;File not being encoded in a compatible format.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Distinguishing among these different situations allows a program to resolve some errors and to communicate to the user any errors it can’t resolve.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Deinitialization</title>
-      <link>https://1-1.link/post/language/swift/15deinitialization/</link>
+      <link>https://wowios.com/post/language/swift/15deinitialization/</link>
       <pubDate>Mon, 02 May 2022 16:00:40 +0800</pubDate>
       
-      <guid>https://1-1.link/post/language/swift/15deinitialization/</guid>
+      <guid>https://wowios.com/post/language/swift/15deinitialization/</guid>
       <description>Before the object is recycle, the deinitializer solve the post events.</description>
     </item>
     
     <item>
       <title>Initialization</title>
-      <link>https://1-1.link/post/language/swift/14initialization/</link>
+      <link>https://wowios.com/post/language/swift/14initialization/</link>
       <pubDate>Sat, 30 Apr 2022 16:00:40 +0800</pubDate>
       
-      <guid>https://1-1.link/post/language/swift/14initialization/</guid>
+      <guid>https://wowios.com/post/language/swift/14initialization/</guid>
       <description>The class&amp;rsquo;s initializer set the original state for the object.</description>
     </item>
     
     <item>
       <title>Inheritance</title>
-      <link>https://1-1.link/post/language/swift/13inheritance/</link>
+      <link>https://wowios.com/post/language/swift/13inheritance/</link>
       <pubDate>Sun, 24 Apr 2022 16:00:40 +0800</pubDate>
       
-      <guid>https://1-1.link/post/language/swift/13inheritance/</guid>
+      <guid>https://wowios.com/post/language/swift/13inheritance/</guid>
       <description>A class inherit another class call super class, and get some ability from super class.</description>
     </item>
     
     <item>
       <title>Method</title>
-      <link>https://1-1.link/post/language/swift/11method/</link>
+      <link>https://wowios.com/post/language/swift/11method/</link>
       <pubDate>Sun, 17 Apr 2022 16:15:40 +0800</pubDate>
       
-      <guid>https://1-1.link/post/language/swift/11method/</guid>
+      <guid>https://wowios.com/post/language/swift/11method/</guid>
       <description>The object have some method to provide functionality.</description>
     </item>
     
     <item>
       <title>Properties</title>
-      <link>https://1-1.link/post/language/swift/10properties/</link>
+      <link>https://wowios.com/post/language/swift/10properties/</link>
       <pubDate>Sun, 17 Apr 2022 16:12:40 +0800</pubDate>
       
-      <guid>https://1-1.link/post/language/swift/10properties/</guid>
-      <description>Stored properties
-Only provided by classed and structures.
-Computed properties
-Provide by classes, structures, enumerations.
-Usually associated with instance of a particular type, can be associated with the type itself(type properties).
-Can define property observers to monitor changes in a property’s value, which can respond to with custom action.
-Can use a property wrapper to reuse code in the getter and setter.
-Stored Properties **struct Setting { var width: Int let height: Int } var appSetting = Setting(width: 100, height: 200) appSetting.</description>
+      <guid>https://wowios.com/post/language/swift/10properties/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Stored properties&lt;/p&gt;
+&lt;p&gt;Only provided by &lt;strong&gt;classed and structures&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Computed properties&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Provide by classes, structures, enumerations.&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Usually associated with instance of a particular type, can be associated with the type itself(type properties).&lt;/p&gt;
+&lt;p&gt;Can define property observers to monitor changes in a property’s value, which can respond to with custom action.&lt;/p&gt;
+&lt;p&gt;Can use a property wrapper to reuse code in the getter and setter.&lt;/p&gt;
+&lt;h2 id=&#34;stored-properties&#34;&gt;Stored Properties&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;**&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;struct&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Setting&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; width: Int
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; height: Int  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; appSetting = Setting(width: &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;, height: &lt;span style=&#34;color:#ae81ff&#34;&gt;200&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;appSetting.width = &lt;span style=&#34;color:#ae81ff&#34;&gt;150&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; constSetting = Setting(width: &lt;span style=&#34;color:#ae81ff&#34;&gt;110&lt;/span&gt;, height: &lt;span style=&#34;color:#ae81ff&#34;&gt;210&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;//constSetting.width = 120  // This will trigger a compile-time error, the struct is of const value type.**&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;lazy-stored-properties&#34;&gt;Lazy Stored Properties&lt;/h2&gt;
+&lt;p&gt;Its initial value isn’t calculated until the first time it’s used.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Structures and Classes</title>
-      <link>https://1-1.link/post/language/swift/09structures-and-classes/</link>
+      <link>https://wowios.com/post/language/swift/09structures-and-classes/</link>
       <pubDate>Sun, 10 Apr 2022 16:12:40 +0800</pubDate>
       
-      <guid>https://1-1.link/post/language/swift/09structures-and-classes/</guid>
+      <guid>https://wowios.com/post/language/swift/09structures-and-classes/</guid>
       <description>The object oriented programming.</description>
     </item>
     
     <item>
       <title>Enumerations</title>
-      <link>https://1-1.link/post/language/swift/08enumerations/</link>
+      <link>https://wowios.com/post/language/swift/08enumerations/</link>
       <pubDate>Sun, 10 Apr 2022 16:08:40 +0800</pubDate>
       
-      <guid>https://1-1.link/post/language/swift/08enumerations/</guid>
-      <description>Syntax enum Direction { case up case down case left case right } Multiple case can appear on a single line, separated by commas:
-enum { case up, down, left, right } Use the Enumeration
-var dir = Direction.up When we want to modify the var after the initialized, we can use a shorter form of the enumeration.
-var dir = Direction.up dir = .down // The value&amp;#39;s type has been inferred when the value is in initializing.</description>
+      <guid>https://wowios.com/post/language/swift/08enumerations/</guid>
+      <description>&lt;h2 id=&#34;syntax&#34;&gt;Syntax&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;enum&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Direction&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; up
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; down
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;left&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;right&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Multiple case can appear on a single line, separated by commas:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;enum&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; up, down, &lt;span style=&#34;color:#66d9ef&#34;&gt;left&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;right&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Use the Enumeration&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; dir = Direction.up
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;When we want to &lt;strong&gt;modify&lt;/strong&gt; the var after the initialized, we can use a shorter form of the enumeration.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; dir = Direction.up
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dir = .down    &lt;span style=&#34;color:#75715e&#34;&gt;// The value&amp;#39;s type has been inferred when the value is in initializing.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;matching-enumeration-values-with-a-switch-statement&#34;&gt;Matching Enumeration Values with a Switch Statement&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;enum&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Direction&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; up
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; down
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;left&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;right&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; dir = Direction.&lt;span style=&#34;color:#66d9ef&#34;&gt;right&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;switch&lt;/span&gt; dir {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; .up:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Go up&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; .down:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Go down&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; .&lt;span style=&#34;color:#66d9ef&#34;&gt;left&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Go left&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; .&lt;span style=&#34;color:#66d9ef&#34;&gt;right&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Go right&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;iterating-over-enumeration-cases&#34;&gt;Iterating over Enumeration Cases&lt;/h2&gt;
+&lt;p&gt;Conform to the &lt;code&gt;CaseIterable&lt;/code&gt; protocol,  to make the enumeration’s case be iterable.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Subscripts</title>
-      <link>https://1-1.link/post/language/swift/12subscripts/</link>
+      <link>https://wowios.com/post/language/swift/12subscripts/</link>
       <pubDate>Sun, 10 Apr 2022 16:00:40 +0800</pubDate>
       
-      <guid>https://1-1.link/post/language/swift/12subscripts/</guid>
+      <guid>https://wowios.com/post/language/swift/12subscripts/</guid>
       <description>Set subscript(index: Int) in the class to index the data of the instance of the this class.</description>
     </item>
     
     <item>
       <title>Closures</title>
-      <link>https://1-1.link/post/language/swift/07closures/</link>
+      <link>https://wowios.com/post/language/swift/07closures/</link>
       <pubDate>Sat, 02 Apr 2022 16:10:40 +0800</pubDate>
       
-      <guid>https://1-1.link/post/language/swift/07closures/</guid>
+      <guid>https://wowios.com/post/language/swift/07closures/</guid>
       <description>The closures can cantains something by the curly bracket.</description>
     </item>
     
     <item>
       <title>Function</title>
-      <link>https://1-1.link/post/language/swift/06function/</link>
+      <link>https://wowios.com/post/language/swift/06function/</link>
       <pubDate>Sat, 02 Apr 2022 16:08:40 +0800</pubDate>
       
-      <guid>https://1-1.link/post/language/swift/06function/</guid>
+      <guid>https://wowios.com/post/language/swift/06function/</guid>
       <description>Call the function(method) to do something detail.</description>
     </item>
     
     <item>
       <title>Control Flow</title>
-      <link>https://1-1.link/post/language/swift/05control-flow/</link>
+      <link>https://wowios.com/post/language/swift/05control-flow/</link>
       <pubDate>Mon, 28 Mar 2022 16:08:40 +0800</pubDate>
       
-      <guid>https://1-1.link/post/language/swift/05control-flow/</guid>
+      <guid>https://wowios.com/post/language/swift/05control-flow/</guid>
       <description>loop, condition branch, control transfer.</description>
     </item>
     
     <item>
       <title>Collection Type</title>
-      <link>https://1-1.link/post/language/swift/04collection-type/</link>
+      <link>https://wowios.com/post/language/swift/04collection-type/</link>
       <pubDate>Mon, 28 Mar 2022 16:04:40 +0800</pubDate>
       
-      <guid>https://1-1.link/post/language/swift/04collection-type/</guid>
+      <guid>https://wowios.com/post/language/swift/04collection-type/</guid>
       <description>The array, set, and dictionary.</description>
     </item>
     
     <item>
       <title>Strings and Characters</title>
-      <link>https://1-1.link/post/language/swift/03strings-and-characters/</link>
+      <link>https://wowios.com/post/language/swift/03strings-and-characters/</link>
       <pubDate>Sun, 20 Mar 2022 16:04:40 +0800</pubDate>
       
-      <guid>https://1-1.link/post/language/swift/03strings-and-characters/</guid>
-      <description>String type is bridged with Foundation’s NSString. Foundation extends String to expose methods defines by NSString. If import Foundation, you can access those NSString methods on String without casting.
-String Literals // &amp;#34;Hello World!&amp;#34; is a String literal. let sentence = &amp;#34;Hello World!&amp;#34; // Multiline let story = &amp;#34;&amp;#34;&amp;#34; There are some people in the room. They are having a party. Because today is the Christmas. &amp;#34;&amp;#34;&amp;#34; // every line has the line breaks.</description>
+      <guid>https://wowios.com/post/language/swift/03strings-and-characters/</guid>
+      <description>&lt;p&gt;String type is bridged with Foundation’s NSString. Foundation extends String to expose methods defines by NSString. If import Foundation, you can access those NSString methods on String without casting.&lt;/p&gt;
+&lt;h2 id=&#34;string-literals&#34;&gt;String Literals&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// &amp;#34;Hello World!&amp;#34; is a String literal. &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; sentence = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello World!&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Multiline&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; story = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;There are some people in the room.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;They are having a party.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Because today is the Christmas.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// every line has the line breaks.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// the start and end sign(&amp;#34;&amp;#34;&amp;#34;) must take a single line.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// backlash(\), it means that the string is not broken. Then line breaks not to be part of the string&amp;#39;s value.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; content = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;In a happy atmos\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;phere. We start the conversation
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(content) &lt;span style=&#34;color:#75715e&#34;&gt;// result: In a happy atmosphere. We start the conversation.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Alignment of quotation marks in the multiline string.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; desc = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    Ha it&amp;#39;s so funny.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(desc)  &lt;span style=&#34;color:#75715e&#34;&gt;// result:     Ha its so funny.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; desc = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    Ha it&amp;#39;s so funny.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    &amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(desc)  &lt;span style=&#34;color:#75715e&#34;&gt;// result: Ha its so funny.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; desc = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        Ha it&amp;#39;s so funny.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    &amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(desc)  &lt;span style=&#34;color:#75715e&#34;&gt;// result:     Ha its so funny.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Special Character in String Literals&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Basic Operators</title>
-      <link>https://1-1.link/post/language/swift/02basic-operators/</link>
+      <link>https://wowios.com/post/language/swift/02basic-operators/</link>
       <pubDate>Sat, 19 Mar 2022 16:00:40 +0800</pubDate>
       
-      <guid>https://1-1.link/post/language/swift/02basic-operators/</guid>
+      <guid>https://wowios.com/post/language/swift/02basic-operators/</guid>
       <description>Basic usage of the operators.</description>
     </item>
     
     <item>
       <title>Basic</title>
-      <link>https://1-1.link/post/language/swift/01basic/</link>
+      <link>https://wowios.com/post/language/swift/01basic/</link>
       <pubDate>Sat, 12 Mar 2022 15:55:40 +0800</pubDate>
       
-      <guid>https://1-1.link/post/language/swift/01basic/</guid>
+      <guid>https://wowios.com/post/language/swift/01basic/</guid>
       <description>Basic usage of the swift syntax.</description>
     </item>
     
     <item>
       <title>Mail</title>
-      <link>https://1-1.link/post/info/contact/mail/</link>
+      <link>https://wowios.com/post/info/contact/mail/</link>
       <pubDate>Sat, 10 Jul 2021 18:46:21 +0800</pubDate>
       
-      <guid>https://1-1.link/post/info/contact/mail/</guid>
+      <guid>https://wowios.com/post/info/contact/mail/</guid>
       <description>false</description>
     </item>
     
     <item>
       <title>竞赛经历与奖项</title>
-      <link>https://1-1.link/post/info/certificate/</link>
+      <link>https://wowios.com/post/info/certificate/</link>
       <pubDate>Mon, 21 Jun 2021 10:17:24 +0800</pubDate>
       
-      <guid>https://1-1.link/post/info/certificate/</guid>
-      <description>机器人比赛 2019.05 寻宝机器人
-2019.05 超市购物机器人
-2020.06 创意机器人比赛魔方组
-魔方机器人 🔗
-西门子智能制造挑战赛 2019.08
-大学生挑战杯 2022.07</description>
+      <guid>https://wowios.com/post/info/certificate/</guid>
+      <description>&lt;h3 id=&#34;机器人比赛&#34;&gt;机器人比赛&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;2019.05 寻宝机器人&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../certificate/travel_car.jpg&#34; alt=&#34;机器人&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../certificate/travel.jpg&#34; alt=&#34;寻宝&#34;  /&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;2019.05 超市购物机器人&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../certificate/car.jpg&#34; alt=&#34;购物&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../certificate/shopping_map.jpg&#34; alt=&#34;购物&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../certificate/shopping.jpg&#34; alt=&#34;购物&#34;  /&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2020.06 创意机器人比赛魔方组&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://compeition-excute.oss-cn-beijing.aliyuncs.com/webFile/2019117/5c3d3f1ffabd11e994a47cd30a5180b6/aWHSLydW_1573089290143.mp4&#34;&gt;魔方机器人 🔗&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../certificate/cube_img.jpg&#34; alt=&#34;魔方图像识别&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../certificate/cube.jpg&#34; alt=&#34;魔方组&#34;  /&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;西门子智能制造挑战赛&#34;&gt;西门子智能制造挑战赛&lt;/h3&gt;
+&lt;p&gt;2019.08&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../certificate/Simon.png&#34; alt=&#34;西门子&#34;  /&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;大学生挑战杯&#34;&gt;大学生挑战杯&lt;/h3&gt;
+&lt;p&gt;2022.07&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../certificate/sound.jpg&#34; alt=&#34;挑战杯&#34;  /&gt;
+&lt;/p&gt;</description>
     </item>
     
   </channel>

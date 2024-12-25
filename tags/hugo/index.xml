@@ -2,34 +2,60 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Hugo on CodePaper</title>
-    <link>https://1-1.link/tags/hugo/</link>
+    <link>https://wowios.com/tags/hugo/</link>
     <description>Recent content in Hugo on CodePaper</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 Mar 2023 16:59:18 +0800</lastBuildDate><atom:link href="https://1-1.link/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Mar 2023 16:59:18 +0800</lastBuildDate><atom:link href="https://wowios.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo 的一些问题</title>
-      <link>https://1-1.link/post/tool/usehugo/someproblem/</link>
+      <link>https://wowios.com/post/tool/usehugo/someproblem/</link>
       <pubDate>Sat, 11 Mar 2023 16:59:18 +0800</pubDate>
       
-      <guid>https://1-1.link/post/tool/usehugo/someproblem/</guid>
-      <description>若域名有变动 需要修改三个地方
-workflow 文件夹里 Github Acction 配置文件 Action.yml 中的 cname: config.yaml 中的 baseURL Github repository setting Pages </description>
+      <guid>https://wowios.com/post/tool/usehugo/someproblem/</guid>
+      <description>&lt;h2 id=&#34;若域名有变动&#34;&gt;若域名有变动&lt;/h2&gt;
+&lt;p&gt;需要修改三个地方&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;workflow 文件夹里 Github Acction 配置文件 &lt;code&gt;Action.yml&lt;/code&gt; 中的 &lt;code&gt;cname:&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;config.yaml 中的 &lt;code&gt;baseURL&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Github repository setting &lt;code&gt;Pages&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
       <title>Hugo 发布一篇文章的过程</title>
-      <link>https://1-1.link/post/tool/usehugo/publisharticle/</link>
+      <link>https://wowios.com/post/tool/usehugo/publisharticle/</link>
       <pubDate>Sat, 11 Mar 2023 16:00:07 +0800</pubDate>
       
-      <guid>https://1-1.link/post/tool/usehugo/publisharticle/</guid>
-      <description>安装 windows：确保有 hugo.exe 在工程目录下, 并且 .gitignore 里面写上 hugo.exe，即可 Mac：确保 hugo 已安装就可以 新建 一般，都在 post 文件夹下放 markdown 文件，使用不同文件夹来归类
-hugo new post/tool/useHugo/publishArticle.md
-书写 设定文章的 title, categories, tags 写入内容。标题大小从 ## 开始 本地预览 hugo server
-编译成 html，输出到 /docs （路径与 GitHub Action 对应） hugo
-到这里，就完成了写作
-Git Push 先 fetch，再 commit，再 push。
-Github Page 需要重新填写域名 因为 Github Action 在执行的时候会把 master 分支中的 /docs 内所有内容拷贝到 main 分支，这里面不包括 CNAME 文件。所以在 repository 的 setting 的 pages 重新填写域名。（问题已经解决，在 workflow action.yml 中添加 cname: 1-1.</description>
+      <guid>https://wowios.com/post/tool/usehugo/publisharticle/</guid>
+      <description>&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;windows：确保有 hugo.exe 在工程目录下, 并且 .gitignore 里面写上 &lt;code&gt;hugo.exe&lt;/code&gt;，即可&lt;/li&gt;
+&lt;li&gt;Mac：确保 hugo 已安装就可以&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;新建&#34;&gt;新建&lt;/h2&gt;
+&lt;p&gt;一般，都在 post 文件夹下放 markdown 文件，使用不同文件夹来归类&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;hugo new post/tool/useHugo/publishArticle.md&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;书写&#34;&gt;书写&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;设定文章的 title, categories, tags&lt;/li&gt;
+&lt;li&gt;写入内容。标题大小从 &lt;code&gt;##&lt;/code&gt; 开始&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;本地预览&#34;&gt;本地预览&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;hugo server&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;编译成-html输出到-docs-路径与-github-action-对应&#34;&gt;编译成 html，输出到 /docs （路径与 GitHub Action 对应）&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;hugo&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;到这里，就完成了写作&lt;/p&gt;
+&lt;h2 id=&#34;git-push&#34;&gt;Git Push&lt;/h2&gt;
+&lt;p&gt;先 fetch，再 commit，再 push。&lt;/p&gt;
+&lt;h3 id=&#34;github-page-需要重新填写域名&#34;&gt;&lt;del&gt;Github Page 需要重新填写域名&lt;/del&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;del&gt;因为 Github Action 在执行的时候会把 master 分支中的 /docs 内所有内容拷贝到 main 分支，这里面不包括 CNAME 文件。所以在 repository 的 setting 的 pages 重新填写域名。&lt;/del&gt;&lt;strong&gt;（问题已经解决，在 workflow &lt;code&gt;action.yml&lt;/code&gt; 中添加 &lt;code&gt;cname: 1-1.link&lt;/code&gt;，所以如果域名有改动，需要在这修改）&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
