@@ -1,43 +1,99 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>iOS on CodePaper</title>
-    <link>https://1-1.link/tags/ios/</link>
-    <description>Recent content in iOS on CodePaper</description>
+    <title>IOS on CodePaper</title>
+    <link>https://wowios.com/tags/ios/</link>
+    <description>Recent content in IOS on CodePaper</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Jul 2023 13:12:14 +0800</lastBuildDate><atom:link href="https://1-1.link/tags/ios/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Jul 2023 13:12:14 +0800</lastBuildDate><atom:link href="https://wowios.com/tags/ios/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>“小速记” App 介绍</title>
-      <link>https://1-1.link/post/ios/checkthempicshow/</link>
+      <link>https://wowios.com/post/ios/checkthempicshow/</link>
       <pubDate>Fri, 07 Jul 2023 13:12:14 +0800</pubDate>
       
-      <guid>https://1-1.link/post/ios/checkthempicshow/</guid>
-      <description>《小速记》各部分功能介绍   主页面，各个功能入口
-  ToDo 功能
-新建 Todo 时，可设定 Todo 的表情 emoji 、时间段。 右滑删除，左滑完成 Todo，长按 Todo 可设定一个在几分钟后的系统通知推送（提醒这个 Todo）
-  每日打卡
-可以新建任务，设定为每日打卡、每周打卡或每月打卡。 打卡任务有进度，任务完成后会将任务归档。
-  数字记录器
-可以为某一件事情添加计数器，用于腐竹记忆生活中的琐碎数字。
-  数据
-Todo、每日打卡、数字记录器是都作为任务，使用 CoreData 存放于本地。 对应的，有 ArchivedTodo、ArchivedDailyTask、ArchivedRecord 作为归档对象，在任务完成后作为记录存放于本地。
-  演示
-App 使用视频演示
-  </description>
+      <guid>https://wowios.com/post/ios/checkthempicshow/</guid>
+      <description>&lt;h3 id=&#34;小速记各部分功能介绍&#34;&gt;《小速记》各部分功能介绍&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;主页面，各个功能入口&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../CheckThemPickShow/1.png&#34; alt=&#34;&#34;  /&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ToDo 功能&lt;/p&gt;
+&lt;p&gt;新建 Todo 时，可设定 Todo 的表情 emoji 、时间段。
+右滑删除，左滑完成 Todo，长按 Todo 可设定一个在几分钟后的系统通知推送（提醒这个 Todo）&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../CheckThemPickShow//2.png&#34; alt=&#34;&#34;  /&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;每日打卡&lt;/p&gt;
+&lt;p&gt;可以新建任务，设定为每日打卡、每周打卡或每月打卡。
+打卡任务有进度，任务完成后会将任务归档。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../CheckThemPickShow/4.png&#34; alt=&#34;&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../CheckThemPickShow/3.png&#34; alt=&#34;&#34;  /&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数字记录器&lt;/p&gt;
+&lt;p&gt;可以为某一件事情添加计数器，用于腐竹记忆生活中的琐碎数字。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../CheckThemPickShow//5.png&#34; alt=&#34;&#34;  /&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据&lt;/p&gt;
+&lt;p&gt;Todo、每日打卡、数字记录器是都作为任务，使用 CoreData 存放于本地。
+对应的，有 ArchivedTodo、ArchivedDailyTask、ArchivedRecord 作为归档对象，在任务完成后作为记录存放于本地。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;演示&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1Vh4y1E7Gx/?vd_source=c24c919e207e47d8f84bb5082e08de26&#34;&gt;App 使用视频演示&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description>
     </item>
     
     <item>
       <title>如何通过点击 UICollectionViewCell 跳转至对应的 UIViewController</title>
-      <link>https://1-1.link/post/ios/viewcontrollertransform/</link>
+      <link>https://wowios.com/post/ios/viewcontrollertransform/</link>
       <pubDate>Wed, 17 May 2023 22:41:55 +0800</pubDate>
       
-      <guid>https://1-1.link/post/ios/viewcontrollertransform/</guid>
-      <description>跳转部分的实现 我需要从我的 HomeViewController 通过点击不同的 CollectionViewCell 跳至不同的 ViewController
-思路：
- 首先是需要把目标 ViewController 存放起来，在点击 cell 时可以作为目的地进行 present 跳转。  因为我的多个不同的 ViewController 都继承自 UIViewController， 那么我想用它作为父类型存放在cell中。
- 先把 Main storyboard 存为当前类的属性，以方便初始化各个 collectionView   然后使用 storyboard 自带的动态反射方法 instantiateViewController，通过字符串找到对应的 ViewController   在 dataSource 的实现中，将 cell 的属性绑定为对应的 controllerView 目标。   最后是 didTapCell 方法，是点击后的具体要做的动作，即跳转。这里的 target 类型是 UIController。  发现这样实现不了，原因是第 1 步中 MainChoiceCell 中的 targetController 不能是 weak，若为 weak 那么它在被赋值然后在函数结束时（closure 结束）会释放引用也就是恢复为 nil，所以正确的做法应该是把 weak 去掉。
-手指触碰 UICollectionViewCell 但未释放，这属于 Highlight UICollectionViewCell 底层来自 UIView。重写 highlight 的 willSet， 手指点在 UICollectionViewCell 区域会触发 highlight 置为 true ；手指不松开，移动到不属于 UICollectionViewCell 的区域，则会触发 highlight 置为 false。</description>
+      <guid>https://wowios.com/post/ios/viewcontrollertransform/</guid>
+      <description>&lt;h2 id=&#34;跳转部分的实现&#34;&gt;跳转部分的实现&lt;/h2&gt;
+&lt;p&gt;我需要从我的 HomeViewController 通过点击不同的 CollectionViewCell 跳至不同的 ViewController&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E7%82%B9%E5%87%BB%20UICollectionViewCell%20%E8%B7%B3%E8%BD%AC%E8%87%B3%E5%AF%B9%E5%BA%94%E7%9A%84%20UIViewController/Untitled.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E7%82%B9%E5%87%BB%20UICollectionViewCell%20%E8%B7%B3%E8%BD%AC%E8%87%B3%E5%AF%B9%E5%BA%94%E7%9A%84%20UIViewController/Untitled%201.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;思路：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;首先是需要把目标 ViewController 存放起来，在点击 cell 时可以作为目的地进行 present 跳转。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;因为我的多个不同的 ViewController 都继承自 UIViewController， 那么我想用它作为父类型存放在cell中。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E7%82%B9%E5%87%BB%20UICollectionViewCell%20%E8%B7%B3%E8%BD%AC%E8%87%B3%E5%AF%B9%E5%BA%94%E7%9A%84%20UIViewController/Untitled%202.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;先把 Main storyboard 存为当前类的属性，以方便初始化各个 collectionView&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E7%82%B9%E5%87%BB%20UICollectionViewCell%20%E8%B7%B3%E8%BD%AC%E8%87%B3%E5%AF%B9%E5%BA%94%E7%9A%84%20UIViewController/Untitled%203.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;然后使用 storyboard 自带的动态反射方法 instantiateViewController，通过字符串找到对应的 ViewController&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E7%82%B9%E5%87%BB%20UICollectionViewCell%20%E8%B7%B3%E8%BD%AC%E8%87%B3%E5%AF%B9%E5%BA%94%E7%9A%84%20UIViewController/Untitled%204.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在 dataSource 的实现中，将 cell 的属性绑定为对应的 controllerView 目标。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E7%82%B9%E5%87%BB%20UICollectionViewCell%20%E8%B7%B3%E8%BD%AC%E8%87%B3%E5%AF%B9%E5%BA%94%E7%9A%84%20UIViewController/Untitled%205.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;最后是 didTapCell 方法，是点击后的具体要做的动作，即跳转。这里的 target 类型是 UIController。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E7%82%B9%E5%87%BB%20UICollectionViewCell%20%E8%B7%B3%E8%BD%AC%E8%87%B3%E5%AF%B9%E5%BA%94%E7%9A%84%20UIViewController/Untitled%206.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;发现这样实现不了，原因是第 1 步中 MainChoiceCell 中的 targetController 不能是 weak，若为 weak 那么它在被赋值然后在函数结束时（closure 结束）会释放引用也就是恢复为 nil，所以正确的做法应该是把 weak 去掉。&lt;/p&gt;</description>
     </item>
     
   </channel>

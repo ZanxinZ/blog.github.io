@@ -2,28 +2,71 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Notion on CodePaper</title>
-    <link>https://1-1.link/tags/notion/</link>
+    <link>https://wowios.com/tags/notion/</link>
     <description>Recent content in Notion on CodePaper</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 Mar 2023 15:11:32 +0800</lastBuildDate><atom:link href="https://1-1.link/tags/notion/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Mar 2023 15:11:32 +0800</lastBuildDate><atom:link href="https://wowios.com/tags/notion/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Notion文件导出</title>
-      <link>https://1-1.link/post/tool/notion/notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/</link>
+      <link>https://wowios.com/post/tool/notion/notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/</link>
       <pubDate>Sat, 11 Mar 2023 15:11:32 +0800</pubDate>
       
-      <guid>https://1-1.link/post/tool/notion/notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/</guid>
-      <description>Notion 批量文件导出，以 PFD格式 Notion 是一款 markdown 笔记软件，可以快速书写，多端同步，支持文件导出，十分方便。 我在 notion 中写了很多页面，有时要转移到别的地方保存，那么应该怎么做呢？
-notion 支持导出的文件格式：PDF，HTML，MD 可是，这几种方法都有缺点。
- PDF：只能当前页面，导出所有子页面，需要升级 Pro HTML：多出了一些附带的文件，文件散乱，转移和浏览都不方便 MD：导出之后，图片和文本都分开，转移不方便，文件散乱  那么，有没有更简单的办法获取我自己写的许多页面，且保存为 PDF ？ 有的，步骤如下：
- 在notion中包含子页面导出 markdown 使用 vs code 打开，使用插件 Markdown PDF 逐页导出。  具体操作步骤 下图可以看到我的一个页面包含了多个子页面。
-右上角三个点的按钮，选择 export
-  导出 markdown
-  会得到页面和子页面的目录结构
-    使用 vscode 打开。
-  安装插件 ”Markdown PDF“
-搜索 Markdown PDF， 点击安装 install。
-  设置 ”auto convert when save “</description>
+      <guid>https://wowios.com/post/tool/notion/notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/</guid>
+      <description>&lt;h2 id=&#34;notion-批量文件导出以-pfd格式&#34;&gt;Notion 批量文件导出，以 PFD格式&lt;/h2&gt;
+&lt;p&gt;Notion 是一款 markdown 笔记软件，可以快速书写，多端同步，支持文件导出，十分方便。
+我在 notion 中写了很多页面，有时要转移到别的地方保存，那么应该怎么做呢？&lt;/p&gt;
+&lt;h3 id=&#34;notion-支持导出的文件格式pdfhtmlmd&#34;&gt;notion 支持导出的文件格式：PDF，HTML，MD&lt;/h3&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../Notion%e6%96%87%e4%bb%b6%e5%af%bc%e5%87%ba/Untitled.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;可是，这几种方法都有缺点。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PDF：只能当前页面，导出所有子页面，需要升级 Pro&lt;/li&gt;
+&lt;li&gt;HTML：多出了一些附带的文件，文件散乱，转移和浏览都不方便&lt;/li&gt;
+&lt;li&gt;MD：导出之后，图片和文本都分开，转移不方便，文件散乱&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;那么有没有更简单的办法获取我自己写的许多页面且保存为-pdf-&#34;&gt;那么，有没有更简单的办法获取我自己写的许多页面，且保存为 PDF ？&lt;/h3&gt;
+&lt;p&gt;有的，步骤如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在notion中包含子页面导出 markdown&lt;/li&gt;
+&lt;li&gt;使用 vs code 打开，使用插件 Markdown PDF 逐页导出。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;具体操作步骤&#34;&gt;具体操作步骤&lt;/h3&gt;
+&lt;p&gt;下图可以看到我的一个页面包含了多个子页面。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../Notion%e6%96%87%e4%bb%b6%e5%af%bc%e5%87%ba/Untitled1.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;右上角三个点的按钮，选择 export&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../Notion%e6%96%87%e4%bb%b6%e5%af%bc%e5%87%ba/Untitled2.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;导出 markdown&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../Notion%e6%96%87%e4%bb%b6%e5%af%bc%e5%87%ba/Untitled3.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;会得到页面和子页面的目录结构&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../Notion%e6%96%87%e4%bb%b6%e5%af%bc%e5%87%ba/Untitled4.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../Notion%e6%96%87%e4%bb%b6%e5%af%bc%e5%87%ba/Untitled5.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;使用 vscode 打开。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装插件 ”Markdown PDF“&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../Notion%e6%96%87%e4%bb%b6%e5%af%bc%e5%87%ba/Untitled6.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;搜索 Markdown PDF， 点击安装 install。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;../Notion%e6%96%87%e4%bb%b6%e5%af%bc%e5%87%ba/Untitled7.png&#34; alt=&#34;Untitled&#34;  /&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;设置 ”auto convert when save “&lt;/p&gt;
+&lt;p&gt;在插件库里可以看到已安装 Markdown PDF&lt;/p&gt;</description>
     </item>
     
   </channel>
