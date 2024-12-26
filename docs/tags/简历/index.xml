@@ -2,59 +2,49 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>简历 on CodePaper</title>
-    <link>http://localhost:1313/tags/%E7%AE%80%E5%8E%86/</link>
+    <link>https://wowios.com/tags/%E7%AE%80%E5%8E%86/</link>
     <description>Recent content in 简历 on CodePaper</description>
     <generator>Hugo -- 0.140.1</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 12 Jul 2022 14:46:26 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/%E7%AE%80%E5%8E%86/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://wowios.com/tags/%E7%AE%80%E5%8E%86/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>简历</title>
-      <link>http://localhost:1313/about/</link>
+      <link>https://wowios.com/about/</link>
       <pubDate>Tue, 12 Jul 2022 14:46:26 +0800</pubDate>
-      <guid>http://localhost:1313/about/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;img alt=&#34;me&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/content/about/avatar-me.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;出生年月：1998.01 籍贯：广东揭阳   学历：硕士研究生&lt;/p&gt;
-&lt;p&gt;联系方式：13757116490&lt;/p&gt;
-&lt;p&gt;Github：&lt;a href=&#34;https://github.com/ZanxinZ&#34;&gt;https://github.com/ZanxinZ&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
+      <guid>https://wowios.com/about/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;me&#34; loading=&#34;lazy&#34; src=&#34;https://wowios.com/about/avatar-me.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;1998.01 | 广东 | 硕士研究生&lt;/p&gt;
+&lt;p&gt;电话: 13757116490 | 邮箱: &lt;a href=&#34;mailto:cinuni@outlook.com&#34;&gt;cinuni@outlook.com&lt;/a&gt; | Github: &lt;a href=&#34;https://github.com/ZanxinZ&#34;&gt;https://github.com/ZanxinZ&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;工作经历&#34;&gt;工作经历&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;2024.06.24-2024.11.06 北京猫眼微影科技有限公司 iOS软件前端开发&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;教育经历&#34;&gt;教育经历&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;2017&amp;ndash;2021 中国计量大学（本科）自动化专业&lt;/li&gt;
 &lt;li&gt;2021&amp;ndash;2024 中国计量大学（研究生）电子信息专业&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;工作经历&#34;&gt;工作经历&lt;/h3&gt;
-&lt;p&gt;2024.06.24-2024.11.06 北京猫眼微影科技有限公司，iOS软件前端开发&lt;/p&gt;
 &lt;h3 id=&#34;技术栈&#34;&gt;技术栈&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;熟悉基本数据结构与算法&lt;/li&gt;
-&lt;li&gt;熟悉 iOS Swift &amp;amp; UIKit &amp;amp; Objective-C 开发流程&lt;/li&gt;
-&lt;li&gt;Java 服务端开发&lt;/li&gt;
-&lt;li&gt;熟悉各个设计模式的思想&lt;/li&gt;
-&lt;li&gt;熟悉基本 Git 协作&lt;/li&gt;
-&lt;li&gt;掌握基本 C 语言编程&lt;/li&gt;
-&lt;li&gt;熟悉基本 Python 语法&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;iOS Swift | Objective-C | 数据结构与算法 | 设计模式 | Git 协作 | Python&lt;/p&gt;
 &lt;h3 id=&#34;项目经历&#34;&gt;项目经历&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;2024.11-至今 格言 App&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;2022-2023 iOS App &lt;a href=&#34;http://localhost:1313/post/ios/checkthempicshow&#34;&gt;《小速记》🔗&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;为了帮助用户对自己的一些小计划做记录，以及激励用户去达成这些小计划，开发了这样一款简洁的 App。具有 ToDo、每日打卡、数字记录、统计功能。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;主要技术&lt;/strong&gt;：
-在Xcode平台Swift开发；
-使用CoreData管理各个对象信息；
-使用UIKit各个原生控件做App功能的实现；
-支持简体中文、繁体、英文本地化。&lt;/p&gt;
+&lt;p&gt;2022-2023 iOS App &lt;a href=&#34;https://wowios.com/post/ios/checkthempicshow&#34;&gt;&lt;strong&gt;“小速记”&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;可用于记录一些小计划。具有 ToDo、每日打卡、数字记录、统计功能。&lt;/p&gt;
+&lt;p&gt;主要技术:&lt;/p&gt;
+&lt;p&gt;CoreData管理各个对象信息 ｜ UIKit 原生实现 ｜ 支持简体中文、繁体、英文本地化&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;2021.05 跨平台文件传输 &lt;a href=&#34;https://aacell.me&#34;&gt;5 号电池 AAcell 🔗&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;负责后端部分 Java 开发，基于 SpringBoot 框架搭建 web 服务，实现仅依赖于浏览器的文件传输便捷服务；&lt;/p&gt;
-&lt;p&gt;多台不同系统的设备使用房间号和密码可以进入同一个房间；&lt;/p&gt;
-&lt;p&gt;使用拦截器配合 JWT (Json Web Token) 对请求建立连接的用户进行验证；&lt;/p&gt;</description>
+&lt;p&gt;2021.05 跨平台文件传输 &lt;a href=&#34;https://aacell.me&#34;&gt;&lt;strong&gt;AAcell&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;负责后端 Java 开发，基于 SpringBoot 框架搭建 web 服务，实现文件传输、共享服务;&lt;/p&gt;
+&lt;p&gt;多台不同系统的设备输入同一房间号和密码可以进入房间;&lt;/p&gt;
+&lt;p&gt;使用拦截器配合 JWT (Json Web Token) 验证用户;&lt;/p&gt;
+&lt;p&gt;SHA-256 摘要保存密码，在仅知道密文的情况下无法获取用户设置的源密码;&lt;/p&gt;
+&lt;p&gt;使用 MySQL 数据库存放房间信息和用户发送的消息;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

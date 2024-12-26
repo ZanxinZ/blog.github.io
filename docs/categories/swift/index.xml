@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Swift on CodePaper</title>
-    <link>http://localhost:1313/categories/swift/</link>
+    <link>https://wowios.com/categories/swift/</link>
     <description>Recent content in Swift on CodePaper</description>
     <generator>Hugo -- 0.140.1</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 19 Jun 2022 16:00:40 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/swift/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://wowios.com/categories/swift/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Advanced Operators</title>
-      <link>http://localhost:1313/post/language/swift/28advanced-operators/</link>
+      <link>https://wowios.com/post/language/swift/28advanced-operators/</link>
       <pubDate>Sun, 19 Jun 2022 16:00:40 +0800</pubDate>
-      <guid>http://localhost:1313/post/language/swift/28advanced-operators/</guid>
+      <guid>https://wowios.com/post/language/swift/28advanced-operators/</guid>
       <description>&lt;p&gt;Unlike arithmetic operators in C, arithmetic operators in Swift don’t overflow by default. If want to overflow by default, use the overflow operation begin with ampersand (&lt;code&gt;&amp;amp;&lt;/code&gt;). For example, the overflow addition operator (&lt;code&gt;&amp;amp;+&lt;/code&gt;).&lt;/p&gt;
 &lt;p&gt;It’s so free to define custom infix, prefix, postfix and assignment operators, precedence and associativity values.&lt;/p&gt;
 &lt;h2 id=&#34;bitwise-operators&#34;&gt;Bitwise Operators&lt;/h2&gt;
@@ -33,18 +33,18 @@
     </item>
     <item>
       <title>Access Control</title>
-      <link>http://localhost:1313/post/language/swift/27access-control/</link>
+      <link>https://wowios.com/post/language/swift/27access-control/</link>
       <pubDate>Sat, 18 Jun 2022 16:00:40 +0800</pubDate>
-      <guid>http://localhost:1313/post/language/swift/27access-control/</guid>
+      <guid>https://wowios.com/post/language/swift/27access-control/</guid>
       <description>&lt;p&gt;Access control restrict access to part of the code form code in other source files and modules. It enable us to &lt;strong&gt;hide the implement detail&lt;/strong&gt; of the code, and to &lt;strong&gt;specify a preferred interface&lt;/strong&gt; which that code can be accessed and used.&lt;/p&gt;
 &lt;p&gt;Set access levels to individual types (classes, structures, enumerations), as well as to properties, methods, initializers, and subscripts belonging to those types.&lt;/p&gt;
 &lt;p&gt;Protocols can be restricted to a certain context, as can global constants, variable, and functions.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Memory Safty</title>
-      <link>http://localhost:1313/post/language/swift/26memory-safety/</link>
+      <link>https://wowios.com/post/language/swift/26memory-safety/</link>
       <pubDate>Sun, 12 Jun 2022 16:05:40 +0800</pubDate>
-      <guid>http://localhost:1313/post/language/swift/26memory-safety/</guid>
+      <guid>https://wowios.com/post/language/swift/26memory-safety/</guid>
       <description>&lt;p&gt;Most of the time we don’t have to think about accessing memory, but it’s important to understand where potential conflicts can occur, so we can avoid writing code that has conflicting access to memory.&lt;/p&gt;
 &lt;p&gt;Here we are talking about the situation that happen on a single thread.&lt;/p&gt;
 &lt;h2 id=&#34;memory-access&#34;&gt;Memory Access&lt;/h2&gt;
@@ -54,9 +54,9 @@
     </item>
     <item>
       <title>Automatic Reference Counting</title>
-      <link>http://localhost:1313/post/language/swift/25automatic-reference-counting/</link>
+      <link>https://wowios.com/post/language/swift/25automatic-reference-counting/</link>
       <pubDate>Sun, 12 Jun 2022 16:00:40 +0800</pubDate>
-      <guid>http://localhost:1313/post/language/swift/25automatic-reference-counting/</guid>
+      <guid>https://wowios.com/post/language/swift/25automatic-reference-counting/</guid>
       <description>&lt;p&gt;Swift use ARC to track and manage the app’s memory usage. ARC frees up the memory used by class instances when those instances are no longer needed.&lt;/p&gt;
 &lt;p&gt;Reference counting &lt;strong&gt;applies only to instance of classes.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Reference:&lt;/p&gt;
@@ -70,9 +70,9 @@
     </item>
     <item>
       <title>Opaque Type</title>
-      <link>http://localhost:1313/post/language/swift/24opaque-type/</link>
+      <link>https://wowios.com/post/language/swift/24opaque-type/</link>
       <pubDate>Sun, 05 Jun 2022 16:05:40 +0800</pubDate>
-      <guid>http://localhost:1313/post/language/swift/24opaque-type/</guid>
+      <guid>https://wowios.com/post/language/swift/24opaque-type/</guid>
       <description>&lt;p&gt;A function with an opaque type hides its return value’s type information. Hiding type information at some boundaries between a module and code that calls into the module. Unlike returning a value whose type is a protocol type, opaque type preserve type identity —the compile has access to the type information, but clients of the module don’t.&lt;/p&gt;
 &lt;h2 id=&#34;the-situation&#34;&gt;The Situation&lt;/h2&gt;
 &lt;p&gt;Here we have a &lt;code&gt;Shape&lt;/code&gt; protocol.&lt;/p&gt;
@@ -83,16 +83,16 @@
     </item>
     <item>
       <title>Generics</title>
-      <link>http://localhost:1313/post/language/swift/23generics/</link>
+      <link>https://wowios.com/post/language/swift/23generics/</link>
       <pubDate>Sun, 05 Jun 2022 16:00:40 +0800</pubDate>
-      <guid>http://localhost:1313/post/language/swift/23generics/</guid>
+      <guid>https://wowios.com/post/language/swift/23generics/</guid>
       <description>Define a class with template type &lt;!-- raw HTML omitted --&gt;, then should illustract the type when use the class.</description>
     </item>
     <item>
       <title>Optional Chaining</title>
-      <link>http://localhost:1313/post/language/swift/16optional-chaining/</link>
+      <link>https://wowios.com/post/language/swift/16optional-chaining/</link>
       <pubDate>Tue, 24 May 2022 16:05:40 +0800</pubDate>
-      <guid>http://localhost:1313/post/language/swift/16optional-chaining/</guid>
+      <guid>https://wowios.com/post/language/swift/16optional-chaining/</guid>
       <description>&lt;p&gt;A process for querying and calling properties, methods, and subscripts on an optional that might currently be &lt;code&gt;nil&lt;/code&gt; .Multiple queries can be chained together, and the chain fails gracefully if any link in the chain is &lt;code&gt;nil&lt;/code&gt; .&lt;/p&gt;
 &lt;h2 id=&#34;optional-chaining-as-an-alternative-to-forced-unwrapping&#34;&gt;Optional Chaining as an Alternative to Forced Unwrapping&lt;/h2&gt;
 &lt;ul&gt;
@@ -108,23 +108,23 @@
     </item>
     <item>
       <title>Protocol</title>
-      <link>http://localhost:1313/post/language/swift/22protocols/</link>
+      <link>https://wowios.com/post/language/swift/22protocols/</link>
       <pubDate>Sun, 22 May 2022 16:00:40 +0800</pubDate>
-      <guid>http://localhost:1313/post/language/swift/22protocols/</guid>
+      <guid>https://wowios.com/post/language/swift/22protocols/</guid>
       <description>A protocol defines a blueprint with methods, properties.</description>
     </item>
     <item>
       <title>Extension</title>
-      <link>http://localhost:1313/post/language/swift/21extensions/</link>
+      <link>https://wowios.com/post/language/swift/21extensions/</link>
       <pubDate>Sat, 21 May 2022 16:00:40 +0800</pubDate>
-      <guid>http://localhost:1313/post/language/swift/21extensions/</guid>
+      <guid>https://wowios.com/post/language/swift/21extensions/</guid>
       <description>Extension add new functionality to an existing class, structure, enumeration, or protocol type.</description>
     </item>
     <item>
       <title>Nested Types</title>
-      <link>http://localhost:1313/post/language/swift/20nested-types/</link>
+      <link>https://wowios.com/post/language/swift/20nested-types/</link>
       <pubDate>Mon, 16 May 2022 16:05:40 +0800</pubDate>
-      <guid>http://localhost:1313/post/language/swift/20nested-types/</guid>
+      <guid>https://wowios.com/post/language/swift/20nested-types/</guid>
       <description>&lt;p&gt;Enumerations, classes or structures can be nested in another type.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;struct&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Closh&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;enum&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Size&lt;/span&gt;: String{
@@ -163,9 +163,9 @@
     </item>
     <item>
       <title>Type Casting</title>
-      <link>http://localhost:1313/post/language/swift/19type-casting/</link>
+      <link>https://wowios.com/post/language/swift/19type-casting/</link>
       <pubDate>Mon, 16 May 2022 16:00:40 +0800</pubDate>
-      <guid>http://localhost:1313/post/language/swift/19type-casting/</guid>
+      <guid>https://wowios.com/post/language/swift/19type-casting/</guid>
       <description>&lt;p&gt;Type casting in Swift is implemented with &lt;code&gt;is&lt;/code&gt; and &lt;code&gt;as&lt;/code&gt; operators.&lt;/p&gt;
 &lt;p&gt;Type casting:&lt;/p&gt;
 &lt;ul&gt;
@@ -214,9 +214,9 @@
     </item>
     <item>
       <title>Concurrency</title>
-      <link>http://localhost:1313/post/language/swift/18concurrency/</link>
+      <link>https://wowios.com/post/language/swift/18concurrency/</link>
       <pubDate>Sun, 08 May 2022 16:00:40 +0800</pubDate>
-      <guid>http://localhost:1313/post/language/swift/18concurrency/</guid>
+      <guid>https://wowios.com/post/language/swift/18concurrency/</guid>
       <description>&lt;p&gt;Swift has built-in support for writing asynchronous and parallel code in a structured way.&lt;/p&gt;
 &lt;p&gt;Parallel code means multiple pieces of code run simultaneously.&lt;/p&gt;
 &lt;ul&gt;
@@ -235,9 +235,9 @@
     </item>
     <item>
       <title>Error Handling</title>
-      <link>http://localhost:1313/post/language/swift/17error-handling/</link>
+      <link>https://wowios.com/post/language/swift/17error-handling/</link>
       <pubDate>Sat, 07 May 2022 16:00:40 +0800</pubDate>
-      <guid>http://localhost:1313/post/language/swift/17error-handling/</guid>
+      <guid>https://wowios.com/post/language/swift/17error-handling/</guid>
       <description>&lt;p&gt;A class support for throwing, catching, propagating, and manipulating recoverable errors at &lt;em&gt;runtime&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;When an optional fails, it’s useful to understand what cause the failure, so that the code can respond accordingly.&lt;/p&gt;
 &lt;h2 id=&#34;example&#34;&gt;Example:&lt;/h2&gt;
@@ -251,37 +251,37 @@
     </item>
     <item>
       <title>Deinitialization</title>
-      <link>http://localhost:1313/post/language/swift/15deinitialization/</link>
+      <link>https://wowios.com/post/language/swift/15deinitialization/</link>
       <pubDate>Mon, 02 May 2022 16:00:40 +0800</pubDate>
-      <guid>http://localhost:1313/post/language/swift/15deinitialization/</guid>
+      <guid>https://wowios.com/post/language/swift/15deinitialization/</guid>
       <description>Before the object is recycle, the deinitializer solve the post events.</description>
     </item>
     <item>
       <title>Initialization</title>
-      <link>http://localhost:1313/post/language/swift/14initialization/</link>
+      <link>https://wowios.com/post/language/swift/14initialization/</link>
       <pubDate>Sat, 30 Apr 2022 16:00:40 +0800</pubDate>
-      <guid>http://localhost:1313/post/language/swift/14initialization/</guid>
+      <guid>https://wowios.com/post/language/swift/14initialization/</guid>
       <description>The class&amp;rsquo;s initializer set the original state for the object.</description>
     </item>
     <item>
       <title>Inheritance</title>
-      <link>http://localhost:1313/post/language/swift/13inheritance/</link>
+      <link>https://wowios.com/post/language/swift/13inheritance/</link>
       <pubDate>Sun, 24 Apr 2022 16:00:40 +0800</pubDate>
-      <guid>http://localhost:1313/post/language/swift/13inheritance/</guid>
+      <guid>https://wowios.com/post/language/swift/13inheritance/</guid>
       <description>A class inherit another class call super class, and get some ability from super class.</description>
     </item>
     <item>
       <title>Method</title>
-      <link>http://localhost:1313/post/language/swift/11method/</link>
+      <link>https://wowios.com/post/language/swift/11method/</link>
       <pubDate>Sun, 17 Apr 2022 16:15:40 +0800</pubDate>
-      <guid>http://localhost:1313/post/language/swift/11method/</guid>
+      <guid>https://wowios.com/post/language/swift/11method/</guid>
       <description>The object have some method to provide functionality.</description>
     </item>
     <item>
       <title>Properties</title>
-      <link>http://localhost:1313/post/language/swift/10properties/</link>
+      <link>https://wowios.com/post/language/swift/10properties/</link>
       <pubDate>Sun, 17 Apr 2022 16:12:40 +0800</pubDate>
-      <guid>http://localhost:1313/post/language/swift/10properties/</guid>
+      <guid>https://wowios.com/post/language/swift/10properties/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Stored properties&lt;/p&gt;
@@ -310,16 +310,16 @@
     </item>
     <item>
       <title>Structures and Classes</title>
-      <link>http://localhost:1313/post/language/swift/09structures-and-classes/</link>
+      <link>https://wowios.com/post/language/swift/09structures-and-classes/</link>
       <pubDate>Sun, 10 Apr 2022 16:12:40 +0800</pubDate>
-      <guid>http://localhost:1313/post/language/swift/09structures-and-classes/</guid>
+      <guid>https://wowios.com/post/language/swift/09structures-and-classes/</guid>
       <description>The object oriented programming.</description>
     </item>
     <item>
       <title>Enumerations</title>
-      <link>http://localhost:1313/post/language/swift/08enumerations/</link>
+      <link>https://wowios.com/post/language/swift/08enumerations/</link>
       <pubDate>Sun, 10 Apr 2022 16:08:40 +0800</pubDate>
-      <guid>http://localhost:1313/post/language/swift/08enumerations/</guid>
+      <guid>https://wowios.com/post/language/swift/08enumerations/</guid>
       <description>&lt;h2 id=&#34;syntax&#34;&gt;Syntax&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;enum&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Direction&lt;/span&gt; {
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;case&lt;/span&gt; up
@@ -359,44 +359,44 @@
     </item>
     <item>
       <title>Subscripts</title>
-      <link>http://localhost:1313/post/language/swift/12subscripts/</link>
+      <link>https://wowios.com/post/language/swift/12subscripts/</link>
       <pubDate>Sun, 10 Apr 2022 16:00:40 +0800</pubDate>
-      <guid>http://localhost:1313/post/language/swift/12subscripts/</guid>
+      <guid>https://wowios.com/post/language/swift/12subscripts/</guid>
       <description>Set subscript(index: Int) in the class to index the data of the instance of the this class.</description>
     </item>
     <item>
       <title>Closures</title>
-      <link>http://localhost:1313/post/language/swift/07closures/</link>
+      <link>https://wowios.com/post/language/swift/07closures/</link>
       <pubDate>Sat, 02 Apr 2022 16:10:40 +0800</pubDate>
-      <guid>http://localhost:1313/post/language/swift/07closures/</guid>
+      <guid>https://wowios.com/post/language/swift/07closures/</guid>
       <description>The closures can cantains something by the curly bracket.</description>
     </item>
     <item>
       <title>Function</title>
-      <link>http://localhost:1313/post/language/swift/06function/</link>
+      <link>https://wowios.com/post/language/swift/06function/</link>
       <pubDate>Sat, 02 Apr 2022 16:08:40 +0800</pubDate>
-      <guid>http://localhost:1313/post/language/swift/06function/</guid>
+      <guid>https://wowios.com/post/language/swift/06function/</guid>
       <description>Call the function(method) to do something detail.</description>
     </item>
     <item>
       <title>Control Flow</title>
-      <link>http://localhost:1313/post/language/swift/05control-flow/</link>
+      <link>https://wowios.com/post/language/swift/05control-flow/</link>
       <pubDate>Mon, 28 Mar 2022 16:08:40 +0800</pubDate>
-      <guid>http://localhost:1313/post/language/swift/05control-flow/</guid>
+      <guid>https://wowios.com/post/language/swift/05control-flow/</guid>
       <description>loop, condition branch, control transfer.</description>
     </item>
     <item>
       <title>Collection Type</title>
-      <link>http://localhost:1313/post/language/swift/04collection-type/</link>
+      <link>https://wowios.com/post/language/swift/04collection-type/</link>
       <pubDate>Mon, 28 Mar 2022 16:04:40 +0800</pubDate>
-      <guid>http://localhost:1313/post/language/swift/04collection-type/</guid>
+      <guid>https://wowios.com/post/language/swift/04collection-type/</guid>
       <description>The array, set, and dictionary.</description>
     </item>
     <item>
       <title>Strings and Characters</title>
-      <link>http://localhost:1313/post/language/swift/03strings-and-characters/</link>
+      <link>https://wowios.com/post/language/swift/03strings-and-characters/</link>
       <pubDate>Sun, 20 Mar 2022 16:04:40 +0800</pubDate>
-      <guid>http://localhost:1313/post/language/swift/03strings-and-characters/</guid>
+      <guid>https://wowios.com/post/language/swift/03strings-and-characters/</guid>
       <description>&lt;p&gt;String type is bridged with Foundation’s NSString. Foundation extends String to expose methods defines by NSString. If import Foundation, you can access those NSString methods on String without casting.&lt;/p&gt;
 &lt;h2 id=&#34;string-literals&#34;&gt;String Literals&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// &amp;#34;Hello World!&amp;#34; is a String literal. &lt;/span&gt;
@@ -437,16 +437,16 @@
     </item>
     <item>
       <title>Basic Operators</title>
-      <link>http://localhost:1313/post/language/swift/02basic-operators/</link>
+      <link>https://wowios.com/post/language/swift/02basic-operators/</link>
       <pubDate>Sat, 19 Mar 2022 16:00:40 +0800</pubDate>
-      <guid>http://localhost:1313/post/language/swift/02basic-operators/</guid>
+      <guid>https://wowios.com/post/language/swift/02basic-operators/</guid>
       <description>Basic usage of the operators.</description>
     </item>
     <item>
       <title>Basic</title>
-      <link>http://localhost:1313/post/language/swift/01basic/</link>
+      <link>https://wowios.com/post/language/swift/01basic/</link>
       <pubDate>Sat, 12 Mar 2022 15:55:40 +0800</pubDate>
-      <guid>http://localhost:1313/post/language/swift/01basic/</guid>
+      <guid>https://wowios.com/post/language/swift/01basic/</guid>
       <description>Basic usage of the swift syntax.</description>
     </item>
   </channel>

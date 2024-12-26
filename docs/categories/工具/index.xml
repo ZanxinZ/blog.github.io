@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>工具 on CodePaper</title>
-    <link>http://localhost:1313/categories/%E5%B7%A5%E5%85%B7/</link>
+    <link>https://wowios.com/categories/%E5%B7%A5%E5%85%B7/</link>
     <description>Recent content in 工具 on CodePaper</description>
     <generator>Hugo -- 0.140.1</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 13 May 2023 22:43:27 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://wowios.com/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>N4000 四网口工控机组网</title>
-      <link>http://localhost:1313/post/tool/wrt/setnetwork/</link>
+      <link>https://wowios.com/post/tool/wrt/setnetwork/</link>
       <pubDate>Sat, 13 May 2023 22:43:27 +0800</pubDate>
-      <guid>http://localhost:1313/post/tool/wrt/setnetwork/</guid>
+      <guid>https://wowios.com/post/tool/wrt/setnetwork/</guid>
       <description>&lt;h3 id=&#34;需要用到的硬件&#34;&gt;需要用到的硬件&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;工控机本体这里称为 A，&lt;/li&gt;
@@ -37,9 +37,9 @@
     </item>
     <item>
       <title>Hugo 的一些问题</title>
-      <link>http://localhost:1313/post/tool/usehugo/someproblem/</link>
+      <link>https://wowios.com/post/tool/usehugo/someproblem/</link>
       <pubDate>Sat, 11 Mar 2023 16:59:18 +0800</pubDate>
-      <guid>http://localhost:1313/post/tool/usehugo/someproblem/</guid>
+      <guid>https://wowios.com/post/tool/usehugo/someproblem/</guid>
       <description>&lt;h2 id=&#34;若域名有变动&#34;&gt;若域名有变动&lt;/h2&gt;
 &lt;p&gt;需要修改三个地方&lt;/p&gt;
 &lt;ul&gt;
@@ -50,9 +50,9 @@
     </item>
     <item>
       <title>Hugo 发布一篇文章的过程</title>
-      <link>http://localhost:1313/post/tool/usehugo/publisharticle/</link>
+      <link>https://wowios.com/post/tool/usehugo/publisharticle/</link>
       <pubDate>Sat, 11 Mar 2023 16:00:07 +0800</pubDate>
-      <guid>http://localhost:1313/post/tool/usehugo/publisharticle/</guid>
+      <guid>https://wowios.com/post/tool/usehugo/publisharticle/</guid>
       <description>&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;windows：确保有 hugo.exe 在工程目录下, 并且 .gitignore 里面写上 &lt;code&gt;hugo.exe&lt;/code&gt;，即可&lt;/li&gt;
@@ -84,9 +84,9 @@
     </item>
     <item>
       <title>Notion文件导出</title>
-      <link>http://localhost:1313/post/tool/notion/notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/</link>
+      <link>https://wowios.com/post/tool/notion/notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/</link>
       <pubDate>Sat, 11 Mar 2023 15:11:32 +0800</pubDate>
-      <guid>http://localhost:1313/post/tool/notion/notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/</guid>
+      <guid>https://wowios.com/post/tool/notion/notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/</guid>
       <description>&lt;h2 id=&#34;notion-批量文件导出以-pfd格式&#34;&gt;Notion 批量文件导出，以 PFD格式&lt;/h2&gt;
 &lt;p&gt;Notion 是一款 markdown 笔记软件，可以快速书写，多端同步，支持文件导出，十分方便。
 我在 notion 中写了很多页面，有时要转移到别的地方保存，那么应该怎么做呢？&lt;/p&gt;
