@@ -9,4 +9,4 @@ tags:
 
 ## 多线程
 
-[Java 多线程编程笔记 🔗](https://eios.us)
+[Java 多线程编程笔记 🔗](https://javadoc.wowios.com)
