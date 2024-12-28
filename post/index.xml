@@ -6,8 +6,67 @@
     <description>Recent content in Posts on CodePaper</description>
     <generator>Hugo -- 0.140.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Jul 2023 13:12:14 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 28 Dec 2024 14:41:19 +0800</lastBuildDate>
     <atom:link href="https://wowios.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Oc Summary</title>
+      <link>https://wowios.com/post/oc-summary/oc-summary/</link>
+      <pubDate>Sat, 28 Dec 2024 14:41:19 +0800</pubDate>
+      <guid>https://wowios.com/post/oc-summary/oc-summary/</guid>
+      <description>&lt;h2 id=&#34;类和结构体的区别&#34;&gt;类和结构体的区别&lt;/h2&gt;
+&lt;h2 id=&#34;计算属性&#34;&gt;计算属性&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;struct&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Rectangle&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; width: Double
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; height: Double
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 这是一个计算属性&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; area: Double {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;get&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; width &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; height
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#75715e&#34;&gt;// 假设保持宽高比例不变&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; ratio = width &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; height
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            height = sqrt(newValue &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; ratio)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            width = height &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; ratio
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;关联对象&#34;&gt;关联对象&lt;/h2&gt;
+&lt;h2 id=&#34;category-和-extension-的区别&#34;&gt;Category 和 Extension 的区别&lt;/h2&gt;
+&lt;h3 id=&#34;category分类&#34;&gt;Category（分类）：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;可以在不修改原类源代码的情况下给类添加方法&lt;/li&gt;
+&lt;li&gt;不能添加实例变量（存储属性），但可以使用关联对象&lt;/li&gt;
+&lt;li&gt;可以被添加到任何类中，包括没有源码的类&lt;/li&gt;
+&lt;li&gt;在&lt;strong&gt;运行时&lt;/strong&gt;添加方法&lt;/li&gt;
+&lt;li&gt;可以有多个分类&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;extension扩展&#34;&gt;Extension（扩展）：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;只能在原类的实现文件（.m文件）中添加&lt;/li&gt;
+&lt;li&gt;可以添加实例变量和属性&lt;/li&gt;
+&lt;li&gt;必须在类的主实现文件中实现所有声明的方法&lt;/li&gt;
+&lt;li&gt;在&lt;strong&gt;编译时&lt;/strong&gt;添加特性&lt;/li&gt;
+&lt;li&gt;只能有一个扩展&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-objc&#34; data-lang=&#34;objc&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;@interface&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;MyClass&lt;/span&gt; ()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Extension 1
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;@property&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;nonatomic&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;strong&lt;/span&gt;) NSString &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;property1;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;@end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;@interface&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;MyClass&lt;/span&gt; ()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Extension 2
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;@property&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;nonatomic&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;strong&lt;/span&gt;) NSString &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;property2;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;@end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// 编译后相当于只有一个扩展
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;@interface&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;MyClass&lt;/span&gt; ()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;@property&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;nonatomic&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;strong&lt;/span&gt;) NSString &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;property1;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;@property&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;nonatomic&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;strong&lt;/span&gt;) NSString &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;property2;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;@end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;OC 可以动态添加属性或方法，但开销较大、类型安全性差、降低代码可维护性和可读性，swift 中限制了这种方式。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>“小速记” App 介绍</title>
       <link>https://wowios.com/post/ios/checkthempicshow/</link>
