@@ -8,7 +8,7 @@ tags:
 - iOS
 ---
 
-![appStatus](../appLife/appStatus.png)
+![appStatus](/appStatus.png)
 
 - **未运行（Not Running）**：应用尚未启动或被系统终止
 - **非活动（Inactive）**：应用在前台运行但不接收事件，如来电或推送通知时
