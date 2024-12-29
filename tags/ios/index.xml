@@ -97,7 +97,7 @@
       <link>https://wowios.com/post/ios-base/applife/</link>
       <pubDate>Sun, 29 Dec 2024 12:20:10 +0800</pubDate>
       <guid>https://wowios.com/post/ios-base/applife/</guid>
-      <description>&lt;p&gt;&lt;img alt=&#34;appStatus&#34; loading=&#34;lazy&#34; src=&#34;../appLife/appStatus.png&#34;&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img alt=&#34;appStatus&#34; loading=&#34;lazy&#34; src=&#34;https://wowios.com/post/ios-base/applife/appStatus.png&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;未运行（Not Running）&lt;/strong&gt;：应用尚未启动或被系统终止&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;非活动（Inactive）&lt;/strong&gt;：应用在前台运行但不接收事件，如来电或推送通知时&lt;/li&gt;
