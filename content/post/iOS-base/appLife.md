@@ -10,8 +10,6 @@ tags:
 
 ![appStatus](../appLife/appStatus.png)
 
-
-
 - **未运行（Not Running）**：应用尚未启动或被系统终止
 - **非活动（Inactive）**：应用在前台运行但不接收事件，如来电或推送通知时
 - **活动（Active）**：应用在前台正常运行并可以接收事件
