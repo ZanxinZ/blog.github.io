@@ -103,7 +103,9 @@ iOS 中的 RunLoop 使用 模式（Modes） 来区分和管理不同的事件集
 模式的使用场景
 	
 •	NSDefaultRunLoopMode: 适用于绝大多数常规任务。
+
 •	UITrackingRunLoopMode: 适用于处理与用户界面滑动相关的任务，如滚动视图。
+
 •	NSRunLoopCommonModes: 适用于需要同时在滑动和普通模式下运行的任务（如动画或高频更新的任务）。
 
 ### runloop 特点：
