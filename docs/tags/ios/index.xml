@@ -6,8 +6,19 @@
     <description>Recent content in IOS on CodePaper</description>
     <generator>Hugo -- 0.140.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 Dec 2024 18:37:41 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jan 2025 16:01:03 +0800</lastBuildDate>
     <atom:link href="https://wowios.com/tags/ios/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>UICollectionView</title>
+      <link>https://wowios.com/post/ios/uicollectionview/</link>
+      <pubDate>Fri, 10 Jan 2025 16:01:03 +0800</pubDate>
+      <guid>https://wowios.com/post/ios/uicollectionview/</guid>
+      <description>&lt;p&gt;注册cell 的时候，是 XX 类型和 YY identifier。
+一个 XX 可以对应多个 YY。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;collectionView.register(MyFirstCell.&lt;span style=&#34;color:#66d9ef&#34;&gt;self&lt;/span&gt;, forCellWithReuseIdentifier: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;FirstCell&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;collectionView.register(MySecondCell.&lt;span style=&#34;color:#66d9ef&#34;&gt;self&lt;/span&gt;, forCellWithReuseIdentifier: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;SecondCell&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;应用场景：同一个 UICollectionView 可以有多种 cell，例如有一个额外的带有 ➕ 的 cell，用于向 UICollectionView 添加新的元素。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>ViewController 生命周期</title>
       <link>https://wowios.com/post/ios-base/viewcontrollerlife/</link>
