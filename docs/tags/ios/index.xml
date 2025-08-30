@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>IOS on CodePaper</title>
-    <link>http://localhost:1313/tags/ios/</link>
+    <link>https://wowios.com/tags/ios/</link>
     <description>Recent content in IOS on CodePaper</description>
     <generator>Hugo -- 0.149.0</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 10 Jan 2025 16:01:03 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/ios/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://wowios.com/tags/ios/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>UICollectionView</title>
-      <link>http://localhost:1313/post/ios/uicollectionview/</link>
+      <link>https://wowios.com/post/ios/uicollectionview/</link>
       <pubDate>Fri, 10 Jan 2025 16:01:03 +0800</pubDate>
-      <guid>http://localhost:1313/post/ios/uicollectionview/</guid>
+      <guid>https://wowios.com/post/ios/uicollectionview/</guid>
       <description>&lt;p&gt;注册cell 的时候，是 XX 类型和 YY identifier。
 一个 XX 可以对应多个 YY。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;collectionView.register(MyFirstCell.&lt;span style=&#34;color:#66d9ef&#34;&gt;self&lt;/span&gt;, forCellWithReuseIdentifier: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;FirstCell&amp;#34;&lt;/span&gt;)
@@ -21,9 +21,9 @@
     </item>
     <item>
       <title>ViewController 生命周期</title>
-      <link>http://localhost:1313/post/ios-base/viewcontrollerlife/</link>
+      <link>https://wowios.com/post/ios-base/viewcontrollerlife/</link>
       <pubDate>Sun, 29 Dec 2024 18:37:41 +0800</pubDate>
-      <guid>http://localhost:1313/post/ios-base/viewcontrollerlife/</guid>
+      <guid>https://wowios.com/post/ios-base/viewcontrollerlife/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;1. 实例化阶段&lt;/strong&gt;：init(coder:) 或 init(nibName:bundle:) 被调用&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;2. 加载视图阶段&lt;/strong&gt;：loadView → viewDidLoad&lt;/li&gt;
@@ -105,10 +105,10 @@
     </item>
     <item>
       <title>App 生命周期</title>
-      <link>http://localhost:1313/post/ios-base/applife/</link>
+      <link>https://wowios.com/post/ios-base/applife/</link>
       <pubDate>Sun, 29 Dec 2024 12:20:10 +0800</pubDate>
-      <guid>http://localhost:1313/post/ios-base/applife/</guid>
-      <description>&lt;p&gt;&lt;img alt=&#34;appStatus&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/post/ios-base/applife/appStatus.png&#34;&gt;&lt;/p&gt;
+      <guid>https://wowios.com/post/ios-base/applife/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;appStatus&#34; loading=&#34;lazy&#34; src=&#34;https://wowios.com/post/ios-base/applife/appStatus.png&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;未运行（Not Running）&lt;/strong&gt;：应用尚未启动或被系统终止&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;非活动（Inactive）&lt;/strong&gt;：应用在前台运行但不接收事件，如来电或推送通知时&lt;/li&gt;
@@ -149,9 +149,9 @@
     </item>
     <item>
       <title>“小速记” App 介绍</title>
-      <link>http://localhost:1313/post/ios/checkthempicshow/</link>
+      <link>https://wowios.com/post/ios/checkthempicshow/</link>
       <pubDate>Fri, 07 Jul 2023 13:12:14 +0800</pubDate>
-      <guid>http://localhost:1313/post/ios/checkthempicshow/</guid>
+      <guid>https://wowios.com/post/ios/checkthempicshow/</guid>
       <description>&lt;h3 id=&#34;小速记各部分功能介绍&#34;&gt;《小速记》各部分功能介绍&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -189,9 +189,9 @@
     </item>
     <item>
       <title>如何通过点击 UICollectionViewCell 跳转至对应的 UIViewController</title>
-      <link>http://localhost:1313/post/ios/viewcontrollertransform/</link>
+      <link>https://wowios.com/post/ios/viewcontrollertransform/</link>
       <pubDate>Wed, 17 May 2023 22:41:55 +0800</pubDate>
-      <guid>http://localhost:1313/post/ios/viewcontrollertransform/</guid>
+      <guid>https://wowios.com/post/ios/viewcontrollertransform/</guid>
       <description>&lt;h2 id=&#34;跳转部分的实现&#34;&gt;跳转部分的实现&lt;/h2&gt;
 &lt;p&gt;我需要从我的 HomeViewController 通过点击不同的 CollectionViewCell 跳至不同的 ViewController&lt;/p&gt;
 &lt;p&gt;&lt;img alt=&#34;Untitled&#34; loading=&#34;lazy&#34; src=&#34;../%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E7%82%B9%E5%87%BB%20UICollectionViewCell%20%E8%B7%B3%E8%BD%AC%E8%87%B3%E5%AF%B9%E5%BA%94%E7%9A%84%20UIViewController/Untitled.png&#34;&gt;&lt;/p&gt;
