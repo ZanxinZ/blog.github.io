@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>简历 on CodePaper</title>
+    <title>简历 on Zanxinz</title>
     <link>https://wowios.com/tags/%E7%AE%80%E5%8E%86/</link>
-    <description>Recent content in 简历 on CodePaper</description>
+    <description>Recent content in 简历 on Zanxinz</description>
     <generator>Hugo -- 0.149.0</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 12 Jul 2022 14:46:26 +0800</lastBuildDate>
@@ -13,7 +13,7 @@
       <link>https://wowios.com/about/</link>
       <pubDate>Tue, 12 Jul 2022 14:46:26 +0800</pubDate>
       <guid>https://wowios.com/about/</guid>
-      <description>&lt;p&gt;&lt;img alt=&#34;me&#34; loading=&#34;lazy&#34; src=&#34;https://wowios.com/about/avatar-me.png&#34;&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img alt=&#34;me&#34; loading=&#34;lazy&#34; src=&#34;https://wowios.com/about/me.jpeg&#34;&gt;&lt;/p&gt;
 &lt;p&gt;1998.01 | 广东 | 硕士研究生&lt;/p&gt;
 &lt;p&gt;电话: 13757116490 | 邮箱: &lt;a href=&#34;mailto:cinuni@outlook.com&#34;&gt;cinuni@outlook.com&lt;/a&gt; | Github: &lt;a href=&#34;https://github.com/ZanxinZ&#34;&gt;https://github.com/ZanxinZ&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;工作经历&#34;&gt;工作经历&lt;/h3&gt;
@@ -39,12 +39,11 @@
 &lt;p&gt;CoreData管理各个对象信息 ｜ UIKit 原生实现 ｜ 支持简体中文、繁体、英文本地化&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;2021.05 跨平台文件传输 &lt;a href=&#34;https://aacell.me&#34;&gt;&lt;strong&gt;AAcell&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2021.05 跨平台文件传输 &lt;strong&gt;AAcell&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;负责后端 Java 开发，基于 SpringBoot 框架搭建 web 服务，实现文件传输、共享服务;&lt;/p&gt;
 &lt;p&gt;多台不同系统的设备输入同一房间号和密码可以进入房间;&lt;/p&gt;
 &lt;p&gt;使用拦截器配合 JWT (Json Web Token) 验证用户;&lt;/p&gt;
-&lt;p&gt;SHA-256 摘要保存密码，在仅知道密文的情况下无法获取用户设置的源密码;&lt;/p&gt;
-&lt;p&gt;使用 MySQL 数据库存放房间信息和用户发送的消息;&lt;/p&gt;</description>
+&lt;p&gt;SHA-256 摘要保存密码，在仅知道密文的情况下无法获取用户设置的源密码;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
