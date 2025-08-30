@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on CodePaper</title>
-    <link>https://wowios.com/post/</link>
+    <link>http://localhost:1313/post/</link>
     <description>Recent content in Posts on CodePaper</description>
     <generator>Hugo -- 0.149.0</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 31 Aug 2025 04:39:07 +0800</lastBuildDate>
-    <atom:link href="https://wowios.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git 分支管理</title>
-      <link>https://wowios.com/post/develop/gitwork/</link>
+      <link>http://localhost:1313/post/develop/gitwork/</link>
       <pubDate>Sun, 31 Aug 2025 04:39:07 +0800</pubDate>
-      <guid>https://wowios.com/post/develop/gitwork/</guid>
+      <guid>http://localhost:1313/post/develop/gitwork/</guid>
       <description>&lt;h3 id=&#34;较为标准的版本多人协作&#34;&gt;较为标准的版本（多人协作）&lt;/h3&gt;
 &lt;p&gt;master 分支：用于存放稳定的生产环境代码，每个合并到master的提交通常都对应一个发布版本。&lt;/p&gt;
 &lt;p&gt;develop 分支：用于源代码功能集成&lt;/p&gt;
@@ -47,9 +47,9 @@
     </item>
     <item>
       <title>UICollectionView</title>
-      <link>https://wowios.com/post/ios/uicollectionview/</link>
+      <link>http://localhost:1313/post/ios/uicollectionview/</link>
       <pubDate>Fri, 10 Jan 2025 16:01:03 +0800</pubDate>
-      <guid>https://wowios.com/post/ios/uicollectionview/</guid>
+      <guid>http://localhost:1313/post/ios/uicollectionview/</guid>
       <description>&lt;p&gt;注册cell 的时候，是 XX 类型和 YY identifier。
 一个 XX 可以对应多个 YY。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;collectionView.register(MyFirstCell.&lt;span style=&#34;color:#66d9ef&#34;&gt;self&lt;/span&gt;, forCellWithReuseIdentifier: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;FirstCell&amp;#34;&lt;/span&gt;)
@@ -58,9 +58,9 @@
     </item>
     <item>
       <title>Runloop</title>
-      <link>https://wowios.com/post/ios-base/runloop/</link>
+      <link>http://localhost:1313/post/ios-base/runloop/</link>
       <pubDate>Mon, 30 Dec 2024 15:38:33 +0800</pubDate>
-      <guid>https://wowios.com/post/ios-base/runloop/</guid>
+      <guid>http://localhost:1313/post/ios-base/runloop/</guid>
       <description>&lt;h3 id=&#34;问题-定时器最好设置为-nsrunloopcommonmodes&#34;&gt;问题: 定时器最好设置为 NSRunLoopCommonModes&lt;/h3&gt;
 &lt;p&gt;在 iOS 中，界面滑动时 RunLoop 会切换到 UITrackingRunLoopMode，而默认情况下 NSTimer 运行在 NSDefaultRunLoopMode，导致滑动时 NSTimer 无法触发或与主线程争夺资源，引发性能下降甚至卡顿。&lt;/p&gt;
 &lt;p&gt;原因&lt;/p&gt;
@@ -88,9 +88,9 @@
     </item>
     <item>
       <title>ViewController 生命周期</title>
-      <link>https://wowios.com/post/ios-base/viewcontrollerlife/</link>
+      <link>http://localhost:1313/post/ios-base/viewcontrollerlife/</link>
       <pubDate>Sun, 29 Dec 2024 18:37:41 +0800</pubDate>
-      <guid>https://wowios.com/post/ios-base/viewcontrollerlife/</guid>
+      <guid>http://localhost:1313/post/ios-base/viewcontrollerlife/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;1. 实例化阶段&lt;/strong&gt;：init(coder:) 或 init(nibName:bundle:) 被调用&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;2. 加载视图阶段&lt;/strong&gt;：loadView → viewDidLoad&lt;/li&gt;
@@ -172,10 +172,10 @@
     </item>
     <item>
       <title>App 生命周期</title>
-      <link>https://wowios.com/post/ios-base/applife/</link>
+      <link>http://localhost:1313/post/ios-base/applife/</link>
       <pubDate>Sun, 29 Dec 2024 12:20:10 +0800</pubDate>
-      <guid>https://wowios.com/post/ios-base/applife/</guid>
-      <description>&lt;p&gt;&lt;img alt=&#34;appStatus&#34; loading=&#34;lazy&#34; src=&#34;https://wowios.com/post/ios-base/applife/appStatus.png&#34;&gt;&lt;/p&gt;
+      <guid>http://localhost:1313/post/ios-base/applife/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;appStatus&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/post/ios-base/applife/appStatus.png&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;未运行（Not Running）&lt;/strong&gt;：应用尚未启动或被系统终止&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;非活动（Inactive）&lt;/strong&gt;：应用在前台运行但不接收事件，如来电或推送通知时&lt;/li&gt;
@@ -216,9 +216,9 @@
     </item>
     <item>
       <title>Oc Summary</title>
-      <link>https://wowios.com/post/oc-summary/oc-summary/</link>
+      <link>http://localhost:1313/post/oc-summary/oc-summary/</link>
       <pubDate>Sat, 28 Dec 2024 14:41:19 +0800</pubDate>
-      <guid>https://wowios.com/post/oc-summary/oc-summary/</guid>
+      <guid>http://localhost:1313/post/oc-summary/oc-summary/</guid>
       <description>&lt;h2 id=&#34;类和结构体的区别&#34;&gt;类和结构体的区别&lt;/h2&gt;
 &lt;h2 id=&#34;计算属性&#34;&gt;计算属性&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;struct&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Rectangle&lt;/span&gt; {
@@ -275,9 +275,9 @@
     </item>
     <item>
       <title>“小速记” App 介绍</title>
-      <link>https://wowios.com/post/ios/checkthempicshow/</link>
+      <link>http://localhost:1313/post/ios/checkthempicshow/</link>
       <pubDate>Fri, 07 Jul 2023 13:12:14 +0800</pubDate>
-      <guid>https://wowios.com/post/ios/checkthempicshow/</guid>
+      <guid>http://localhost:1313/post/ios/checkthempicshow/</guid>
       <description>&lt;h3 id=&#34;小速记各部分功能介绍&#34;&gt;《小速记》各部分功能介绍&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -315,9 +315,9 @@
     </item>
     <item>
       <title>如何通过点击 UICollectionViewCell 跳转至对应的 UIViewController</title>
-      <link>https://wowios.com/post/ios/viewcontrollertransform/</link>
+      <link>http://localhost:1313/post/ios/viewcontrollertransform/</link>
       <pubDate>Wed, 17 May 2023 22:41:55 +0800</pubDate>
-      <guid>https://wowios.com/post/ios/viewcontrollertransform/</guid>
+      <guid>http://localhost:1313/post/ios/viewcontrollertransform/</guid>
       <description>&lt;h2 id=&#34;跳转部分的实现&#34;&gt;跳转部分的实现&lt;/h2&gt;
 &lt;p&gt;我需要从我的 HomeViewController 通过点击不同的 CollectionViewCell 跳至不同的 ViewController&lt;/p&gt;
 &lt;p&gt;&lt;img alt=&#34;Untitled&#34; loading=&#34;lazy&#34; src=&#34;../%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E7%82%B9%E5%87%BB%20UICollectionViewCell%20%E8%B7%B3%E8%BD%AC%E8%87%B3%E5%AF%B9%E5%BA%94%E7%9A%84%20UIViewController/Untitled.png&#34;&gt;&lt;/p&gt;
@@ -351,9 +351,9 @@
     </item>
     <item>
       <title>N4000 四网口工控机组网</title>
-      <link>https://wowios.com/post/tool/wrt/setnetwork/</link>
+      <link>http://localhost:1313/post/tool/wrt/setnetwork/</link>
       <pubDate>Sat, 13 May 2023 22:43:27 +0800</pubDate>
-      <guid>https://wowios.com/post/tool/wrt/setnetwork/</guid>
+      <guid>http://localhost:1313/post/tool/wrt/setnetwork/</guid>
       <description>&lt;h3 id=&#34;需要用到的硬件&#34;&gt;需要用到的硬件&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;工控机本体这里称为 A，&lt;/li&gt;
@@ -378,9 +378,9 @@
     </item>
     <item>
       <title>Hugo 的一些问题</title>
-      <link>https://wowios.com/post/tool/usehugo/someproblem/</link>
+      <link>http://localhost:1313/post/tool/usehugo/someproblem/</link>
       <pubDate>Sat, 11 Mar 2023 16:59:18 +0800</pubDate>
-      <guid>https://wowios.com/post/tool/usehugo/someproblem/</guid>
+      <guid>http://localhost:1313/post/tool/usehugo/someproblem/</guid>
       <description>&lt;h2 id=&#34;若域名有变动&#34;&gt;若域名有变动&lt;/h2&gt;
 &lt;p&gt;需要修改三个地方&lt;/p&gt;
 &lt;ul&gt;
@@ -391,9 +391,9 @@
     </item>
     <item>
       <title>Hugo 发布一篇文章的过程</title>
-      <link>https://wowios.com/post/tool/usehugo/publisharticle/</link>
+      <link>http://localhost:1313/post/tool/usehugo/publisharticle/</link>
       <pubDate>Sat, 11 Mar 2023 16:00:07 +0800</pubDate>
-      <guid>https://wowios.com/post/tool/usehugo/publisharticle/</guid>
+      <guid>http://localhost:1313/post/tool/usehugo/publisharticle/</guid>
       <description>&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;windows：确保有 hugo.exe 在工程目录下, 并且 .gitignore 里面写上 &lt;code&gt;hugo.exe&lt;/code&gt;，即可&lt;/li&gt;
@@ -422,9 +422,9 @@
     </item>
     <item>
       <title>Notion文件导出</title>
-      <link>https://wowios.com/post/tool/notion/notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/</link>
+      <link>http://localhost:1313/post/tool/notion/notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/</link>
       <pubDate>Sat, 11 Mar 2023 15:11:32 +0800</pubDate>
-      <guid>https://wowios.com/post/tool/notion/notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/</guid>
+      <guid>http://localhost:1313/post/tool/notion/notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/</guid>
       <description>&lt;h2 id=&#34;notion-批量文件导出以-pfd格式&#34;&gt;Notion 批量文件导出，以 PFD格式&lt;/h2&gt;
 &lt;p&gt;Notion 是一款 markdown 笔记软件，可以快速书写，多端同步，支持文件导出，十分方便。
 我在 notion 中写了很多页面，有时要转移到别的地方保存，那么应该怎么做呢？&lt;/p&gt;
@@ -477,9 +477,9 @@
     </item>
     <item>
       <title>各种设计模式</title>
-      <link>https://wowios.com/post/design-pattern/all-design-pattern/</link>
+      <link>http://localhost:1313/post/design-pattern/all-design-pattern/</link>
       <pubDate>Mon, 11 Jul 2022 18:27:35 +0800</pubDate>
-      <guid>https://wowios.com/post/design-pattern/all-design-pattern/</guid>
+      <guid>http://localhost:1313/post/design-pattern/all-design-pattern/</guid>
       <description>&lt;h2 id=&#34;creational&#34;&gt;Creational&lt;/h2&gt;
 &lt;p&gt;Object Created Pattern&lt;/p&gt;
 &lt;h3 id=&#34;factory-method&#34;&gt;Factory Method&lt;/h3&gt;
@@ -550,16 +550,16 @@
     </item>
     <item>
       <title>Mail</title>
-      <link>https://wowios.com/post/info/contact/mail/</link>
+      <link>http://localhost:1313/post/info/contact/mail/</link>
       <pubDate>Sat, 10 Jul 2021 18:46:21 +0800</pubDate>
-      <guid>https://wowios.com/post/info/contact/mail/</guid>
+      <guid>http://localhost:1313/post/info/contact/mail/</guid>
       <description>false</description>
     </item>
     <item>
       <title>竞赛经历与奖项</title>
-      <link>https://wowios.com/post/info/certificate/</link>
+      <link>http://localhost:1313/post/info/certificate/</link>
       <pubDate>Mon, 21 Jun 2021 10:17:24 +0800</pubDate>
-      <guid>https://wowios.com/post/info/certificate/</guid>
+      <guid>http://localhost:1313/post/info/certificate/</guid>
       <description>&lt;h3 id=&#34;机器人比赛&#34;&gt;机器人比赛&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;

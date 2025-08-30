@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on CodePaper</title>
-    <link>https://wowios.com/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on CodePaper</description>
     <generator>Hugo -- 0.149.0</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 31 Aug 2025 04:39:07 +0800</lastBuildDate>
-    <atom:link href="https://wowios.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Develop</title>
-      <link>https://wowios.com/categories/develop/</link>
+      <link>http://localhost:1313/categories/develop/</link>
       <pubDate>Sun, 31 Aug 2025 04:39:07 +0800</pubDate>
-      <guid>https://wowios.com/categories/develop/</guid>
+      <guid>http://localhost:1313/categories/develop/</guid>
       <description></description>
     </item>
     <item>
       <title>IOS</title>
-      <link>https://wowios.com/categories/ios/</link>
+      <link>http://localhost:1313/categories/ios/</link>
       <pubDate>Sat, 28 Dec 2024 14:41:19 +0800</pubDate>
-      <guid>https://wowios.com/categories/ios/</guid>
+      <guid>http://localhost:1313/categories/ios/</guid>
       <description></description>
     </item>
     <item>
       <title>软件开发</title>
-      <link>https://wowios.com/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</link>
+      <link>http://localhost:1313/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</link>
       <pubDate>Fri, 07 Jul 2023 13:12:14 +0800</pubDate>
-      <guid>https://wowios.com/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</guid>
+      <guid>http://localhost:1313/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</guid>
       <description></description>
     </item>
     <item>
       <title>工具</title>
-      <link>https://wowios.com/categories/%E5%B7%A5%E5%85%B7/</link>
+      <link>http://localhost:1313/categories/%E5%B7%A5%E5%85%B7/</link>
       <pubDate>Sat, 13 May 2023 22:43:27 +0800</pubDate>
-      <guid>https://wowios.com/categories/%E5%B7%A5%E5%85%B7/</guid>
+      <guid>http://localhost:1313/categories/%E5%B7%A5%E5%85%B7/</guid>
       <description></description>
     </item>
     <item>
       <title>Java</title>
-      <link>https://wowios.com/categories/java/</link>
+      <link>http://localhost:1313/categories/java/</link>
       <pubDate>Tue, 12 Jul 2022 21:45:46 +0800</pubDate>
-      <guid>https://wowios.com/categories/java/</guid>
+      <guid>http://localhost:1313/categories/java/</guid>
       <description></description>
     </item>
     <item>
       <title>Swift</title>
-      <link>https://wowios.com/categories/swift/</link>
+      <link>http://localhost:1313/categories/swift/</link>
       <pubDate>Sun, 19 Jun 2022 16:00:40 +0800</pubDate>
-      <guid>https://wowios.com/categories/swift/</guid>
+      <guid>http://localhost:1313/categories/swift/</guid>
       <description></description>
     </item>
   </channel>

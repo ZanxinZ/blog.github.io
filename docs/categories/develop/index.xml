@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Develop on CodePaper</title>
-    <link>https://wowios.com/categories/develop/</link>
+    <link>http://localhost:1313/categories/develop/</link>
     <description>Recent content in Develop on CodePaper</description>
     <generator>Hugo -- 0.149.0</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 31 Aug 2025 04:39:07 +0800</lastBuildDate>
-    <atom:link href="https://wowios.com/categories/develop/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/develop/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git 分支管理</title>
-      <link>https://wowios.com/post/develop/gitwork/</link>
+      <link>http://localhost:1313/post/develop/gitwork/</link>
       <pubDate>Sun, 31 Aug 2025 04:39:07 +0800</pubDate>
-      <guid>https://wowios.com/post/develop/gitwork/</guid>
+      <guid>http://localhost:1313/post/develop/gitwork/</guid>
       <description>&lt;h3 id=&#34;较为标准的版本多人协作&#34;&gt;较为标准的版本（多人协作）&lt;/h3&gt;
 &lt;p&gt;master 分支：用于存放稳定的生产环境代码，每个合并到master的提交通常都对应一个发布版本。&lt;/p&gt;
 &lt;p&gt;develop 分支：用于源代码功能集成&lt;/p&gt;

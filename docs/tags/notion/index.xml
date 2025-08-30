@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Notion on CodePaper</title>
-    <link>https://wowios.com/tags/notion/</link>
+    <link>http://localhost:1313/tags/notion/</link>
     <description>Recent content in Notion on CodePaper</description>
     <generator>Hugo -- 0.149.0</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 11 Mar 2023 15:11:32 +0800</lastBuildDate>
-    <atom:link href="https://wowios.com/tags/notion/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/notion/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Notion文件导出</title>
-      <link>https://wowios.com/post/tool/notion/notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/</link>
+      <link>http://localhost:1313/post/tool/notion/notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/</link>
       <pubDate>Sat, 11 Mar 2023 15:11:32 +0800</pubDate>
-      <guid>https://wowios.com/post/tool/notion/notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/</guid>
+      <guid>http://localhost:1313/post/tool/notion/notion%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA/</guid>
       <description>&lt;h2 id=&#34;notion-批量文件导出以-pfd格式&#34;&gt;Notion 批量文件导出，以 PFD格式&lt;/h2&gt;
 &lt;p&gt;Notion 是一款 markdown 笔记软件，可以快速书写，多端同步，支持文件导出，十分方便。
 我在 notion 中写了很多页面，有时要转移到别的地方保存，那么应该怎么做呢？&lt;/p&gt;
