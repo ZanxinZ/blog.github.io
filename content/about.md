@@ -5,7 +5,7 @@ tags:
 - 简历
 ---
 
-![me](/about/avatar-me.png) 
+![me](/about/me.jpeg) 
 
 1998.01 | 广东 | 硕士研究生 
 
@@ -35,7 +35,7 @@ iOS Swift | Objective-C | 数据结构与算法 | 设计模式 | Git 协作 | Py
   
   CoreData管理各个对象信息 ｜ UIKit 原生实现 ｜ 支持简体中文、繁体、英文本地化
   
-- 2021.05 跨平台文件传输 [**AAcell**](https://aacell.me)
+- 2021.05 跨平台文件传输 **AAcell**
   
   负责后端 Java 开发，基于 SpringBoot 框架搭建 web 服务，实现文件传输、共享服务;
 
@@ -71,7 +71,6 @@ iOS Swift | Objective-C | 数据结构与算法 | 设计模式 | Git 协作 | Py
 - 了解新的的技术和数码产品
 - 制作 App
 - 摄影
-- 足球
 - 电影
 - 古典音乐
-
+- 游泳、保龄球、羽毛球、篮球

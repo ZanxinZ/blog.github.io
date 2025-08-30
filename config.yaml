@@ -1,6 +1,6 @@
 baseURL: 'https://wowios.com'
 languageCode: en-us 
-title: CodePaper
+title: Zanxinz
 theme: "PaperMod"
 publishdir: "./docs/"
 
@@ -23,7 +23,7 @@ menu:
       url: /tags/
       weight: 20
     - identifier: archive
-      name: 📦档案
+      name: 📦归档
       url: /archive/
       weight: 5
     - identifier: search
@@ -31,7 +31,7 @@ menu:
       url: /search/
       weight: 30
     - identifier: about
-      name: 🧑‍💻关于我
+      name: 🧑‍💻我
       url: /about/
       weight: 40
       
@@ -44,8 +44,8 @@ params:
   # 主页的模式
   homeInfoParams:
     enabled: true
-    Title: I'm Zanxinz👋
-    Content:  ""
+    Title: Welcome 👏
+    Content:  "Here is Zanxinz's blog"
   # 社交联系方式
   socialIcons: 
     - name: "twitter"
@@ -65,11 +65,11 @@ params:
 
 assets:
   disableHLJS: true
-  favicon: "/img/favicon.ico"
-  favicon16x16: "/img/favicon.ico"
-  favicon32x32: "/img/favicon.ico"
-  apple_touch_icon: "/img/favicon.ico"
-  safari_pinned_tab: "/img/favicon.ico"
+  favicon: "/img/cloud32.png"
+  favicon16x16: "/img/cloud16.png"
+  favicon32x32: "/img/cloud32.png"
+  apple_touch_icon: "/img/cloud32.png"
+  safari_pinned_tab: "/img/cloud32.png"
 
 outputs:
   home:
