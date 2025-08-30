@@ -4,10 +4,47 @@
     <title>Home on CodePaper</title>
     <link>https://wowios.com/</link>
     <description>Recent content in Home on CodePaper</description>
-    <generator>Hugo -- 0.140.2</generator>
+    <generator>Hugo -- 0.149.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Jan 2025 16:01:03 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 31 Aug 2025 04:39:07 +0800</lastBuildDate>
     <atom:link href="https://wowios.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git 分支管理</title>
+      <link>https://wowios.com/post/develop/gitwork/</link>
+      <pubDate>Sun, 31 Aug 2025 04:39:07 +0800</pubDate>
+      <guid>https://wowios.com/post/develop/gitwork/</guid>
+      <description>&lt;h3 id=&#34;较为标准的版本多人协作&#34;&gt;较为标准的版本（多人协作）&lt;/h3&gt;
+&lt;p&gt;master 分支：用于存放稳定的生产环境代码，每个合并到master的提交通常都对应一个发布版本。&lt;/p&gt;
+&lt;p&gt;develop 分支：用于源代码功能集成&lt;/p&gt;
+&lt;p&gt;feature分支：基于develop 分支，拉出新分支来开发，开发过程中，需要经常切回develop分支pull最新更改（可能来自其他同事），然后切回feature分支做 git merge develop；开发完成之后提起 Merge Request （也叫 Pull Request）&lt;/p&gt;
+&lt;p&gt;release1.1.0分支：要发布时，基于 develop 分支来拉出&lt;/p&gt;
+&lt;p&gt;当develop分支达到稳定状态时，会通过release分支将代码合并到master分支。（放到 master 上即代表发包完成，并且可以从master上拿这个包去发布给官方平台）&lt;/p&gt;
+&lt;p&gt;bug 修复：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;develop 阶段：在develop分支或相关feature 分支上修复&lt;/li&gt;
+&lt;li&gt;release 阶段，则基于 release 拉出 hotfix分支上修复bug，修复后合入 release 并且事后将修改同步到 develop 分支。&lt;/li&gt;
+&lt;li&gt;如果已经上线（已经由 release 提交到master中），则基于 master 分支的最新 release 去拉出hotfix分支上修复bug，然后合并回 master 和 develop。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;master(main)分支的主要作用是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;代表生产环境的代码，包含已经部署到生产环境的稳定版本&lt;/li&gt;
+&lt;li&gt;是项目的官方发布历史，每个合并到master的提交通常都对应一个发布版本&lt;/li&gt;
+&lt;li&gt;需要保持高度稳定，确保任何时候都可以从这个分支部署到生产环境&lt;/li&gt;
+&lt;li&gt;通常设有保护措施，不允许直接提交，而是通过合并release或hotfix分支的方式更新&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在Git流工作流中，master分支与develop分支共同工作：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;develop分支用于集成开发中的功能&lt;/li&gt;
+&lt;li&gt;release 代表产品的不同版本&lt;/li&gt;
+&lt;li&gt;当develop分支达到稳定状态时，会通过release分支将代码合并到master分支&lt;/li&gt;
+&lt;li&gt;对于生产环境中发现的紧急问题，会从master分支创建hotfix分支进行修复，然后同时合并回master和develop分支&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;非标准版本两三个人的协作时候可以&#34;&gt;非标准版本（两三个人的协作时候可以）&lt;/h3&gt;
+&lt;p&gt;develop 分支作为源代码管理&lt;/p&gt;
+&lt;p&gt;feature 分支开发功能，完成后合入 develop 分支&lt;/p&gt;
+&lt;p&gt;产品版本各个功能开发完成后，直接将 develop 分支的代码拿去打包提交审核。&lt;/p&gt;
+&lt;p&gt;产品版本节点使用 tag 标记。例如 v1.1.2。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>UICollectionView</title>
       <link>https://wowios.com/post/ios/uicollectionview/</link>
@@ -365,8 +402,7 @@
 &lt;h2 id=&#34;新建&#34;&gt;新建&lt;/h2&gt;
 &lt;p&gt;一般，都在 post 文件夹下放 markdown 文件，使用不同文件夹来归类&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;hugo new post/tool/useHugo/publishArticle.md&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;hugo new post/tool/useHugo/publishArticle.md&lt;/code&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;书写&#34;&gt;书写&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;设定文章的 title, categories, tags&lt;/li&gt;
@@ -374,12 +410,10 @@
 &lt;/ol&gt;
 &lt;h2 id=&#34;本地预览&#34;&gt;本地预览&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;hugo server&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;hugo server&lt;/code&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;编译成-html输出到-docs-路径与-github-action-对应&#34;&gt;编译成 html，输出到 /docs （路径与 GitHub Action 对应）&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;hugo&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;hugo&lt;/code&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;到这里，就完成了写作&lt;/p&gt;
 &lt;h2 id=&#34;git-push&#34;&gt;Git Push&lt;/h2&gt;
 &lt;p&gt;先 fetch，再 commit，再 push。&lt;/p&gt;

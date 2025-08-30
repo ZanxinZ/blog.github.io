@@ -4,10 +4,17 @@
     <title>Categories on CodePaper</title>
     <link>https://wowios.com/categories/</link>
     <description>Recent content in Categories on CodePaper</description>
-    <generator>Hugo -- 0.140.2</generator>
+    <generator>Hugo -- 0.149.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Dec 2024 14:41:19 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 31 Aug 2025 04:39:07 +0800</lastBuildDate>
     <atom:link href="https://wowios.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Develop</title>
+      <link>https://wowios.com/categories/develop/</link>
+      <pubDate>Sun, 31 Aug 2025 04:39:07 +0800</pubDate>
+      <guid>https://wowios.com/categories/develop/</guid>
+      <description></description>
+    </item>
     <item>
       <title>IOS</title>
       <link>https://wowios.com/categories/ios/</link>

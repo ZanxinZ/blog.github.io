@@ -2,13 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://wowios.com/tags/ios/</loc>
-    <lastmod>2025-01-10T16:01:03+08:00</lastmod>
+    <loc>https://wowios.com/categories/</loc>
+    <lastmod>2025-08-31T04:39:07+08:00</lastmod>
+  </url><url>
+    <loc>https://wowios.com/categories/develop/</loc>
+    <lastmod>2025-08-31T04:39:07+08:00</lastmod>
+  </url><url>
+    <loc>https://wowios.com/tags/git/</loc>
+    <lastmod>2025-08-31T04:39:07+08:00</lastmod>
+  </url><url>
+    <loc>https://wowios.com/post/develop/gitwork/</loc>
+    <lastmod>2025-08-31T04:39:07+08:00</lastmod>
   </url><url>
     <loc>https://wowios.com/post/</loc>
-    <lastmod>2025-01-10T16:01:03+08:00</lastmod>
+    <lastmod>2025-08-31T04:39:07+08:00</lastmod>
   </url><url>
     <loc>https://wowios.com/tags/</loc>
+    <lastmod>2025-08-31T04:39:07+08:00</lastmod>
+  </url><url>
+    <loc>https://wowios.com/tags/ios/</loc>
     <lastmod>2025-01-10T16:01:03+08:00</lastmod>
   </url><url>
     <loc>https://wowios.com/post/ios/uicollectionview/</loc>
@@ -22,9 +34,6 @@
   </url><url>
     <loc>https://wowios.com/post/ios-base/applife/</loc>
     <lastmod>2024-12-29T12:20:10+08:00</lastmod>
-  </url><url>
-    <loc>https://wowios.com/categories/</loc>
-    <lastmod>2024-12-28T14:41:19+08:00</lastmod>
   </url><url>
     <loc>https://wowios.com/tags/concept/</loc>
     <lastmod>2024-12-28T14:41:19+08:00</lastmod>
@@ -77,10 +86,10 @@
     <loc>https://wowios.com/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
     <lastmod>2022-07-12T21:45:46+08:00</lastmod>
   </url><url>
-    <loc>https://wowios.com/tags/%E7%AE%80%E5%8E%86/</loc>
+    <loc>https://wowios.com/about/</loc>
     <lastmod>2022-07-12T14:46:26+08:00</lastmod>
   </url><url>
-    <loc>https://wowios.com/about/</loc>
+    <loc>https://wowios.com/tags/%E7%AE%80%E5%8E%86/</loc>
     <lastmod>2022-07-12T14:46:26+08:00</lastmod>
   </url><url>
     <loc>https://wowios.com/post/design-pattern/all-design-pattern/</loc>
